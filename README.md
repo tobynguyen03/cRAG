@@ -6,7 +6,7 @@ Contributors: Toby Nguyen, Luis Pimental, Stanley Wong, Allen Zhang
 
 Install environment and dependencies:
 ```bash 
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda env activate cRAG
 cd paper-qa
 pip install -e .
