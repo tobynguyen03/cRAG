@@ -13,7 +13,7 @@ Install environment and dependencies:
 ```bash
 module load anaconda3
 conda env create -f environment.yaml
-conda env activate cRAG
+conda activate cRAG
 cd paper-qa
 pip install -e .
 ```
