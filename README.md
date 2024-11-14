@@ -8,6 +8,7 @@ Contributors: Toby Nguyen, Luis Pimental, Stanley Wong, Allen Zhang
 Login to PACE:
 ```bash
 ssh <GT_USERNAME>@login-ice.pace.gatech.edu
+salloc --gres=gpu:H100:1 --ntasks-per-node=1 --time=1:00:00
 ```
 
 Setup SSH keys:
