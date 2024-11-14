@@ -10,7 +10,8 @@ ssh <GT_USERNAME>@login-ice.pace.gatech.edu
 ```
 
 Install environment and dependencies:
-```bash 
+```bash
+module load anaconda3
 conda env create -f environment.yaml
 conda env activate cRAG
 cd paper-qa
