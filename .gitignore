@@ -2,4 +2,4 @@
 .vscode/
 
 llamafiles/*
-!llamafiles/.gitignore
+!llamafiles/README.md
