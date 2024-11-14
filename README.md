@@ -20,7 +20,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
-- Copy the output and go to your Github.com -> Settings -> SSH and GPG Keys
+- Copy the output (it should start with "ssh-ed25519" and end with your email) and go to your Github.com -> Settings -> SSH and GPG Keys
 - Click "New SSH key"
 - Paste your key into the "Key" field
 - Click "Add SSH key"
