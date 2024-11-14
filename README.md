@@ -3,6 +3,11 @@ Contributors: Toby Nguyen, Luis Pimental, Stanley Wong, Allen Zhang
 
 
 ## Installation
+Login to PACE:
+
+```bash
+ssh <GT_USERNAME>@login-ice.pace.gatech.edu
+```
 
 Install environment and dependencies:
 ```bash 
@@ -14,25 +19,37 @@ pip install -e .
 
 
 ### Install ollama manually
-Dowload binaries:
+Download binaries:
 ```bash
 curl -L https://github.com/ollama/ollama/releases/download/v0.4.1/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
 mkdir -p ~/.local
 tar -C ~/.local -xzf ollama-linux-amd64.tgz
 ```
 
-Add the following to your `~/.bashrc`:
+Open `~/.bashrc`:
+
+```bash
+nano ~/.bashrc
+```
+
+Add the following:
 
 ```bash 
 export PATH=$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib/ollama:$LD_LIBRARY_PATH
-export OLLAMA_MODELS=/home/hice1/gtusername/scratch/ollama_models/ # path to your scratch directory where models will be stored
+export OLLAMA_MODELS=/home/hice1/<GT_USERNAME>/scratch/ollama_models/ # path to your scratch directory where models will be stored
+```
+
+Run the following to update changes:
+
+```bash
+source ~/.bashrc
 ```
 
 Verify
 ```bash 
 ollama serve # run this one terminal
-ollama -v # run thi in another
+ollama -v # run this in another
 ```
 
 Dowload ollama models:
