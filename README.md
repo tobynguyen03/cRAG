@@ -38,6 +38,7 @@ git clone git@github.com:tobynguyen03/cRAG.git
 
 ### Install environment and dependencies:
 ```bash
+cd cRAG
 module load anaconda3
 conda env create -f environment.yaml
 conda activate cRAG
