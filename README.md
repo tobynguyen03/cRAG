@@ -3,13 +3,40 @@ Contributors: Toby Nguyen, Luis Pimental, Stanley Wong, Allen Zhang
 
 
 ## Installation
-Login to PACE:
 
+### Cloning the Repository
+Login to PACE:
 ```bash
 ssh <GT_USERNAME>@login-ice.pace.gatech.edu
 ```
 
-Install environment and dependencies:
+Setup SSH keys:
+```bash
+ssh-keygen -t ed25519 -C "<your_email@example.com>"
+```
+Click enter twice to accept default file location
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+- Copy the output and go to your Github.com -> Settings -> SSH and GPG Keys
+- Click "New SSH key"
+- Paste your key into the "Key" field
+- Click "Add SSH key"
+
+Test your connection
+```bash
+ssh -T git@github.com
+```
+It should say something like ""Hi username! You've successfully authenticated..."
+
+Clone the repo:
+```bash
+git clone git@github.com:tobynguyen03/cRAG.git
+```
+
+### Install environment and dependencies:
 ```bash
 module load anaconda3
 conda env create -f environment.yaml
