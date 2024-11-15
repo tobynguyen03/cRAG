@@ -297,7 +297,7 @@ cython_debug/
 .idea/
 
 # Version files made by setuptools_scm
-**/version.py
+# **/version.py
 
 # Tests
 tests/*txt
