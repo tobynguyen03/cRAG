@@ -73,3 +73,5 @@ for question in questions_list:
             paper_directory="sciqag_papers_txt_only"
         ),
     )
+
+    print(answer.session.answer)
