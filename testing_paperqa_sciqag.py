@@ -2,6 +2,9 @@ from paperqa import Settings, ask
 from paperqa.settings import AgentSettings
 import os
 
+import litellm
+# litellm.set_verbose=True
+
 os.environ['OPENAI_API_KEY'] = "ollama"
 
 
@@ -17,28 +20,7 @@ local_llm_config = dict(
     ]
 )
 
-answer = ask(
-    "What is RAG?",
-    settings=Settings(
-        llm='ollama/llama3.2',
-        llm_config=local_llm_config,
-        
-        summary_llm='ollama/llama3.2',
-        summary_llm_config=local_llm_config,
-        
-        embedding='ollama/mxbai-embed-large',
-        
-        agent=AgentSettings(
-            agent_llm='ollama/llama3.2', 
-            agent_llm_config=local_llm_config
-        ),
-        use_doc_details=False,
-        paper_directory="sciqag_papers_txt_only"
-    ),
-)
-
-
-
+# questions from sciqag
 questions_list = [
     "How was the diabetic rat model established in this study?",
     "How selective is the SrCO3 sensor for detecting ethanol among other gases?",
@@ -75,3 +57,29 @@ for question in questions_list:
     )
 
     print(answer.session.answer)
+    
+    
+    
+q = "How does the SrCO3 material used in the study respond to ethanol vapor?"
+
+
+answer = ask(
+    q,
+    settings=Settings(
+        llm='ollama/llama3.2',
+        llm_config=local_llm_config,
+        
+        summary_llm='ollama/llama3.2',
+        summary_llm_config=local_llm_config,
+        
+        embedding='ollama/mxbai-embed-large',
+        
+        agent=AgentSettings(
+            agent_llm='ollama/llama3.2', 
+            agent_llm_config=local_llm_config
+        ),
+        use_doc_details=False,
+        paper_directory="sciqag_papers_txt_only_test"
+    ),
+)
+
