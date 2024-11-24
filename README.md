@@ -114,11 +114,16 @@ python testing_paperqa_ollama.py
 The SciQAG data is available for download at the [SciQAG GitHub repository](https://github.com/MasterAI-EAM/SciQAG/tree/master/data).
 
 There are three datasets: 
-`final_all_select1000.json` contains all 22,743 entries in the SciQAG data, including full paper texts and associated question-answer pairs. This dataset is generally referred to as "final."
-`Train_qas_179511.json` contains the training set, with only question-answer pairs. This dataset is referred to as "train."
-`Test_qas_8531.json` contains the test set, with only question-answer pairs. This dataset is referred to as "test."
+- `final_all_select1000.json` contains all 22,743 entries in the SciQAG data, including full paper texts and associated question-answer pairs. This dataset is generally referred to as "final."
+- `Train_qas_179511.json` contains the training set, with only question-answer pairs. This dataset is referred to as "train."
+- `Test_qas_8531.json` contains the test set, with only question-answer pairs. This dataset is referred to as "test."
 
 You can download these three datasets to your desired directory.
 
 ### Extracting SciQAG papers
-Extracting the papers present in the SciQAG data can be done with `sciqag_utils.py` and the `final_all_select1000.json` data file. Simply initialize the `SciQAGData` class with `/"final_all_select1000.json/"` as a parameter
+Extracting the papers present in the SciQAG data can be done with `sciqag_utils.py` and the `final_all_select1000.json` data file. Simply initialize the `SciQAGData` class with `"final_all_select1000.json"` as a parameter, call the `SciQAGData.load_data` class function, and then call the `SciQAGData.extract_papers_text_from_final` class function with the directory you want the papers to be placed in. The directory can be already existing.
+```python
+sciqag_data = SciQAGData("final_all_select1000.json")
+sciqag_data.load_data
+sciqag_data.extract_papers_text_from_final("DESIRED_DIRECTORY")
+```
