@@ -20,7 +20,7 @@ class EvaluatorSciQAG:
 
         Args:
             llm_config (dict): Configuration for the local LLM.
-            question_dataset_path (str): Path to the dataset containing questions.
+            question_dataset_path (str): Path to the SciQAG dataset being used.
             document_path (str): Path to the directory containing documents for PaperQA.
             dataset_setting (str): The dataset being passed-- "final" (full data), "train", or "test".
         """
