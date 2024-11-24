@@ -197,12 +197,12 @@ evaluator.generated_answers  ### list of dictionaries with question, ground trut
     {
         "question": "What is the capital of France?",
         "ground_truth": "Paris",
-        "system_answer": "Answer for: What is the capital of France?"
+        "system_answer": "Probably Paris"
     },
     {
         "question": "What is 2 + 2?",
         "ground_truth": "4",
-        "system_answer": "Answer for: What is 2 + 2?"
+        "system_answer": "It might be 4."
     }
 ]
 ```
