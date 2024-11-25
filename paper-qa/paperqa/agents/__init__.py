@@ -12,8 +12,12 @@ from paperqa.settings import Settings, get_settings
 from paperqa.utils import get_loop, pqa_directory, setup_default_logs
 from paperqa.version import __version__
 
+
+from .multiagent import MultiAgentAnswerSummarization
+
+
 from .main import agent_query, index_search
-from .models import AnswerResponse, QueryRequest
+from .models import AnswerResponse, QueryRequest, MultiAgentQueryRequest
 from .search import SearchIndex, get_directory_index
 
 logger = logging.getLogger(__name__)
@@ -99,12 +103,117 @@ def configure_cli_logging(verbosity: int | Settings = 0) -> None:
 def ask(query: str, settings: Settings) -> AnswerResponse:
     """Query PaperQA via an agent."""
     configure_cli_logging(settings)
-    return get_loop().run_until_complete(
+
+    
+    answer_response = get_loop().run_until_complete(
         agent_query(
             QueryRequest(query=query, settings=settings),
             agent_type=settings.agent.agent_type,
         )
     )
+
+    return answer_response
+
+
+
+
+
+
+
+
+
+# TODO: add in multi-agent ask function
+def ask_multiagent(query: str, settings: Settings) -> AnswerResponse:
+    """Query multi-agent system with each agent running PaperQA"""
+    
+    
+    # TODO: add in settings for RAG Agent Communicator class 
+    # shuold have all relevant settings like prompts to generat communications, consensus mechanism, etc.
+    
+    configure_cli_logging(settings)
+
+
+
+    other_agents_summarization = []
+    
+    other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=1, answer='this is agent1 answer', reason='agent1 answer reason' ))
+    other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=2, answer='this is agent2 answer', reason='agent2 answer reason' ))
+
+    answer_response = get_loop().run_until_complete(        
+        agent_query(
+            
+            MultiAgentQueryRequest(
+                query=query, 
+                settings=settings, 
+                
+                other_agents_summarization=other_agents_summarization,
+               
+            ),
+            
+            
+            
+            agent_type=settings.agent.agent_type,
+        )
+    )
+
+
+
+
+
+
+
+
+    return answer_response
+
+    
+    
+    
+    # TODO: what is this? 
+    # configure_cli_logging(settings)
+    
+    
+    
+    # get the response of one agent 
+    # TODO: how do we ensure these are different agents?
+    # answer_response = get_loop().run_until_complete(
+    #     agent_query(
+    #         QueryRequest(query=query, settings=settings),
+    #         agent_type=settings.agent.agent_type,
+    #     )
+    # )
+
+
+
+
+    # TODO: get responses from multiple agents (call agent query one by one with appropriate info filled in)
+    # need to add in information of RAG Summary 
+    # for initial round, have prompt saying what will happen and specify that its initial round 
+    
+    
+    #
+    
+    
+    
+    
+    
+    # here we need to add in the RAG Agent Communicator to share information betweeen agwent
+    # need to design the RAG Agent Communicator to based on what other agents are answering/retrieving, they will update their answer/retrieval
+    # as appropriate 
+    # this should be some other class that is able to produce the summarization state for eac agent, and send to other agents for reasking 
+    # we should control the number of communication steps 
+    # does this need 
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 def search_query(

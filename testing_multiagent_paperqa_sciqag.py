@@ -1,4 +1,6 @@
-from paperqa import Settings, ask
+from paperqa import Settings, ask, ask_multiagent
+
+
 from paperqa.settings import AgentSettings
 import os
 
@@ -20,7 +22,7 @@ local_llm_config = dict(
 
 q = "How does the SrCO3 material used in the study respond to ethanol vapor?"
 
-answer = ask(
+answer = ask_multiagent(
     q,
     settings=Settings(
         llm='ollama/llama3.2',

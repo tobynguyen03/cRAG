@@ -23,6 +23,9 @@ from paperqa.settings import Settings
 from paperqa.types import PQASession
 from paperqa.version import __version__
 
+from paperqa.agents.multiagent import MultiAgentAnswerSummarization
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -82,6 +85,49 @@ class QueryRequest(BaseModel):
     def set_docs_name(self, docs_name: str) -> None:
         """Set the internal docs name for tracking."""
         self._docs_name = docs_name
+
+
+
+class MultiAgentQueryRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = ""
+    id: UUID = Field(
+        default_factory=uuid4,
+        description="Identifier which will be propagated to the Answer object.",
+    )
+    settings_template: str | None = None
+    settings: Settings = Field(default_factory=Settings, validate_default=True)
+    # provides post-hoc linkage of request to a docs object
+    # NOTE: this isn't a unique field, on the user to keep straight
+    _docs_name: str | None = PrivateAttr(default=None)
+
+    multiagent: bool = True
+
+    
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
+        
+    other_agents_summarization: list[MultiAgentAnswerSummarization]
+
+    @field_validator("settings")
+    @classmethod
+    def apply_settings_template(cls, v: Settings, info: ValidationInfo) -> Settings:
+        if info.data["settings_template"] and isinstance(v, Settings):
+            base_settings = Settings.from_name(info.data["settings_template"])
+            return Settings(**(base_settings.model_dump() | v.model_dump()))
+        return v
+
+    @computed_field  # type: ignore[prop-decorator]
+    @property
+    def docs_name(self) -> str | None:
+        return self._docs_name
+
+    def set_docs_name(self, docs_name: str) -> None:
+        """Set the internal docs name for tracking."""
+        self._docs_name = docs_name
+
 
 
 class AnswerResponse(BaseModel):

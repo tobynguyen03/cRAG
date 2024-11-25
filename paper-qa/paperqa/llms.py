@@ -271,6 +271,8 @@ class Chunk(BaseModel):
         return self.text
 
 
+
+# TODO: want to use this class to get LLM Model for the RAG Agent Communicator
 class LLMModel(ABC, BaseModel):
     model_config = ConfigDict(extra="forbid", arbitrary_types_allowed=True)
 
@@ -333,10 +335,20 @@ class LLMModel(ABC, BaseModel):
     ) -> LLMResult:
         if self.llm_type is None:
             self.llm_type = self.infer_llm_type()
+        
+        
+        
+        
+        # NOTE: this is what is sent to the LLM; these are used across all tools; need to only modify if gather evidence prompt?
         if self.llm_type == "chat":
             return await self._run_chat(
                 prompt, data, callbacks, name, skip_system, system_prompt
             )
+        
+        
+        
+        
+        
         if self.llm_type == "completion":
             return await self._run_completion(
                 prompt, data, callbacks, name, skip_system, system_prompt
@@ -365,6 +377,9 @@ class LLMModel(ABC, BaseModel):
         Returns:
             Result of the chat.
         """
+        
+        
+        
         system_message_prompt = {"role": "system", "content": system_prompt}
         human_message_prompt = {"role": "user", "content": prompt}
         messages = [
@@ -375,6 +390,10 @@ class LLMModel(ABC, BaseModel):
                 else [system_message_prompt, human_message_prompt]
             )
         ]
+        
+        
+        # NOTE: here the LLM gets called 
+        
         result = LLMResult(
             model=self.name,
             name=name,
@@ -384,6 +403,9 @@ class LLMModel(ABC, BaseModel):
                 + sum(self.count_tokens(m["role"]) for m in messages)
             ),
         )
+
+
+
 
         start_clock = asyncio.get_running_loop().time()
         if callbacks is None:
