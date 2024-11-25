@@ -1,6 +1,6 @@
 import logging
 from copy import deepcopy
-from typing import Any, ClassVar, Self, cast
+from typing import Any, ClassVar, Self, cast, Union
 
 from aviary.core import (
     Environment,
@@ -18,10 +18,14 @@ from paperqa.settings import Settings
 from paperqa.types import PQASession
 from paperqa.utils import get_year
 
-from .models import QueryRequest
+from .models import QueryRequest, MultiAgentQueryRequest
 from .tools import (
     AVAILABLE_TOOL_NAME_TO_CLASS,
+    
+    
     EnvironmentState,
+    # MultiAgentEnvironmentState, 
+    
     GatherEvidence,
     GenerateAnswer,
     PaperSearch,
@@ -85,6 +89,13 @@ def settings_to_tools(
             )
         else:
             raise NotImplementedError(f"Didn't handle tool type {tool_type}.")
+        
+        
+        
+        
+        
+        
+        
         if tool.info.name == GenerateAnswer.gen_answer.__name__:
             tools.append(tool)
             has_answer_tool = True
@@ -102,7 +113,7 @@ class PaperQAEnvironment(Environment[EnvironmentState]):
 
     def __init__(
         self,
-        query: QueryRequest,
+        query: Union[QueryRequest, MultiAgentQueryRequest],
         docs: Docs,
         llm_model: LiteLLMModel | None = POPULATE_FROM_SETTINGS,
         summary_llm_model: LiteLLMModel | None = POPULATE_FROM_SETTINGS,
@@ -112,11 +123,22 @@ class PaperQAEnvironment(Environment[EnvironmentState]):
         super().__init__(**env_kwargs)
         # Hold onto QueryRequest to create fresh tools and answer during each reset
         self._query = query
+        
+        # TODO: 
+        # if QueryRequest has info from other agents, set stuff here as appropriate so that when 
+        # EnvironmentState is made it pulls it 
+        if hasattr(query, 'multiagent'):
+            self._multiagent = True
+            self.other_agents_summarization = query.other_agents_summarization # TODO: add in summarizations from other agents
+        
+        
+        
         # Hold onto Docs to clear and reuse in state during each reset
         self._docs = docs
         self._llm_model = llm_model
         self._summary_llm_model = summary_llm_model
         self._embedding_model = embedding_model
+
 
     def make_tools(self) -> list[Tool]:
         return settings_to_tools(
@@ -126,15 +148,38 @@ class PaperQAEnvironment(Environment[EnvironmentState]):
             embedding_model=self._embedding_model,
         )
 
+
+
     def make_initial_state(self) -> EnvironmentState:
-        return EnvironmentState(
-            docs=self._docs,
-            answer=PQASession(
-                question=self._query.query,
-                config_md5=self._query.settings.md5,
-                id=self._query.id,
-            ),
-        )
+
+        # TODO: if multi-agent add to environment state the summarizations of other agents
+        
+        if not self._multiagent:
+            return EnvironmentState(
+                docs=self._docs,
+                answer=PQASession(
+                    question=self._query.query,
+                    config_md5=self._query.settings.md5,
+                    id=self._query.id,
+                ),
+            )
+            
+        else: 
+            return EnvironmentState(
+                docs=self._docs,
+                multiagent=True,
+                other_agents_summarization=self.other_agents_summarization,
+                answer=PQASession(
+                    question=self._query.query,
+                    config_md5=self._query.settings.md5,
+                    id=self._query.id,
+                
+
+                
+                ),
+            )
+
+
 
     async def reset(self) -> tuple[list[Message], list[Tool]]:
         # NOTE: don't build the index here, as sometimes we asyncio.gather over this

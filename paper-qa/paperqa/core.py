@@ -68,6 +68,11 @@ async def map_fxn_summary(
     success = False
 
     if prompt_runner:
+        
+        
+        
+        
+        # TODO: the output of the llm; result_data: {'summary': 'The SrCO3 sensor exhibits rapid response to ethanol vapor, wide linear response, high...non-consumption is also a notable feature.', 'relevance_score': 9}
         llm_result = await prompt_runner(
             {"question": question, "citation": citation, "text": text.text}
             | (extra_prompt_data or {}),
@@ -97,6 +102,7 @@ async def map_fxn_summary(
         # and 5/10 is the other default I could come up with
         score = 5
         success = True
+    
     # remove citations that collide with our grounded citations (for the answer LLM)
     context = strip_citations(context)
     if not success:

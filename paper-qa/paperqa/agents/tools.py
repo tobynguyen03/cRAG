@@ -17,6 +17,9 @@ from paperqa.types import DocDetails, PQASession
 
 from .search import get_directory_index
 
+from paperqa.agents.multiagent import MultiAgentAnswerSummarization
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -30,8 +33,9 @@ def make_status(
     )
 
 
+
 class EnvironmentState(BaseModel):
-    """State here contains documents and answer being populated."""
+    """ State here contains documents and answer being populated."""
 
     model_config = ConfigDict(extra="forbid")
 
@@ -45,7 +49,20 @@ class EnvironmentState(BaseModel):
             " the order of tool calls at each step."
         ),
     )
-
+    
+    
+    
+    multiagent: bool = False
+    # TODO: add in other agent answers
+    other_agents_summarization: list[MultiAgentAnswerSummarization] = []
+    
+    model_config = {
+        "arbitrary_types_allowed": True
+    }
+    
+    
+    
+    
     # SEE: https://regex101.com/r/RmuVdC/1
     STATUS_SEARCH_REGEX_PATTERN: ClassVar[str] = (
         r"Status: Paper Count=(\d+) \| Relevant Papers=(\d+) \| Current Evidence=(\d+)"
@@ -77,6 +94,62 @@ class EnvironmentState(BaseModel):
     def record_action(self, action: ToolRequestMessage) -> None:
         self.session.add_tokens(action)
         self.tool_history.append([tc.function.name for tc in action.tool_calls])
+
+
+
+
+
+
+# class MultiAgentEnvironmentState(BaseModel):
+#     """State here contains documents and answer being populated."""
+
+#     model_config = ConfigDict(extra="forbid")
+
+#     docs: Docs
+#     session: PQASession = Field(..., alias="answer")
+#     tool_history: list[list[str]] = Field(
+#         default_factory=list,
+#         description=(
+#             "History of tool names input to each Environment.step (regardless of being"
+#             " a typo or not), where the outer list is steps, and the inner list matches"
+#             " the order of tool calls at each step."
+#         ),
+#     )
+    
+#     # SEE: https://regex101.com/r/RmuVdC/1
+#     STATUS_SEARCH_REGEX_PATTERN: ClassVar[str] = (
+#         r"Status: Paper Count=(\d+) \| Relevant Papers=(\d+) \| Current Evidence=(\d+)"
+#     )
+#     RELEVANT_SCORE_CUTOFF: ClassVar[int] = 5
+
+#     @computed_field  # type: ignore[prop-decorator]
+#     @property
+#     def status(self) -> str:
+#         return make_status(
+#             total_paper_count=len(self.docs.docs),
+#             relevant_paper_count=len(
+#                 {
+#                     c.text.doc.dockey
+#                     for c in self.session.contexts
+#                     if c.score > self.RELEVANT_SCORE_CUTOFF
+#                 }
+#             ),
+#             evidence_count=len(
+#                 [
+#                     c
+#                     for c in self.session.contexts
+#                     if c.score > self.RELEVANT_SCORE_CUTOFF
+#                 ]
+#             ),
+#             cost=self.session.cost,
+#         )
+
+#     def record_action(self, action: ToolRequestMessage) -> None:
+#         self.session.add_tokens(action)
+#         self.tool_history.append([tc.function.name for tc in action.tool_calls])
+
+
+
 
 
 class NamedTool(BaseModel):
@@ -203,7 +276,11 @@ class GatherEvidence(NamedTool):
         """
         if not state.docs.docs:
             raise EmptyDocsError("Not gathering evidence due to having no papers.")
-
+        else: 
+            print("got papers")
+            
+            
+            
         if f"{self.TOOL_FN_NAME}_initialized" in self.settings.agent.callbacks:
             await asyncio.gather(
                 *(
@@ -300,18 +377,46 @@ class GenerateAnswer(NamedTool):
                 )
             )
 
-        # TODO: Should we allow the agent to change the question?
-        # self.answer.question = query
-        state.session = await state.docs.aquery(
-            query=state.session,
-            settings=self.settings,
-            llm_model=self.llm_model,
-            summary_llm_model=self.summary_llm_model,
-            embedding_model=self.embedding_model,
-            callbacks=self.settings.agent.callbacks.get(
-                f"{self.TOOL_FN_NAME}_aget_query"
-            ),
-        )
+        
+        if not state.multiagent:
+        
+            # TODO: modify state session here to get info from other agents from EnvironmentState
+            state.session = await state.docs.aquery(
+                query=state.session,
+                settings=self.settings,
+                llm_model=self.llm_model,
+                summary_llm_model=self.summary_llm_model,
+                embedding_model=self.embedding_model,
+                callbacks=self.settings.agent.callbacks.get(
+                    f"{self.TOOL_FN_NAME}_aget_query"
+                ),
+            )
+
+        else: 
+            
+            state.session = await state.docs.multiagent_aquery(
+                query=state.session,
+                settings=self.settings,
+                llm_model=self.llm_model,
+                summary_llm_model=self.summary_llm_model,
+                embedding_model=self.embedding_model,
+                
+                other_agents_summarization=state.other_agents_summarization,
+                
+                callbacks=self.settings.agent.callbacks.get(
+                    f"{self.TOOL_FN_NAME}_aget_query"
+                ),
+            )
+
+
+
+
+
+
+
+
+
+
 
         if state.session.could_not_answer:
             if self.settings.agent.wipe_context_on_answer_failure:
@@ -334,6 +439,11 @@ class GenerateAnswer(NamedTool):
             )
 
         return f"{answer} | {status}"
+
+
+
+
+
 
     # NOTE: can match failure to answer or an actual answer
     ANSWER_SPLIT_REGEX_PATTERN: ClassVar[str] = (

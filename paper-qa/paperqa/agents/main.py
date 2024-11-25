@@ -51,14 +51,21 @@ agent_logger = logging.getLogger(__name__ + ".agent_callers")
 DEFAULT_AGENT_TYPE = AgentSettings.model_fields["agent_type"].default
 
 
+
+
+
+
 async def agent_query(
     query: str | QueryRequest,
     docs: Docs | None = None,
     agent_type: str | type = DEFAULT_AGENT_TYPE,
     **runner_kwargs,
 ) -> AnswerResponse:
+    
+    # TODO: handle if dict with question and other agent answers 
     if isinstance(query, str):
         query = QueryRequest(query=query)
+    
     if docs is None:
         docs = Docs()
 
@@ -68,11 +75,19 @@ async def agent_query(
         index_directory=query.settings.agent.index.index_directory,
         storage=SearchDocumentStorage.JSON_MODEL_DUMP,
     )
-
+    
+    
+    # this here runs a single agent. how do we instantiate multiple?
     response = await run_agent(docs, query, agent_type, **runner_kwargs)
+    
+    
+    
+    # TODO: need to add in new agent loggers? what info do we need to pass into here
+    
     agent_logger.debug(f"agent_response: {response}")
-
     agent_logger.info(f"[bold blue]Answer: {response.session.answer}[/bold blue]")
+
+
 
     await answers_index.add_document(
         {
@@ -86,7 +101,84 @@ async def agent_query(
     return response
 
 
+
+
+
+
+
+
+async def multiagent_query(
+    query: str | QueryRequest,
+    docs: Docs | None = None,
+    agent_type: str | type = DEFAULT_AGENT_TYPE,
+    **runner_kwargs,
+) -> AnswerResponse:
+    """  
+    Querying used in multi-agent system 
+    
+    TODO: 
+    - need to take info from other agents 
+    - need to add prompts to instruct agents to take others responses into consideration 
+    
+    
+    # query: str | QueryRequest, need to have a new class with prompts for taking into account the answers of other agents?
+    
+    """
+    
+
+    # TODO: handle if dict with question and other agent answers 
+    if isinstance(query, str):
+        query = QueryRequest(query=query)
+    
+    
+    
+    if docs is None:
+        docs = Docs()
+
+    answers_index = SearchIndex(
+        fields=[*SearchIndex.REQUIRED_FIELDS, "question"],
+        index_name="answers",
+        index_directory=query.settings.agent.index.index_directory,
+        storage=SearchDocumentStorage.JSON_MODEL_DUMP,
+    )
+    
+    
+    # this here runs a single agent. how do we instantiate multiple?
+    response = await run_agent(docs, query, agent_type, **runner_kwargs)
+    
+    
+    
+    # TODO: need to add in new agent loggers? what info do we need to pass into here
+    
+    agent_logger.debug(f"agent_response: {response}")
+    agent_logger.info(f"[bold blue]Answer: {response.session.answer}[/bold blue]")
+
+
+
+    await answers_index.add_document(
+        {
+            "file_location": str(response.session.id),
+            "body": response.session.answer,
+            "question": response.session.question,
+        },
+        document=response,
+    )
+    await answers_index.save_index()
+    
+    return response
+
+
+
+
+
+
+
+
 FAKE_AGENT_TYPE = "fake"  # No agent, just invoke tools in deterministic order
+
+
+
+
 
 
 async def run_agent(
@@ -121,16 +213,30 @@ async def run_agent(
     await get_directory_index(settings=query.settings)
     if isinstance(agent_type, str) and agent_type.lower() == FAKE_AGENT_TYPE:
         session, agent_status = await run_fake_agent(query, docs, **runner_kwargs)
+    
+
+    
+    
+    
+    
+    # runs here; session contains the information about the query answer etc.
     elif tool_selector_or_none := query.settings.make_aviary_tool_selector(agent_type):
         session, agent_status = await run_aviary_agent(
             query, docs, tool_selector_or_none, **runner_kwargs
         )
+    
+    
+    
+    
+    
     elif ldp_agent_or_none := await query.settings.make_ldp_agent(agent_type):
         session, agent_status = await run_ldp_agent(
             query, docs, ldp_agent_or_none, **runner_kwargs
         )
+    
     else:
         raise NotImplementedError(f"Didn't yet handle agent type {agent_type}.")
+
 
     if session.could_not_answer and agent_status != AgentStatus.TRUNCATED:
         agent_status = AgentStatus.UNSURE
@@ -139,7 +245,25 @@ async def run_agent(
         f"Finished agent {agent_type!r} run with question {query.query!r} and status"
         f" {agent_status}."
     )
+    
+    
+    
+    
+    
+    # the response of a single agent
     return AnswerResponse(session=session, status=agent_status)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 async def _run_with_timeout_failure(
@@ -236,7 +360,16 @@ async def run_aviary_agent(
 ) -> tuple[PQASession, AgentStatus]:
     env = env_class(query, docs, **env_kwargs)
 
+
+
+
+
     async def rollout() -> AgentStatus:
+        
+        
+        
+        #NOTE:  obs: [Message(role='user', content='Use the tools to answer the question: How does the SrCO...urrent Evidence=0 | Current Cost=$0.0000')]
+        # tools: 
         obs, tools = await env.reset()
         if on_env_reset_callback:
             await on_env_reset_callback(env.state)

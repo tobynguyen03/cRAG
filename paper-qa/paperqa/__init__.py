@@ -6,7 +6,7 @@ warnings.filterwarnings(
 )
 
 
-from paperqa.agents import ask  # noqa: E402
+from paperqa.agents import ask, ask_multiagent  # noqa: E402
 from paperqa.agents.main import agent_query  # noqa: E402
 from paperqa.agents.models import QueryRequest  # noqa: E402
 from paperqa.docs import Docs, PQASession, print_callback  # noqa: E402
@@ -48,6 +48,10 @@ __all__ = [
     "__version__",
     "agent_query",
     "ask",
+    
+    "ask_multiagent"
+    
+    
     "embedding_model_factory",
     "get_settings",
     "print_callback",

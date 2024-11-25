@@ -30,6 +30,9 @@ from paperqa.llms import (
     PromptRunner,
     VectorStore,
 )
+
+from paperqa.agents.multiagent import MultiAgentAnswerSummarization
+
 from paperqa.paths import PAPERQA_DIR
 from paperqa.readers import read_doc
 from paperqa.settings import MaybeSettings, get_settings
@@ -51,6 +54,10 @@ from paperqa.utils import (
     md5sum,
     name_in_text,
 )
+
+from paperqa.agents.multiagent import format_agent_summaries
+
+
 
 logger = logging.getLogger(__name__)
 
@@ -798,3 +805,187 @@ class Docs(BaseModel):
         session.context = context_str
 
         return session
+
+
+    async def multiagent_aquery(  # noqa: PLR0912
+        self,
+        query: PQASession | str,
+        settings: MaybeSettings = None,
+        callbacks: list[Callable] | None = None,
+        llm_model: LLMModel | None = None,
+        summary_llm_model: LLMModel | None = None,
+        embedding_model: EmbeddingModel | None = None,
+        other_agents_summarization: list[MultiAgentAnswerSummarization] = None, # TODO: list of MultiAgentAnswerSummarization
+        
+        
+        
+    ) -> PQASession:
+
+        query_settings = get_settings(settings)
+        answer_config = query_settings.answer
+        prompt_config = query_settings.prompts
+
+        
+
+
+
+
+
+        if llm_model is None:
+            llm_model = query_settings.get_llm()
+        if summary_llm_model is None:
+            summary_llm_model = query_settings.get_summary_llm()
+        if embedding_model is None:
+            embedding_model = query_settings.get_embedding_model()
+
+        session = (
+            PQASession(question=query, config_md5=query_settings.md5)
+            if isinstance(query, str)
+            else query
+        )
+
+        contexts = session.contexts
+        if answer_config.get_evidence_if_no_contexts and not contexts:
+            session = await self.aget_evidence(
+                session,
+                callbacks=callbacks,
+                settings=settings,
+                embedding_model=embedding_model,
+                summary_llm_model=summary_llm_model,
+            )
+            contexts = session.contexts
+        pre_str = None
+        if prompt_config.pre is not None:
+            with set_llm_session_ids(session.id):
+                pre = await llm_model.run_prompt(
+                    prompt=prompt_config.pre,
+                    data={"question": session.question},
+                    callbacks=callbacks,
+                    name="pre",
+                    system_prompt=prompt_config.system,
+                )
+            session.add_tokens(pre)
+            pre_str = pre.text
+
+        # sort by first score, then name
+        filtered_contexts = sorted(
+            contexts,
+            key=lambda x: (-x.score, x.text.name),
+        )[: answer_config.answer_max_sources]
+        # remove any contexts with a score of 0
+        filtered_contexts = [c for c in filtered_contexts if c.score > 0]
+
+        # shim deprecated flag
+        # TODO: remove in v6
+        context_inner_prompt = prompt_config.context_inner
+        if (
+            not answer_config.evidence_detailed_citations
+            and "\nFrom {citation}" in context_inner_prompt
+        ):
+            context_inner_prompt = context_inner_prompt.replace("\nFrom {citation}", "")
+
+        inner_context_strs = [
+            context_inner_prompt.format(
+                name=c.text.name,
+                text=c.context,
+                citation=c.text.doc.formatted_citation,
+                **(c.model_extra or {}),
+            )
+            for c in filtered_contexts
+        ]
+        if pre_str:
+            inner_context_strs += (
+                [f"Extra background information: {pre_str}"] if pre_str else []
+            )
+
+        context_str = prompt_config.context_outer.format(
+            context_str="\n\n".join(inner_context_strs),
+            valid_keys=", ".join([c.text.name for c in filtered_contexts]),
+        )
+
+        bib = {}
+        if len(context_str) < 10:  # noqa: PLR2004
+            answer_text = (
+                "I cannot answer this question due to insufficient information."
+            )
+        else:
+            
+            
+            with set_llm_session_ids(session.id):
+                answer_result = await llm_model.run_prompt(
+                    prompt=prompt_config.multiagent_qa,
+                    data={
+                        "context": context_str,
+                        "answer_length": answer_config.answer_length,
+                        "question": session.question,
+                        "example_citation": prompt_config.EXAMPLE_CITATION,
+                        "other_agents_summaries": format_agent_summaries(other_agents_summarization)
+                        
+                    },
+                    
+                    callbacks=callbacks,
+                    name="answer",
+                    system_prompt=prompt_config.system,
+                )
+            
+            answer_text = answer_result.text
+            session.add_tokens(answer_result)
+        # it still happens
+        if prompt_config.EXAMPLE_CITATION in answer_text:
+            answer_text = answer_text.replace(prompt_config.EXAMPLE_CITATION, "")
+        for c in filtered_contexts:
+            name = c.text.name
+            citation = c.text.doc.formatted_citation
+            # do check for whole key (so we don't catch Callahan2019a with Callahan2019)
+            if name_in_text(name, answer_text):
+                bib[name] = citation
+        bib_str = "\n\n".join(
+            [f"{i+1}. ({k}): {c}" for i, (k, c) in enumerate(bib.items())]
+        )
+
+        if answer_config.answer_filter_extra_background:
+            answer_text = re.sub(
+                r"\([Ee]xtra [Bb]ackground [Ii]nformation\)",
+                "",
+                answer_text,
+            )
+
+        formatted_answer = f"Question: {session.question}\n\n{answer_text}\n"
+        if bib:
+            formatted_answer += f"\nReferences\n\n{bib_str}\n"
+
+        if prompt_config.post is not None:
+            with set_llm_session_ids(session.id):
+                post = await llm_model.run_prompt(
+                    prompt=prompt_config.post,
+                    data=session.model_dump(),
+                    callbacks=callbacks,
+                    name="post",
+                    system_prompt=prompt_config.system,
+                )
+            answer_text = post.text
+            session.add_tokens(post)
+            formatted_answer = f"Question: {session.question}\n\n{post}\n"
+            if bib:
+                formatted_answer += f"\nReferences\n\n{bib_str}\n"
+
+        # now at end we modify, so we could have retried earlier
+        session.answer = answer_text
+        session.formatted_answer = formatted_answer
+        session.references = bib_str
+        session.contexts = contexts
+        session.context = context_str
+
+        return session
+
+
+
+
+
+
+
+
+
+
+
+

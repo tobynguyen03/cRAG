@@ -77,6 +77,12 @@ Provide a summary of the relevant information that could help answer the questio
 where `summary` is relevant information from text - {summary_length} words and `relevance_score` is the relevance of `summary` to answer question (out of 10).
 """  # noqa: E501
 
+
+
+
+
+
+
 # Prompt templates for use with LitQA
 QA_PROMPT_TEMPLATE = "Q: {question}\n\nOptions:\n{options}"
 EVAL_PROMPT_TEMPLATE = (
@@ -88,3 +94,29 @@ EVAL_PROMPT_TEMPLATE = (
 
 CONTEXT_OUTER_PROMPT = "{context_str}\n\nValid Keys: {valid_keys}"
 CONTEXT_INNER_PROMPT = "{name}: {text}\nFrom {citation}"
+
+
+
+
+
+# prompt templates for use with multiagent
+multiagent_qa_prompt = (
+    "Answer the question below using the provided context and additional summarizations from other agents.\n\n"
+    "Context (with relevance scores):\n\n{context}\n\n"
+    "----\n\n"
+    "Summarizations from other agents:\n\n"
+    "{other_agents_summaries}\n\n"
+    "Each summarization includes an agent's answer and reasoning. Use these summarizations to:"
+    " (1) Identify points of agreement or disagreement,"
+    " (2) Incorporate complementary insights from other agents' reasoning where relevant,"
+    " (3) Resolve conflicts by relying on evidence and context to generate a coherent, accurate, and consensus-driven answer.\n\n"
+    "----\n\n"
+    "Question: {question}\n\n"
+    "Write an answer based on the context and other agents' summarizations. "
+    "If the context or summarizations provide insufficient information, reply \"I cannot answer.\" "
+    "For each part of your answer, indicate which sources most support it via citation keys at the end of sentences, like {example_citation}. "
+    "Only cite from the context below and only use the valid keys. Write in the style of a Wikipedia article, with concise sentences and coherent paragraphs. "
+    "The context comes from a variety of sources and is only a summary, so there may be inaccuracies or ambiguities. "
+    "If quotes are present and relevant, use them in the answer. This answer will go directly onto Wikipedia, so do not add any extraneous information.\n\n"
+    "Answer ({answer_length}):"
+)

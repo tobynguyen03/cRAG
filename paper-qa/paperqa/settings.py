@@ -47,6 +47,7 @@ from paperqa.prompts import (
     citation_prompt,
     default_system_prompt,
     qa_prompt,
+    multiagent_qa_prompt, 
     select_paper_prompt,
     structured_citation_prompt,
     summary_json_prompt,
@@ -90,9 +91,19 @@ class AnswerSettings(BaseModel):
             " generate an answer before declaring a failure."
         ),
     )
+
+
+
+    # answer_length: str = Field(
+    #     "about 200 words, but can be longer", description="Length of final answer"
+    # )
+
     answer_length: str = Field(
-        "about 200 words, but can be longer", description="Length of final answer"
+        "about 200 words", description="Length of final answer"
     )
+
+
+    
     max_concurrent_requests: int = Field(
         default=4, description="Max concurrent requests to LLMs"
     )
@@ -276,6 +287,14 @@ class PromptSettings(BaseModel):
             "This should at least contain key and name."
         ),
     )
+
+
+
+    # multiagent qa prompts
+    multiagent_qa: str = multiagent_qa_prompt
+    
+
+
 
     @field_validator("summary")
     @classmethod
