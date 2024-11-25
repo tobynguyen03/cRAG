@@ -236,3 +236,24 @@ bert-score -r example/refs.txt -c example/hyps.txt --lang en --rescale_with_base
 
 roberta-large_L17_no-idf_version=0.3.0(hug_trans=2.3.0)-rescaled P: 0.747044 R: 0.770484 F1: 0.759045
 ```
+
+## Testing on LitQA2
+
+### Getting Papers
+Create a (Zotero)[https://www.zotero.org/] account and download the client. Open the client up then click File -> Add by Identifier. Then, copy the list of DOIs from `paper_urls.txt` and paste it into the box. 
+This process will take several minutes, but Zotero will begin adding papers into your personal library. Make sure to turn on syncing as otherwise the files will be unable to be retrieved.
+Unfortunately, Zotero doesn't provide an API to add papers through DOI: https://forums.zotero.org/discussion/70995/perform-add-item-by-identifier-action-through-api
+
+### Downloading Papers
+Create a .env file in your local repo and create two new environment variables, `ZOTERO_USER_ID` and `ZOTERO_API_KEY`. You can get your user ID and private API key (here)[https://www.zotero.org/settings/security]
+
+```bash
+ZOTERO_USER_ID=<USER_ID>
+ZOTERO_API_KEY=<API_KEY>
+```
+
+Afterwards, run the `litqa2_utils.py` file. This will download paper PDFs to your `my_papers` directory. Some papers will not have PDFs that were able to be retrived with the Zotero API. 
+These will be printed to the terminal along with their DOIs. You will need to manually access and download these PDFs to the `my_papers` directory.
+
+### Evaluating on LitQA2
+IP

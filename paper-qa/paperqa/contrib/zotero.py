@@ -246,11 +246,13 @@ class ZoteroDB(zotero.Zotero):
             for item, pdf in zip(_items, _pdfs, strict=True):
                 no_pdf = item is None or pdf is None
                 is_duplicate = pdf in pdfs
+                title = item["data"].get("title", "")
+                doi = item["data"].get("DOI", "")
 
                 if no_pdf or is_duplicate:
+                    print(f"DOI ({doi}) does not have a PDF to download")
                     continue
                 pdf = cast(Path, pdf)
-                title = item["data"].get("title", "")
                 if len(items) >= start:
                     yield ZoteroPaper(
                         key=_get_citation_key(item),

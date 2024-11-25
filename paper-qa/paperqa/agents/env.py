@@ -154,7 +154,7 @@ class PaperQAEnvironment(Environment[EnvironmentState]):
 
         # TODO: if multi-agent add to environment state the summarizations of other agents
         
-        if not self._multiagent:
+        if not hasattr(self, "_multiagent"):
             return EnvironmentState(
                 docs=self._docs,
                 answer=PQASession(
