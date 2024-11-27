@@ -21,7 +21,7 @@ local_llm_config = dict(
 q = "How does the SrCO3 material used in the study respond to ethanol vapor?"
 
 answer = ask(
-    q,
+    q + " Provide your response strictly as a JSON object with 'summary' and 'relevance_score'.",
     settings=Settings(
         llm='ollama/llama3.2',
         llm_config=local_llm_config,
