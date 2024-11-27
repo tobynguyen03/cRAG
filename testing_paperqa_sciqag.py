@@ -37,7 +37,7 @@ questions_list = [
 
 for question in questions_list:
     answer = ask(
-        question,
+        question + " Provide your response strictly as a JSON object with 'summary' and 'relevance_score'.",
         settings=Settings(
             llm='ollama/llama3.2',
             llm_config=local_llm_config,
@@ -52,7 +52,7 @@ for question in questions_list:
                 agent_llm_config=local_llm_config
             ),
             use_doc_details=False,
-            paper_directory="sciqag_papers_txt_only"
+            paper_directory="sciqag_papers_txt_only",
         ),
     )
 
