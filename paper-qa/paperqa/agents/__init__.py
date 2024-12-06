@@ -3,6 +3,10 @@ from __future__ import annotations
 import argparse
 import logging
 import os
+import re 
+import time
+from typing import List
+import asyncio
 from typing import Any
 
 from pydantic_settings import CliSettingsSource
@@ -119,11 +123,7 @@ def ask(query: str, settings: Settings) -> AnswerResponse:
 
 
 
-
-
-
-# TODO: add in multi-agent ask function
-def ask_multiagent(query: str, settings: Settings) -> AnswerResponse:
+def ask_multiagent_working_test(query: str, settings: Settings) -> AnswerResponse:
     """Query multi-agent system with each agent running PaperQA"""
     
     
@@ -138,7 +138,10 @@ def ask_multiagent(query: str, settings: Settings) -> AnswerResponse:
     
     other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=1, answer='this is agent1 answer', reason='agent1 answer reason' ))
     other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=2, answer='this is agent2 answer', reason='agent2 answer reason' ))
-
+    
+    
+    time_to_answer_start = time.time()
+    
     answer_response = get_loop().run_until_complete(        
         agent_query(
             
@@ -149,63 +152,157 @@ def ask_multiagent(query: str, settings: Settings) -> AnswerResponse:
                 other_agents_summarization=other_agents_summarization,
                
             ),
-            
-            
-            
+                    
             agent_type=settings.agent.agent_type,
         )
     )
 
+    answer_time = time.time() - time_to_answer_start
+    print(f"answer time: {answer_time}")
+    print(f"\n \n LEN contextx: {len(answer_response.session.contexts)}")
+    
+    answer = answer_response.session.answer
+    
+    
+    answer_summary_match = re.search(r"ANSWER SUMMARY:\s+(.*?)\s+REASONING SUMMARY:", answer, re.DOTALL)
+    reasoning_summary_match = re.search(r"REASONING SUMMARY:\s+(.*)", answer, re.DOTALL)
+
+    answer_summary = answer_summary_match.group(1).strip() if answer_summary_match else None
+    reasoning_summary = reasoning_summary_match.group(1).strip() if reasoning_summary_match else None
 
 
-
-
-
-
-
+    print("ANSWER SUMMARY:\n", answer_summary)
+    print("\nREASONING SUMMARY:\n", reasoning_summary)
+    
+    
+    
+    
+    
+    
+    
     return answer_response
 
     
+
+
+
+class Agent:
+    def __init__(self, agent_index: int, initial_answer: str = "No answer yet", initial_reason: str = "No reasoning yet"):
+        self.agent_index = agent_index
+        self.summarization = MultiAgentAnswerSummarization(
+            agent_index=agent_index, 
+            answer=initial_answer, 
+            reason=initial_reason
+        )
+        self.round_summarizations: List[MultiAgentAnswerSummarization] = []
+
+    def update_summarization(self, answer_summary: str, reasoning_summary: str):
+        self.summarization.answer = answer_summary
+        self.summarization.reason = reasoning_summary
     
     
-    # TODO: what is this? 
-    # configure_cli_logging(settings)
     
     
+def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, number_of_rounds: int = 2) -> List[Agent]:
+    """
+    Query a multi-agent system. Each agent will take a turn calling the ask function.
+    On the first round, all agents have a default summarization. In subsequent rounds,
+    each agent generates a new answer based on other agents' updated summarizations.
+    All responses per round are stored within each agent's `round_responses`.
+    """
+
+    configure_cli_logging(settings)
+
+
+
+        
     
-    # get the response of one agent 
-    # TODO: how do we ensure these are different agents?
-    # answer_response = get_loop().run_until_complete(
-    #     agent_query(
-    #         QueryRequest(query=query, settings=settings),
-    #         agent_type=settings.agent.agent_type,
-    #     )
-    # )
+    agents = [
+        Agent(agent_index=i+1,
+              initial_answer=f"Default answer for agent {i+1}",
+              initial_reason=f"Default reasoning for agent {i+1}")
+        for i in range(num_agents)
+    ]
+
+    for round_idx in range(number_of_rounds):
+        print(f"\n--- ROUND {round_idx+1}/{number_of_rounds} ---")
+
+        for agent in agents:
+            
+            other_agents_summarization = [a.summarization for a in agents if a.agent_index != agent.agent_index]
+
+            # Run the agent query for this agent give summarixations 
+            time_to_answer_start = time.time()
+            
+            
+            
+            
+            
+            # answer_response = get_loop().run_until_complete(
+            #     agent_query(
+            #         MultiAgentQueryRequest(
+            #             query=query,
+            #             settings=settings,
+            #             other_agents_summarization=other_agents_summarization,
+            #         ),
+            #         agent_type=settings.agent.agent_type,
+            #     )
+            # )
+            
+            
+            loop = get_loop()
+            timeout_seconds = 180 
+
+            try:
+                answer_response = loop.run_until_complete(
+                    asyncio.wait_for(
+                        agent_query(
+                            MultiAgentQueryRequest(
+                                query=query,
+                                settings=settings,
+                                other_agents_summarization=other_agents_summarization,
+                            ),
+                            agent_type=settings.agent.agent_type,
+                        ),
+                        timeout=timeout_seconds,
+                    )
+                )
+            except asyncio.TimeoutError:
+                print(f"The agent_query did not complete within {timeout_seconds} seconds. Returning early.")
+                # return None 
+                    
+                # TODO: handle timeouts? 
+            
+            
+            
+            
+            answer_time = time.time() - time_to_answer_start
+            print(f"Agent {agent.agent_index} answer time: {answer_time}")
+
+            # Extract answer and reasoning from the agent's final output
+            full_answer = answer_response.session.answer
+            answer_summary_match = re.search(r"ANSWER SUMMARY:\s+(.*?)\s+REASONING SUMMARY:", full_answer, re.DOTALL)
+            reasoning_summary_match = re.search(r"REASONING SUMMARY:\s+(.*)", full_answer, re.DOTALL)
+
+            answer_summary = answer_summary_match.group(1).strip() if answer_summary_match else "No summary found"
+            reasoning_summary = reasoning_summary_match.group(1).strip() if reasoning_summary_match else "No reasoning found"
+            
+            # Update the agent's summarization
+            agent.update_summarization(answer_summary, reasoning_summary)
+
+            # Store this round's response in the agent
+            agent.round_summarizations.append(agent.summarization)
+
+            # Print out what happened this turn
+            print(f"Agent {agent.agent_index} UPDATED ANSWER SUMMARY:\n{answer_summary}\n")
+            print(f"Agent {agent.agent_index} UPDATED REASONING SUMMARY:\n{reasoning_summary}\n")
 
 
 
 
-    # TODO: get responses from multiple agents (call agent query one by one with appropriate info filled in)
-    # need to add in information of RAG Summary 
-    # for initial round, have prompt saying what will happen and specify that its initial round 
-    
-    
-    #
-    
-    
-    
-    
-    
-    # here we need to add in the RAG Agent Communicator to share information betweeen agwent
-    # need to design the RAG Agent Communicator to based on what other agents are answering/retrieving, they will update their answer/retrieval
-    # as appropriate 
-    # this should be some other class that is able to produce the summarization state for eac agent, and send to other agents for reasking 
-    # we should control the number of communication steps 
-    # does this need 
-    
 
-
-
+    # Now each agent has their own round_responses list and the latest summarization
+    return agents
 
 
 

@@ -112,11 +112,16 @@ multiagent_qa_prompt = (
     " (3) Resolve conflicts by relying on evidence and context to generate a coherent, accurate, and consensus-driven answer.\n\n"
     "----\n\n"
     "Question: {question}\n\n"
-    "Write an answer based on the context and other agents' summarizations. "
+    "Write an answer based on the context and other agents' summarizations."
     "If the context or summarizations provide insufficient information, reply \"I cannot answer.\" "
-    "For each part of your answer, indicate which sources most support it via citation keys at the end of sentences, like {example_citation}. "
-    "Only cite from the context below and only use the valid keys. Write in the style of a Wikipedia article, with concise sentences and coherent paragraphs. "
-    "The context comes from a variety of sources and is only a summary, so there may be inaccuracies or ambiguities. "
-    "If quotes are present and relevant, use them in the answer. This answer will go directly onto Wikipedia, so do not add any extraneous information.\n\n"
+
+    "Your answer should disscuss your reasoning based on your context and other agent summaries. "
+    
+    "Then you should procced to succintly sumarize the answer and reasoning after outputting ANSWER SUMMARY:  and REASONING SUMMARY:"
+    # "For each part of your answer, indicate which sources most support it via citation keys at the end of sentences, like {example_citation}. "
+    # "Only cite from the context below and only use the valid keys. Write in the style of a Wikipedia article, with concise sentences and coherent paragraphs. "
+    # "The context comes from a variety of sources and is only a summary, so there may be inaccuracies or ambiguities. "
+    # "If quotes are present and relevant, use them in the answer. This answer will go directly onto Wikipedia, so do not add any extraneous information.\n\n"
+    
     "Answer ({answer_length}):"
 )

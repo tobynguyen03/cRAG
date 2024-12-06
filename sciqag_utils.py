@@ -133,3 +133,13 @@ class SciQAGData:
                 self.qna_pairs.append({entry["Q"]: entry["A"]})
 
         print(f"Extracted {len(self.qna_pairs)} Q&A pairs from Test dataset.")
+        
+
+
+
+if __name__ == "__main__": 
+    
+    sciqag_data = SciQAGData("data/SciQAG/final_all_select1000.json")
+    sciqag_data.load_data()
+    sciqag_data.extract_papers_text_from_final("data/SciQAG/papers/")
+    
