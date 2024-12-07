@@ -1,5 +1,6 @@
 import os
 import json
+from itertools import islice
 
 from paperqa import Settings, ask
 from paperqa.settings import AgentSettings
@@ -22,7 +23,8 @@ class EvaluatorSciQAG:
             llm_config (dict): Configuration for the local LLM.
             question_dataset_path (str): Path to the SciQAG dataset being used.
             document_path (str): Path to the directory containing documents for PaperQA.
-            dataset_setting (str): The dataset being passed-- "final" (full data), "train", or "test".
+            dataset_setting (str): The dataset being passed--
+                "final" (full data), "final_short" (full but truncated data), "train", or "test".
         """
         self.llm_config = llm_config
 
@@ -36,6 +38,9 @@ class EvaluatorSciQAG:
 
     def load_questions(self):
         """Load questions and ground truth from the dataset."""
+        if self.dataset_setting == 'final_short': # Manually load instead
+            return
+        
         self.qa_pairs_ground_truth = []
 
         data = SciQAGData(self.question_dataset_path)
@@ -51,7 +56,7 @@ class EvaluatorSciQAG:
             data.extract_qa_pairs_from_test()
             self.qa_pairs_ground_truth = data.qa_pairs
         else:
-            print("Invalid dataset setting given. Only 'final', 'train', and 'test' are allowed.")
+            print("Invalid dataset setting given. Only 'final_short', 'final', 'train', 'test' are allowed.")
             return
         
 
@@ -110,6 +115,15 @@ class EvaluatorSciQAG:
         print(f"Results saved to {output_path}")
 
 
+def minibatch_list(data, chunk_size):
+    """
+    Create an iterator that yields chunks of the given size.
+    """
+    it = iter(data)
+    while chunk := list(islice(it, chunk_size)):
+        yield chunk
+
+
 # Example usage: (This part would be in the main file, not in the Evaluator class)
 if __name__ == "__main__":
     import argparse
@@ -119,6 +133,7 @@ if __name__ == "__main__":
     parser.add_argument("--document_path", type=str, required=True, help="Path to the directory containing documents.")
     parser.add_argument("--dataset_setting", type=str, required=True, help="Pass which SciQAG dataset is being used.")
     parser.add_argument("--output_path", type=str, required=True, help="Path to save the generated answers.")
+    parser.add_argument("--paper_batch_size", type=str, required=False, help="Number of papers (x10 questions) to evaluate at a time.")
 
     args = parser.parse_args()
 
@@ -134,13 +149,57 @@ if __name__ == "__main__":
         ]
     }
 
-    evaluator = EvaluatorSciQAG(
-        llm_config=local_llm_config,
-        question_dataset_path=args.question_dataset_path,
-        document_path=args.document_path,
-        dataset_setting=args.dataset_setting
-    )
+    if args.dataset_setting == 'final_short':
+        data = SciQAGData(args.question_dataset_path)
+        data.load_data()
+        papers_and_qa_pairs = data.extract_papers_and_qa_pairs_from_final()
 
-    evaluator.answer_questions()
-    evaluator.save_results_to_json(args.output_path)
+        evaluator = EvaluatorSciQAG(
+            llm_config=local_llm_config,
+            question_dataset_path=args.question_dataset_path,
+            document_path=args.document_path,
+            dataset_setting=args.dataset_setting
+        )
+
+        os.makedirs(args.document_path, exist_ok=True)
+        os.makedirs(args.output_path, exist_ok=True)
+
+        for batch_number, batch in enumerate(minibatch_list(papers_and_qa_pairs, args.paper_batch_size), start=1):
+            # Write papers from batch to directory
+            for paper in batch:
+                doi_filename = f"{paper['doi'].replace('/', '_').replace('.json', '')}.txt"
+                filepath = os.path.join(args.document_path, doi_filename)
+                with open(filepath, 'w') as f:
+                    f.write(paper['txt'])
+            
+            print(f"Batch {batch_number}: Papers written to {args.document_path}")
+
+            # Extract associated questions
+            evaluator.qa_pairs_ground_truth = [qa_pair for paper in batch for qa_pair in paper['qa_pairs']]
+
+            # Answer questions
+            evaluator.answer_questions()
+
+            # Write answers to output file
+            output_filename = f"sciqag_100_batch_{batch_number}.json"
+            output_filepath = os.path.join(args.output_path, output_filename)
+
+            evaluator.save_results_to_json(output_filepath)
+
+            print(f"Batch {batch_number}: Answers written to {output_filepath}")
+
+            # Clean up papers in directory
+            for paper in batch:
+                doi_filename = f"{paper['doi'].replace('/', '_').replace('.json', '')}.txt"
+                filepath = os.path.join(args.document_path, doi_filename)
+                if os.path.exists(filepath):
+                    os.remove(filepath)
+            
+            print(f"Batch {batch_number}: Papers removed from {args.document_path}")
+
+
+    
+
+    # evaluator.answer_questions()
+    # evaluator.save_results_to_json(args.output_path)
     # Note: Call evaluator.evaluate_answers() once evaluation logic is implemented
