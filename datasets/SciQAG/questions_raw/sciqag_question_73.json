@@ -1,0 +1,3 @@
+{
+    "How was the data analyzed in the study?": "The data was analyzed by applying principal component analysis (PCA) and hierarchical cluster analysis (HCA) to the 1H NMR spectroscopy urine samples collected from dosed and control rats at various time points. k-nearest-neighbour (kNN) classification was also used to predict how well individual samples were classified into their respective class and time point."
+}
