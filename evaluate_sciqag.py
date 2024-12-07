@@ -39,6 +39,7 @@ class EvaluatorSciQAG:
         self.qa_pairs_ground_truth = []
 
         data = SciQAGData(self.question_dataset_path)
+        data.load_data()
 
         if self.dataset_setting == 'final':
             data.extract_qa_pairs_from_final()
