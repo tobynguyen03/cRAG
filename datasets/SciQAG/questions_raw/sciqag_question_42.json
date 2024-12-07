@@ -1,0 +1,3 @@
+{
+    "What are the drawbacks of common MALDI imaging matrix deposition methods?": "Common methods of depositing matrix for MALDI imaging, such as robotic spotting and electrospray deposition, usually yield high signal quality but the image resolution is limited to the size and spacing of the matrix spots. Washing the tissue with ethanol helps to prevent the spreading of the matrix spots, but such a wash cannot be used when analyzing phospholipids. Spray-coating can cause analyte delocalization if the tissue becomes too wet during the application. Also, the matrix crystal size and the homogeneity of the coating can vary significantly from operator to operator."
+}
