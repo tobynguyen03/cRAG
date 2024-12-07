@@ -44,11 +44,13 @@ settings = Settings(
     paper_directory="my_papers"
 )
 
-async def main():
-    await evaluate(settings)
+def main():
+    print('test')
+    evaluate(settings)
 
 if __name__ == "__main__":
-   asyncio.run(main())
+    print('test')
+    main()
 
 
 
