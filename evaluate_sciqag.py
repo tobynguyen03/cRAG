@@ -1,9 +1,6 @@
 import os
 import json
 
-import time
-
-
 from paperqa import Settings, ask
 from paperqa.settings import AgentSettings
 
@@ -44,19 +41,14 @@ class EvaluatorSciQAG:
         data = SciQAGData(self.question_dataset_path)
 
         if self.dataset_setting == 'final':
-            data.extract_papers_text_from_final()
-            self.qa_pairs_ground_truth = data.qna_pairs
-        
-        
+            data.extract_qa_pairs_from_final()
+            self.qa_pairs_ground_truth = data.qa_pairs
         elif self.dataset_setting == 'train':
-            data.extract_qna_pairs_from_train()
-            self.qa_pairs_ground_truth = data.qna_pairs
-        
-        
+            data.extract_qa_pairs_from_train()
+            self.qa_pairs_ground_truth = data.qa_pairs
         elif self.dataset_setting == 'test':
-            data.load_data()
-            data.extract_qna_pairs_from_test()
-            self.qa_pairs_ground_truth = data.qna_pairs
+            data.extract_qa_pairs_from_test()
+            self.qa_pairs_ground_truth = data.qa_pairs
         else:
             print("Invalid dataset setting given. Only 'final', 'train', and 'test' are allowed.")
             return
@@ -71,18 +63,9 @@ class EvaluatorSciQAG:
     def answer_questions(self):
         """Iterate through each question, use PaperQA to get an answer, and save the result."""
         self.generated_answers = []
-                
-        qa_cnt = 0 
-        total_qa = len(self.qa_pairs_ground_truth)
-        
+
         for qa_pair in self.qa_pairs_ground_truth:
-            
             for question, ground_truth in qa_pair.items():
-                
-                print(f"answering question {qa_cnt}/{total_qa} using paperqa ... ")
-                
-                ask_start = time.time()
-                
                 answer = ask(
                     question,
                     settings=Settings(
@@ -99,10 +82,7 @@ class EvaluatorSciQAG:
                         paper_directory=self.document_path,
                     ),
                 )
-                
-                a_time = time.time() - ask_start
-                print(f"answered question in {a_time:.2f}s \n\n")
-            
+
                 self.generated_answers.append({
                     "question": question,
                     "ground_truth": ground_truth,
@@ -153,8 +133,6 @@ if __name__ == "__main__":
         ]
     }
 
-
-
     evaluator = EvaluatorSciQAG(
         llm_config=local_llm_config,
         question_dataset_path=args.question_dataset_path,
@@ -162,13 +140,6 @@ if __name__ == "__main__":
         dataset_setting=args.dataset_setting
     )
 
-    evaluator.load_questions()
-    
     evaluator.answer_questions()
-    
     evaluator.save_results_to_json(args.output_path)
     # Note: Call evaluator.evaluate_answers() once evaluation logic is implemented
-    
-    
-
-    
