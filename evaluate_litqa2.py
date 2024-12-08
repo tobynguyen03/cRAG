@@ -1,109 +1,191 @@
 import os
 import json
+import time
+import re
+import asyncio
+from pathlib import Path
 import pandas as pd
-from string import ascii_uppercase
+from enum import Enum
+from typing import cast
+
+from litqa2_utils import process_question_df
 
 from aviary.env import TaskDataset
 
 from paperqa import QueryRequest, Settings, ask
 from paperqa.settings import AgentSettings
 from paperqa.agents.task import TASK_DATASET_NAME
-from paperqa.prompts import QA_PROMPT_TEMPLATE
-from litqa2_utils import create_mcq_column
+from paperqa.llms import LiteLLMModel
+from paperqa.litqa import LitQAEvaluation
+from paperqa.utils import get_loop
 
 class LitQAEvaluator:
-    def __init__(self, llm_config, document_path, dataset_setting):
+    def __init__(self, model, document_path, output_dir, checkpoint_dir, batch_size=1):
         """
         Initialize the EvaluatorSciQAG class with necessary configurations and paths.
 
         Args:
-            llm_config (dict): Configuration for the local LLM.
+            llm_config (dict): Configuration for the local LLM.5
             document_path (str): Path to the directory containing documents for PaperQA.
             dataset_setting (str): The dataset being passed-- "final" (full data), "train", or "test".
         """
-        self.llm_settings = self._init_llm_settings(llm_config)
-
+        self.model = f"ollama/{model}"       
         self.document_path = document_path
-        self.dataset_setting = dataset_setting
+        self.output_path = Path(os.path.join(output_dir, f"{model}.txt"))
+        self.checkpoint_path = Path(os.path.join(checkpoint_dir, f"{model}.txt"))
+        self.batch_size = batch_size
 
-        self.question_data = self._init_litqa_questions()
-        self.generated_answers = []
+        self.llm_config = self._init_llm_config()
+        self.llm_settings = self._init_llm_settings()
+        self.eval_model = self._init_eval_model()
 
-    def _init_llm_settings(self, llm_config):
+        self.question_data = self._load_litqa_questions()
+        
+        self.processed_questions = self._load_checkpoint()
+    
+    def _init_llm_config(self):
+        return dict(
+            model_list=[
+                dict(
+                    model_name=self.model,
+                    litellm_params=dict(
+                        model=self.model,
+                        api_base="http://localhost:11434", 
+                    ),
+                )
+            ]
+        )
+
+    def _init_llm_settings(self):
         settings = Settings(
-            llm='ollama/llama3.2',
-            llm_config=llm_config,
+            llm=self.model,
+            llm_config=self.llm_config,
             
-            summary_llm='ollama/llama3.2',
-            summary_llm_config=llm_config,
+            summary_llm=self.model,
+            summary_llm_config=self.llm_config,
             
             embedding='ollama/mxbai-embed-large',
             
             agent=AgentSettings(
-                agent_llm='ollama/llama3.2', 
-                agent_llm_config=local_llm_config
+                agent_llm=self.model, 
+                agent_llm_config=self.llm_config
             ),
             use_doc_details=False,
-            paper_directory="my_papers"
+            paper_directory=self.document_path
         )
 
         return settings
+    
+    def _init_eval_model(self):
+        return LiteLLMModel(
+            name=self.model,
+            config=self.llm_config,
+        )
 
-    def _init_litqa_questions(self):
+    def _load_litqa_questions(self):
         """Load questions and ground truth from the dataset."""
         base_query = QueryRequest(
             settings=self.llm_settings
         )
         dataset = TaskDataset.from_name(TASK_DATASET_NAME, base_query=base_query)
-        formatted_questions = create_mcq_column(dataset.data)
+        formatted_dataset = process_question_df(dataset.data)
 
-        return formatted_questions
+        return formatted_dataset
+    
+    def _load_checkpoint(self):
+        """Load previously processed questions from checkpoint if it exists."""
+        if self.checkpoint_path.exists():
+            with open(self.checkpoint_path, 'r') as f:
+                try:
+                    return json.load(f)
+                except Exception as e:
+                    return {}
+        return {}
+    
+    def _save_checkpoint(self):
+        """Save current progress to checkpoint file."""
+        with open(self.checkpoint_path, 'w') as f:
+            json.dump(self.processed_questions, f)
+            
+    def _save_results(self):
+        """Save current results to the output file."""
+        # Convert processed questions to DataFrame
+        results_df = pd.DataFrame.from_dict(self.processed_questions, orient='index')
+        results_df.to_csv(self.output_path)
 
     def answer_questions(self):
-        """Iterate through each question, use PaperQA to get an answer, and save the result."""
-        for qa_data in self.question_data:
-            base_question = qa_data['question']
-            answer_choices = qa_data['answer_choices']
-            correct_answer = qa_data['correct_answer']
+        """
+        Answers questions using the provided LLM function.
+        """
+        questions_processed = 0
+        
+        try:
+            for index, row in self.question_data.iterrows():
+                if str(index) in self.processed_questions:
+                    print(f"Skipping already processed question {index}")
+                    continue
+                
+                print(f"Processing question {index}")
+                
+                try:
+                    question, evaluate_answer = LitQAEvaluation.from_question(
+                        ideal=cast(str, row.ideal),
+                        distractors=cast(list[str], row.distractors),
+                        question=cast(str, row.question),
+                        eval_model=self.eval_model,
+                        seed=42,
+                    )
 
-            question_with_choices = QA_PROMPT_TEMPLATE.format(question=base_question, options=answer_choices)
+                    answer = ask(
+                        question,
+                        self.llm_settings
+                    )
 
-            answer = ask(
-                question_with_choices,
-                settings=Settings(
-                    llm='ollama/llama3.2',
-                    llm_config=self.llm_config,
-                    summary_llm='ollama/llama3.2',
-                    summary_llm_config=self.llm_config,
-                    embedding='ollama/mxbai-embed-large',
-                    agent=AgentSettings(
-                        agent_llm='ollama/llama3.2',
-                        agent_llm_config=self.llm_config,
-                    ),
-                    use_doc_details=False,
-                    paper_directory=self.document_path,
-                ),
-            )
+                    evaluation_result, answer_choice = get_loop().run_until_complete(evaluate_answer(answer))
+                    print(question)
+                    print("LLM Response: ", answer_choice, evaluation_result)
 
-            self.generated_answers.append({
-                "question": base_question,
-                "ground_truth": correct_answer,
-                "system_answer": answer
-            })
+                    question_base = question.split('Options:')[0].strip()
+                    
+                    # Store result
+                    self.processed_questions[str(index)] = {
+                        'question': question_base,
+                        'answer': answer_choice,
+                        'ground_truth': row.ideal,
+                        'result': evaluation_result,
+                        'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
+                    }
+                    
+                    questions_processed += 1
+                    
+                    # Save checkpoint after each batch
+                    if questions_processed % self.batch_size == 0:
+                        print(f"Saving checkpoint after {questions_processed} questions...")
+                        self._save_checkpoint()
+                        self._save_results()
+                        
+                except Exception as e:
+                    print(f"Error processing question {index}: {str(e)}")
+                    # Save progress even if there's an error
+                    self._save_checkpoint()
+                    self._save_results()
+                    continue
+                
+        except KeyboardInterrupt:
+            print("\nProcess interrupted by user. Saving progress...")
+            self._save_checkpoint()
+            self._save_results()
+            return
+        
+        # Final save
+        self._save_checkpoint()
+        self._save_results()
+        print("All questions processed!")
 
 
     def evaluate_answers(self):
-        """Evaluate the answers generated by PaperQA against the ground truths with BERTScore."""
-        ground_and_generated_answers = [(answer["system_answer"], answer["ground_truth"]) for answer in self.generated_answers]
-
-        total_questions = len(ground_and_generated_answers)
-        correctly_answered = 0
-
-        for ground_truth, system_answer in ground_and_generated_answers:
-            if sorted(ground_truth) == sorted(system_answer):
-                correctly_answered += 1
-        
-        return correctly_answered / total_questions
+        """Evaluate the answers generated by PaperQA against the ground truths."""
+        return 0 #TODO
 
 
     def save_results_to_json(self, output_path):
@@ -114,18 +196,14 @@ class LitQAEvaluator:
         print(f"Results saved to {output_path}")
 
 if __name__ == "__main__":
-    local_llm_config = dict(
-        model_list=[
-            dict(
-                model_name='ollama/llama3.2',
-                litellm_params=dict(
-                    model='ollama/llama3.2',
-                    api_base="http://localhost:11434", 
-                ),
-            )
-        ]
-    )
+    model = "llama3.2"
     paper_directory = "my_papers"
-    evaluator = LitQAEvaluator(local_llm_config, paper_directory, "final")
+    output_directory = "litqa_output"
+    checkpoint_directory = "litqa_checkpoints"
 
-    print(evaluator.question_data[0].question)
+    os.makedirs(checkpoint_directory, exist_ok=True)
+    os.makedirs(output_directory, exist_ok=True)
+
+    evaluator = LitQAEvaluator(model, paper_directory, output_directory, checkpoint_directory)
+
+    evaluator.answer_questions()
