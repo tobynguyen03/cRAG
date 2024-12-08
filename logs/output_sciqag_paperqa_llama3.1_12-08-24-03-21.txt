@@ -1,0 +1,157 @@
+Running experiment: sciqag_paperqa_llama3.1
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.1 
+
+
+
+
+ ANSWERING QUESTION: sciqag_question_1.json
+ ----------------------------- 
+
+
+[03:23:40] Starting paper search for 'Type 1 diabetes'.                                                                                                                                       
+[03:23:41] paper_search for query 'Type 1 diabetes' and offset 0 returned 8 papers.                                                                                                           
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:23:42] Starting paper search for 'What are the causes of Type 1 diabetes?'.                                                                                                               
+           paper_search for query 'What are the causes of Type 1 diabetes?' and offset 0 returned 8 papers.                                                                                   
+           Status: Paper Count=9 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:23:43] Generating answer for 'What is Type 1 diabetes and what causes it?'.                                                                                                               
+[03:24:32] Status: Paper Count=9 | Relevant Papers=2 | Current Evidence=4 | Current Cost=$0.0000                                                                                              
+           Answer: Based on the provided context, specifically No2024 chunk 1 and No2024 chunk 4, Type 1 diabetes is an autoimmune disease resulting from the selective destruction of        
+           insulin-producing beta cells in the pancreatic islets. It affects roughly 0.5% of the population in developed countries.                                                           
+                                                                                                                                                                                              
+           The causes of type 1 diabetes are believed to be associated with genetics, environmental factors, nutritional effects, or a combination of these. Furthermore, No2024 chunk 4      
+           states that Type 1 diabetes is caused by enhanced endogenous glucose production (EGP) from noncarbohydrate precursors (gluconeogenesis) and the breakdown of glycogen              
+           (glycogenolysis). In early stages, EGP is mainly due to glycogenolysis, while at a later stage, it is attributed to gluconeogenesis fueled by amino acids from degraded protein or 
+           dietary ingestion.                                                                                                                                                                 
+                                                                                                                                                                                              
+           ANSWER SUMMARY: Type 1 diabetes is an autoimmune disease caused by the destruction of insulin-producing beta cells and enhanced endogenous glucose production through              
+           gluconeogenesis and glycogenolysis.                                                                                                                                                
+
+
+ ANSWERING QUESTION: sciqag_question_10.json
+ ----------------------------- 
+
+
+[03:24:36] Starting paper search for 'metabolite correlations in diabetic vs control rats'.                                                                                                   
+           paper_search for query 'metabolite correlations in diabetic vs control rats' and offset 0 returned 8 papers.                                                                       
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:24:38] Generating answer for 'How did the correlations among the detected metabolites differ between the diabetic and control rats?'.                                                     
+[03:25:08] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=6 | Current Cost=$0.0000                                                                                              
+           Answer: The correlations among the detected metabolites differed between the diabetic and control rats in several ways:                                                            
+                                                                                                                                                                                              
+           * In diabetic rats, there was a significant decrease in metabolic correlation compared to control rats.                                                                            
+           * Certain correlations were dramatically decreased or increased, such as the correlation of glucose with urea increasing, while the correlation of citrate with lactate and        
+           succinate decreased.                                                                                                                                                               
+           * Several metabolite pairs showed high positive correlation with one another in both groups, but with different correlation coefficients.                                          
+           * The diabetic animals showed a number of correlations significantly decreased, indicating an overall decrease in metabolic correlation.                                           
+           * In contrast to control rats, the diabetic animals exhibited altered metabolism in the glucose metabolism and TCA cycles, as well as the effect of gut microbial metabolism.      
+                                                                                                                                                                                              
+           The differences in correlations among metabolites between diabetic and control rats suggest that diabetes disrupts normal metabolic pathways, leading to changes in the            
+           relationships between different metabolites.                                                                                                                                       
+                                                                                                                                                                                              
+           ANSWER SUMMARY: The correlations among detected metabolites differed significantly between diabetic and control rats due to decreased or increased correlations among certain      
+           metabolite pairs.                                                                                                                                                                  
+
+
+ ANSWERING QUESTION: sciqag_question_100.json
+ ----------------------------- 
+
+
+[03:25:11] Starting paper search for 'derivative detection aniline in study'.                                                                                                                 
+           paper_search for query 'derivative detection aniline in study' and offset 0 returned 8 papers.                                                                                     
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:25:12] Generating answer for 'How were the derivatives of aniline detected in this study?'.                                                                                               
+[03:25:40] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=3 | Current Cost=$0.0000                                                                                              
+           Answer: According to the provided context, specifically in "Author chunk 3", the derivatives of anilines were detected using Gas Chromatography-Mass Spectrometry (GC-MS) after    
+           derivatization with PFBAY.                                                                                                                                                         
+                                                                                                                                                                                              
+           The detection method is clearly stated as GC-MS, and it's mentioned that this method was used after the derivatization step with PFBAY. This specific information provides a direct
+           answer to the question of how the derivatives of aniline were detected in this study.                                                                                              
+                                                                                                                                                                                              
+           ANSWER SUMMARY: The derivatives of anilines were detected using Gas Chromatography-Mass Spectrometry (GC-MS) after derivatization with PFBAY.                                      
+
+
+ ANSWERING QUESTION: sciqag_question_11.json
+ ----------------------------- 
+
+
+[03:25:43] Starting paper search for 'detection of gas molecules like ethanol vapor'.                                                                                                         
+[03:25:44] paper_search for query 'detection of gas molecules like ethanol vapor' and offset 0 returned 8 papers.                                                                             
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:25:45] Generating answer for 'What applications require the detection of gas molecules like ethanol vapor?'.                                                                              
+[03:26:11] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=5 | Current Cost=$0.0000                                                                                              
+           Answer: The applications that require the detection of gas molecules like ethanol vapor include:                                                                                   
+                                                                                                                                                                                              
+           1. Monitoring environmental pollutants                                                                                                                                             
+           2. Detecting gases in industrial processes                                                                                                                                         
+           3. Breath checkers for drink-driving offenders (detected through ethanol concentration in breath)                                                                                  
+           4. Workplace monitoring as defined by the American Conference of Governmental Industrial Hygienists (ACGIH) to measure gaseous substances                                          
+                                                                                                                                                                                              
+           These applications are mentioned in various chunks of text, specifically in Author2024 chunk 1 and chunk 5.                                                                        
+                                                                                                                                                                                              
+           I derived my answer from the context by looking for key phrases such as "detecting gas molecules like ethanol vapor", "monitoring environmental pollutants", and "detecting gases  
+           in industrial processes". These phrases indicate that the detection of ethanol vapor is necessary for various applications, including monitoring and detecting gases in different  
+           contexts.                                                                                                                                                                          
+                                                                                                                                                                                              
+           ANSWER SUMMARY: Detection of ethanol vapor required for environmental monitoring, industrial process control, breath checking for drink-driving offenders, and workplace           
+           monitoring.                                                                                                                                                                        
+
+
+ ANSWERING QUESTION: sciqag_question_12.json
+ ----------------------------- 
+
+
+[03:26:15] Starting paper search for 'significance of nanosized materials in chemical sensors'.                                                                                               
+           paper_search for query 'significance of nanosized materials in chemical sensors' and offset 0 returned 8 papers.                                                                   
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+[03:26:18] Starting paper search for 'significance of nanosized materials in chemical sensors'.                                                                                               
+           paper_search for query 'significance of nanosized materials in chemical sensors' and offset 8 returned 0 papers.                                                                   
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                              
+got papers
+[03:26:19] gather_evidence starting for question 'What is the significance of nanosized materials in the development of chemical sensors?'.                                                   
+Failed to answer question due to timeout: What is the significance of nanosized materials in the development of chemical sensors?
+
+
+ ANSWERING QUESTION: sciqag_question_13.json
+ ----------------------------- 
+
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+Failed to answer question due to timeout: How does the SrCO3 material used in the study respond to ethanol vapor?
+
+
+ ANSWERING QUESTION: sciqag_question_14.json
+ ----------------------------- 
+
+
+[03:40:48] Starting paper search for 'CL emission oxidation ethanol SrCO3'.                                                                                                                                                                                      
+           paper_search for query 'CL emission oxidation ethanol SrCO3' and offset 0 returned 7 papers.                                                                                                                                                          
+           Status: Paper Count=7 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+[03:40:51] Starting paper search for 'CL emission oxidation ethanol SrCO3'.                                                                                                                                                                                      
+           paper_search for query 'CL emission oxidation ethanol SrCO3' and offset 8 returned 0 papers.                                                                                                                                                          
+           Status: Paper Count=7 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+[03:40:53] Starting paper search for 'mechanism CL emission oxidation ethanol SrCO3'.                                                                                                                                                                            
+           paper_search for query 'mechanism CL emission oxidation ethanol SrCO3' and offset 0 returned 7 papers.                                                                                                                                                
+           Status: Paper Count=7 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+[03:40:54] Starting paper search for 'mechanism CL emission oxidation ethanol SrCO3'.                                                                                                                                                                            
+           paper_search for query 'mechanism CL emission oxidation ethanol SrCO3' and offset 8 returned 0 papers.                                                                                                                                                
+           Status: Paper Count=7 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+[03:40:57] Generating answer for 'What is the likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3?'.                                                                                                                          
+Failed to answer question due to timeout: What is the likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3?
+
+
+ ANSWERING QUESTION: sciqag_question_15.json
+ ----------------------------- 
+
+
+[03:41:15] Starting paper search for 'SrCO3 sensor selectivity for ethanol among other gases'.                                                                                                                                                                   
+           paper_search for query 'SrCO3 sensor selectivity for ethanol among other gases' and offset 0 returned 8 papers.                                                                                                                                       
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+[03:41:16] Starting paper search for 'SrCO3 sensor selectivity for ethanol among other gases'.                                                                                                                                                                   
+           paper_search for query 'SrCO3 sensor selectivity for ethanol among other gases' and offset 0 returned 8 papers.                                                                                                                                       
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                                                                 
+got papers
+[03:41:17] gather_evidence starting for question 'How selective is the SrCO3 sensor for detecting ethanol among other gases?'.                                                                                                                                   
