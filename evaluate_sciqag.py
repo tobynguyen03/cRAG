@@ -255,6 +255,10 @@ class EvaluatorSciQAG:
         question = list(question_data.keys())[0]
         ground_truth = question_data[question]
         
+        
+        
+        # agents is class Agents type see def ask_multiagent
+        
         success, agents = ask_multiagent(
             question,
             settings=Settings(
@@ -307,7 +311,7 @@ class EvaluatorSciQAG:
                     return False, None
 
             multiagent_answers = [agent.summarization.answer for agent in agents]
-            
+
             success, final_answer = get_loop().run_until_complete(get_multiagent_consensus(question, multiagent_answers))
             
             if success:
@@ -322,12 +326,8 @@ class EvaluatorSciQAG:
             return False, None
             
         
-
-
-        return success, formatted_answer
     #############################################################################################
-
-
+    
     def _init_llm_config(self):
         return dict(
             model_list=[
