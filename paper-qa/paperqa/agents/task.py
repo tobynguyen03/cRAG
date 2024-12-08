@@ -14,6 +14,7 @@ from collections.abc import Awaitable, Callable, Sequence
 from copy import deepcopy
 from enum import StrEnum
 from typing import TYPE_CHECKING, Any, Self, assert_never
+import pandas as pd
 
 from aviary.core import (
     TASK_DATASET_REGISTRY,
@@ -304,6 +305,7 @@ class LitQATaskDataset(
 class LitQAv2TaskSplit(StrEnum):
     TRAIN = "train"
     EVAL = "eval"
+    FINAL = "final"
 
 
 class LitQAv2TaskDataset(LitQATaskDataset):
@@ -313,16 +315,19 @@ class LitQAv2TaskDataset(LitQATaskDataset):
         self,
         *args,
         labbench_dataset: str = DEFAULT_LABBENCH_HF_HUB_NAME,
-        split: str | LitQAv2TaskSplit = LitQAv2TaskSplit.EVAL,
+        split: str | LitQAv2TaskSplit = LitQAv2TaskSplit.FINAL,
         **kwargs,
     ):
         super().__init__(*args, **kwargs)
         train_df, eval_df = read_litqa_v2_from_hub(labbench_dataset)
+        combined_df = pd.concat([train_df, eval_df])
         split = LitQAv2TaskSplit(split)
         if split == LitQAv2TaskSplit.TRAIN:
             self.data = train_df
         elif split == LitQAv2TaskSplit.EVAL:
             self.data = eval_df
+        elif split == LitQAv2TaskSplit.FINAL:
+            self.data = combined_df
         else:
             assert_never(split)
 

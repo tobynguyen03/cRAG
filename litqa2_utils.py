@@ -3,7 +3,7 @@ import random
 from string import ascii_uppercase
 import pandas as pd
 
-from urllib.parse import urljoin
+from urllib.parse import urlparse
 from aviary.env import TaskDataset
 
 from dotenv import load_dotenv
@@ -37,7 +37,8 @@ def download_pdfs_from_zotero(paper_dir: str):
 
     print(f"Successfully downloaded {total_papers} papers to {paper_dir}")
 
-def create_mcq_column(df):
+
+def process_question_df(df):
     def process_row(row):
         ideal_answers = [ans.strip() for ans in str(row['ideal']).split(',')]
         distractors = row['distractors']
@@ -56,9 +57,13 @@ def create_mcq_column(df):
             'correct_answer': correct_answer
         })
     
-    result_df = df.join(df.apply(process_row, axis=1))
+    result_df = df.join(df.apply(process_row, axis=1)).sort_index()
+    with open('paper_urls.txt', 'r') as file:
+        urls = set([line.strip() for line in file])
     
-    return result_df
+    filtered_df = result_df[result_df['sources'].apply(lambda x: x[0] in urls)]
+
+    return filtered_df
 
 if __name__ == "__main__":
     paper_dir = "my_papers"

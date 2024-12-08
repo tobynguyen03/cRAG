@@ -102,6 +102,7 @@ class LitQAEvaluation(IntEnum):
         cls, text: str, ideal_mc_answer: str, unsure_mc_answer: str | None = None
     ) -> LitQAEvaluation:
         """Compare text with a multiple choice answer or optionally an unsure answer."""
+        print("Evaluator LLM: ", text)
 
         def extract_answer(answer: str) -> str:
             # first capital letter, like A or A)
@@ -116,7 +117,7 @@ class LitQAEvaluation(IntEnum):
             evaluation_result = cls.UNSURE
         if result[0].lower() == ideal_mc_answer[0].lower():
             evaluation_result = cls.CORRECT
-        return evaluation_result
+        return evaluation_result, result
 
     @classmethod
     def from_question(

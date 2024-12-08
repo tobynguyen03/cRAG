@@ -86,7 +86,7 @@ where `summary` is relevant information from text - {summary_length} words and `
 # Prompt templates for use with LitQA
 QA_PROMPT_TEMPLATE = "Q: {question}\n\nOptions:\n{options}"
 EVAL_PROMPT_TEMPLATE = (
-    "Extract the single letter answer from the following question and answer"
+    "Extract the single letter answer from the following question and answer. Your answer should only be a single letter, do NOT output anything other than a single letter."
     "\n\n{qa_prompt}"
     "\n\n{qa_answer}"
     "\n\nSingle Letter Answer:"
