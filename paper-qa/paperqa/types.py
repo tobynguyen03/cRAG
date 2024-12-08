@@ -107,7 +107,8 @@ class LLMResult(BaseModel):
                 oc = litellm.model_cost[self.model]["output_cost_per_token"]
                 return pc * self.prompt_count + oc * self.completion_count
             except KeyError:
-                logger.warning(f"Could not find cost for model {self.model}.")
+                # logger.warning(f"Could not find cost for model {self.model}.")
+                pass 
         return 0.0
 
 

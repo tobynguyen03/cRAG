@@ -255,5 +255,23 @@ ZOTERO_API_KEY=<API_KEY>
 Afterwards, run the `litqa2_utils.py` file. This will download paper PDFs to your `my_papers` directory. Some papers will not have PDFs that were able to be retrived with the Zotero API. 
 These will be printed to the terminal along with their DOIs. You will need to manually access and download these PDFs to the `my_papers` directory.
 
+
+
+### Evaluating on SciQAG
+
+PaperQA baseline: 
+
+```bash
+python evaluate_sciqag.py --question_dataset_path datasets/SciQAG/questions_raw --document_path datasets/SciQAG/papers --method paperqa --llm_model llama3.2
+
+
+
+
+
+
+
+```
+
+
 ### Evaluating on LitQA2
-IP
+

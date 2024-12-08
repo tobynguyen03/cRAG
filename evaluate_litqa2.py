@@ -19,6 +19,9 @@ from paperqa.llms import LiteLLMModel
 from paperqa.litqa import LitQAEvaluation
 from paperqa.utils import get_loop
 
+
+
+
 class LitQAEvaluator:
     def __init__(self, model, document_path, output_dir, checkpoint_dir, batch_size=1):
         """

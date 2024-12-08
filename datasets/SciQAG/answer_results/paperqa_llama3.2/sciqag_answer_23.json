@@ -1,0 +1,5 @@
+{
+    "question": "What is the drawback of using solvent in sample preparation for phthalate esters analysis?",
+    "ground_truth": "The use of solvent in sample preparation for phthalate esters analysis can present a drawback as residues of the solvent, especially DEHP, can also be found in the solvent. Moreover, fat in dairy product samples such as milk could be co-extracted and require extra steps to remove them prior to phthalate analysis, which makes the direct SPME method inappropriate for complex matrices such as milk and other dairy products.",
+    "system_answer": "The drawback of using solvents in phthalate esters analysis is potential co-extraction and interference with target analytes, potentially leading to inaccurate results."
+}

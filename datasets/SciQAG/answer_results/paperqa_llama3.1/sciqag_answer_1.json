@@ -1,0 +1,5 @@
+{
+    "question": "What is Type 1 diabetes and what causes it?",
+    "ground_truth": "Type 1 diabetes is an autoimmune disease that results from the selective destruction of insulin-producing beta cells in the pancreatic islets. Genetics, environmental factors, nutritional effects, and a combination of these are believed to be associated with the disease. Streptozotocin (STZ) is commonly used to induce diabetes mellitus in experimental studies.",
+    "system_answer": "Type 1 diabetes is an autoimmune disease caused by the destruction of insulin-producing beta cells and enhanced endogenous glucose production through gluconeogenesis and glycogenolysis."
+}

@@ -7,7 +7,7 @@ import re
 import time
 from typing import List
 import asyncio
-from typing import Any
+from typing import Any, Tuple, Optional
 
 from pydantic_settings import CliSettingsSource
 from rich.logging import RichHandler
@@ -104,75 +104,83 @@ def configure_cli_logging(verbosity: int | Settings = 0) -> None:
         print(f"PaperQA version: {__version__}")
 
 
-def ask(query: str, settings: Settings) -> AnswerResponse:
+def ask(query: str, settings: Settings, timeout: int = 180) -> Tuple[bool, Optional[AnswerResponse]]:
     """Query PaperQA via an agent."""
+    
     configure_cli_logging(settings)
 
-    
-    answer_response = get_loop().run_until_complete(
-        agent_query(
-            QueryRequest(query=query, settings=settings),
-            agent_type=settings.agent.agent_type,
+    try:
+        answer_response = get_loop().run_until_complete(
+            asyncio.wait_for(
+                agent_query(
+                    QueryRequest(query=query, settings=settings),
+                    agent_type=settings.agent.agent_type,
+                ),
+                timeout=timeout
+            )
         )
-    )
-
-    return answer_response
-
-
-
+        return True, answer_response
+    
+    except asyncio.TimeoutError:
+        return False, None
 
 
 
-def ask_multiagent_working_test(query: str, settings: Settings) -> AnswerResponse:
-    """Query multi-agent system with each agent running PaperQA"""
+
+
+
+
+
+# def ask_multiagent_working_test(query: str, settings: Settings) -> AnswerResponse:
+#     """Query multi-agent system with each agent running PaperQA"""
     
     
-    # TODO: add in settings for RAG Agent Communicator class 
-    # shuold have all relevant settings like prompts to generat communications, consensus mechanism, etc.
+#     # TODO: add in settings for RAG Agent Communicator class 
+#     # shuold have all relevant settings like prompts to generat communications, consensus mechanism, etc.
     
-    configure_cli_logging(settings)
+#     configure_cli_logging(settings)
 
 
 
-    other_agents_summarization = []
+#     other_agents_summarization = []
     
-    other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=1, answer='this is agent1 answer', reason='agent1 answer reason' ))
-    other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=2, answer='this is agent2 answer', reason='agent2 answer reason' ))
+#     other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=1, answer='this is agent1 answer', reason='agent1 answer reason' ))
+#     other_agents_summarization.append(MultiAgentAnswerSummarization(agent_index=2, answer='this is agent2 answer', reason='agent2 answer reason' ))
     
     
-    time_to_answer_start = time.time()
+#     time_to_answer_start = time.time()
     
-    answer_response = get_loop().run_until_complete(        
-        agent_query(
+#     answer_response = get_loop().run_until_complete(        
+#         agent_query(
             
-            MultiAgentQueryRequest(
-                query=query, 
-                settings=settings, 
+#             MultiAgentQueryRequest(
+#                 query=query, 
+#                 settings=settings, 
                 
-                other_agents_summarization=other_agents_summarization,
+#                 other_agents_summarization=other_agents_summarization,
                
-            ),
+#             ),
                     
-            agent_type=settings.agent.agent_type,
-        )
-    )
+#             agent_type=settings.agent.agent_type,
+#         )
+#     )
 
-    answer_time = time.time() - time_to_answer_start
-    print(f"answer time: {answer_time}")
-    print(f"\n \n LEN contextx: {len(answer_response.session.contexts)}")
+#     answer_time = time.time() - time_to_answer_start
+#     print(f"answer time: {answer_time}")
+#     print(f"\n \n LEN contextx: {len(answer_response.session.contexts)}")
     
-    answer = answer_response.session.answer
+#     answer = answer_response.session.answer
     
     
-    answer_summary_match = re.search(r"ANSWER SUMMARY:\s+(.*?)\s+REASONING SUMMARY:", answer, re.DOTALL)
-    reasoning_summary_match = re.search(r"REASONING SUMMARY:\s+(.*)", answer, re.DOTALL)
+#     answer_summary_match = re.search(r"ANSWER SUMMARY:\s+(.*?)\s+REASONING SUMMARY:", answer, re.DOTALL)
+#     reasoning_summary_match = re.search(r"REASONING SUMMARY:\s+(.*)", answer, re.DOTALL)
 
-    answer_summary = answer_summary_match.group(1).strip() if answer_summary_match else None
-    reasoning_summary = reasoning_summary_match.group(1).strip() if reasoning_summary_match else None
+#     answer_summary = answer_summary_match.group(1).strip() if answer_summary_match else None
+#     reasoning_summary = reasoning_summary_match.group(1).strip() if reasoning_summary_match else None
 
 
-    print("ANSWER SUMMARY:\n", answer_summary)
-    print("\nREASONING SUMMARY:\n", reasoning_summary)
+#     print("ANSWER SUMMARY:\n", answer_summary)
+#     print("\nREASONING SUMMARY:\n", reasoning_summary)
     
     
     
@@ -180,9 +188,7 @@ def ask_multiagent_working_test(query: str, settings: Settings) -> AnswerRespons
     
     
     
-    return answer_response
-
-    
+#     return answer_response
 
 
 
@@ -203,7 +209,7 @@ class Agent:
     
     
     
-def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, number_of_rounds: int = 2) -> List[Agent]:
+def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, num_rounds: int = 2, timeout=180) -> List[Agent]:
     """
     Query a multi-agent system. Each agent will take a turn calling the ask function.
     On the first round, all agents have a default summarization. In subsequent rounds,
@@ -212,10 +218,6 @@ def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, number_o
     """
 
     configure_cli_logging(settings)
-
-
-
-        
     
     agents = [
         Agent(agent_index=i+1,
@@ -224,85 +226,94 @@ def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, number_o
         for i in range(num_agents)
     ]
 
-    for round_idx in range(number_of_rounds):
-        print(f"\n--- ROUND {round_idx+1}/{number_of_rounds} ---")
+    
 
+    for round_idx in range(num_rounds):
+        print(f"\n--- ROUND {round_idx+1}/{num_rounds} ---")
+
+        round_success = True 
+        
         for agent in agents:
-            
             other_agents_summarization = [a.summarization for a in agents if a.agent_index != agent.agent_index]
 
-            # Run the agent query for this agent give summarixations 
             time_to_answer_start = time.time()
             
-            
-            
-            
-            
-            # answer_response = get_loop().run_until_complete(
-            #     agent_query(
-            #         MultiAgentQueryRequest(
-            #             query=query,
-            #             settings=settings,
-            #             other_agents_summarization=other_agents_summarization,
-            #         ),
-            #         agent_type=settings.agent.agent_type,
-            #     )
-            # )
-            
-            
-            loop = get_loop()
-            timeout_seconds = 180 
+            max_retries = 3
+            retries = 0
+            success = False
 
-            try:
-                answer_response = loop.run_until_complete(
-                    asyncio.wait_for(
-                        agent_query(
-                            MultiAgentQueryRequest(
-                                query=query,
-                                settings=settings,
-                                other_agents_summarization=other_agents_summarization,
+            while not success and retries < max_retries:
+                try:
+                    answer_response = get_loop().run_until_complete(
+                        asyncio.wait_for(
+                            agent_query(
+                                MultiAgentQueryRequest(
+                                    query=query,
+                                    settings=settings,
+                                    other_agents_summarization=other_agents_summarization,
+                                ),
+                                agent_type=settings.agent.agent_type,
                             ),
-                            agent_type=settings.agent.agent_type,
-                        ),
-                        timeout=timeout_seconds,
+                            timeout=timeout  # 3 minutes timeout
+                        )
                     )
-                )
-            except asyncio.TimeoutError:
-                print(f"The agent_query did not complete within {timeout_seconds} seconds. Returning early.")
-                # return None 
                     
-                # TODO: handle timeouts? 
+                    
+                    full_answer = answer_response.session.answer
+                    
+                    answer_pattern = re.compile(r'(?i)answer summary:\s*(.*)')
+                    reasoning_pattern = re.compile(r'(?i)reasoning summary:\s*(.*)')
+
+                    answer_match = answer_pattern.search(full_answer)
+                    reasoning_match = reasoning_pattern.search(full_answer)
+
+                    if answer_match and reasoning_match:
+                        answer_summary = answer_match.group(1)
+                        reasoning_summary = reasoning_match.group(1)
+                        success = True
+
+                
+                except asyncio.TimeoutError:
+                    retries += 1
+                    print(f"Attempt {retries} failed during agent query. Retrying...")
+
+            if not success:
+                print(f"Agent {agent.agent_index} failed to get a response after {max_retries} attempts.")
+                answer_response = None
             
+            if success:
+                answer_time = time.time() - time_to_answer_start
+                print(f"Agent {agent.agent_index} answer time: {answer_time}")
+                agent.update_summarization(answer_summary, reasoning_summary)
+                agent.round_summarizations.append(agent.summarization)
+            else: 
+                # break out of the loop if the agent failed to get a response
+                round_success = False
+                break
             
+        if not round_success:
+            print("Round failed. Exiting...")
+            success_question_answer = False
+            break
+        else:
+            print("Round successful.")
+            success_question_answer = True
             
-            
-            answer_time = time.time() - time_to_answer_start
-            print(f"Agent {agent.agent_index} answer time: {answer_time}")
-
-            # Extract answer and reasoning from the agent's final output
-            full_answer = answer_response.session.answer
-            answer_summary_match = re.search(r"ANSWER SUMMARY:\s+(.*?)\s+REASONING SUMMARY:", full_answer, re.DOTALL)
-            reasoning_summary_match = re.search(r"REASONING SUMMARY:\s+(.*)", full_answer, re.DOTALL)
-
-            answer_summary = answer_summary_match.group(1).strip() if answer_summary_match else "No summary found"
-            reasoning_summary = reasoning_summary_match.group(1).strip() if reasoning_summary_match else "No reasoning found"
-            
-            # Update the agent's summarization
-            agent.update_summarization(answer_summary, reasoning_summary)
-
-            # Store this round's response in the agent
-            agent.round_summarizations.append(agent.summarization)
-
-            # Print out what happened this turn
-            print(f"Agent {agent.agent_index} UPDATED ANSWER SUMMARY:\n{answer_summary}\n")
-            print(f"Agent {agent.agent_index} UPDATED REASONING SUMMARY:\n{reasoning_summary}\n")
+    if success_question_answer: 
+        print("All rounds successful.")
+        return success_question_answer, agents
+    
+    else:
+        print("Some rounds failed.")
+        return success_question_answer, agents
+    
+                
+                
+                # Print out what happened this turn
+                # print(f"Agent {agent.agent_index} UPDATED ANSWER SUMMARY:\n{answer_summary}\n")
+                # print(f"Agent {agent.agent_index} UPDATED REASONING SUMMARY:\n{reasoning_summary}\n")
 
 
-
-
-
-    # Now each agent has their own round_responses list and the latest summarization
-    return agents
 
 
 
