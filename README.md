@@ -68,6 +68,8 @@ Add the following:
 export PATH=$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib/ollama:$LD_LIBRARY_PATH
 export OLLAMA_MODELS=/home/hice1/<GT_USERNAME>/scratch/ollama_models/ # path to your scratch directory where models will be stored
+export OLLAMA_KEEP_ALIVE=6h
+export OLLAMA_LOAD_TIMEOUT=20m
 ```
 
 Run the following to update changes:
