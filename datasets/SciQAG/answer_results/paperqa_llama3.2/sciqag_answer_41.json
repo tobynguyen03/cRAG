@@ -1,0 +1,5 @@
+{
+    "question": "What is the primary technique used in the analysis of the spatial distribution of biomolecules?",
+    "ground_truth": "The primary technique used in the analysis of the spatial distribution of biomolecules is Matrix-assisted laser desorption/ionization imaging mass spectrometry (MALDI IMS).",
+    "system_answer": "STEM (Scanning Transmission Electron Microscopy) is the primary technique used for analyzing the spatial distribution of biomolecules due to its ability to provide high-resolution imaging at the nanoscale."
+}

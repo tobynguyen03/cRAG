@@ -152,6 +152,12 @@ class EvaluatorSciQAG:
                 self.args.query_timeout = 300
             elif self.args.method == "paperqa_multiagent":
                 self.args.query_timeout = 600
+
+        elif self.args.llm_model == "llama3.3": # takes more than 180 to load this model             
+            if self.args.method == "paperqa":
+                self.args.query_timeout = 300
+            elif self.args.method == "paperqa_multiagent":
+                self.args.query_timeout = 500
             
             
 

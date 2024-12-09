@@ -1,0 +1,5 @@
+{
+    "question": "How was the effectiveness of the dry-coating method assessed?",
+    "ground_truth": "The effectiveness of the dry-coating method was assessed by optical microscopy, which determined the DHB crystal size and homogeneity of the matrix coverage.",
+    "system_answer": "Insufficient context prevents determination of effectiveness assessment."
+}

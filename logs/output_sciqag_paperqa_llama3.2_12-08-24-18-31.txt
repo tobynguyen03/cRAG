@@ -1,0 +1,100 @@
+Running experiment: sciqag_paperqa_llama3.2
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.2 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+ Skipping sciqag_question_13.json as sciqag_answer_13.json already exists. 
+
+
+ Skipping sciqag_question_14.json as sciqag_answer_14.json already exists. 
+
+
+ Skipping sciqag_question_15.json as sciqag_answer_15.json already exists. 
+
+
+ Skipping sciqag_question_16.json as sciqag_answer_16.json already exists. 
+
+
+ Skipping sciqag_question_17.json as sciqag_answer_17.json already exists. 
+
+
+ Skipping sciqag_question_18.json as sciqag_answer_18.json already exists. 
+
+
+ Skipping sciqag_question_19.json as sciqag_answer_19.json already exists. 
+
+
+ Skipping sciqag_question_2.json as sciqag_answer_2.json already exists. 
+
+
+ Skipping sciqag_question_20.json as sciqag_answer_20.json already exists. 
+
+
+ Skipping sciqag_question_21.json as sciqag_answer_21.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_22.json
+ ----------------------------- 
+
+
+[18:31:36] New file to index: 10.1007-s00216-010-3936-9.txt...                                                                            
+           New file to index: 10.1016-S0003-2670(02)00549-4.txt...                                                                        
+           New file to index: 10.1016-S0003-2670(03)00060-6.txt...                                                                        
+           New file to index: 10.1016-j.ab.2008.07.041.txt...                                                                             
+           New file to index: 10.1016-j.aca.2005.02.020.txt...                                                                            
+[18:32:07] Complete (10.1016-j.ab.2008.07.041.txt).                                                                                       
+           New file to index: 10.1016-j.jasms.2008.02.013.txt...                                                                          
+           Complete (10.1016-S0003-2670(02)00549-4.txt).                                                                                  
+           New file to index: 10.1016-j.snb.2009.05.024.txt...                                                                            
+           Complete (10.1007-s00216-010-3936-9.txt).                                                                                      
+           New file to index: 10.1016-j.snb.2010.07.033.txt...                                                                            
+[18:32:08] Complete (10.1016-S0003-2670(03)00060-6.txt).                                                                                  
+           New file to index: 10.1016-j.talanta.2007.10.036.txt...                                                                        
+           Complete (10.1016-j.aca.2005.02.020.txt).                                                                                      
+           New file to index: 10.1039-b509251e.txt...                                                                                     
+[18:32:11] Complete (10.1016-j.talanta.2007.10.036.txt).                                                                                  
+[18:32:14] Complete (10.1039-b509251e.txt).                                                                                               
+[18:32:15] Complete (10.1016-j.snb.2009.05.024.txt).                                                                                      
+[18:32:17] Complete (10.1016-j.jasms.2008.02.013.txt).                                                                                    
+[18:32:19] Complete (10.1016-j.snb.2010.07.033.txt).                                                                                      
+[18:32:20] Starting paper search for 'most commonly used plasticizer in the world'.                                                       
+           paper_search for query 'most commonly used plasticizer in the world' and offset 0 returned 8 papers.                           
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+got papers
+[18:32:21] gather_evidence starting for question 'What is the most commonly used plasticizer in the world?'.                              
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+

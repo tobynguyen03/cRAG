@@ -1,0 +1,24 @@
+Running experiment: sciqag_paperqa_llama3.3
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.3 
+
+
+
+
+ ANSWERING QUESTION: sciqag_question_1.json
+ ----------------------------- 
+
+
+Failed to answer question due to timeout: What is Type 1 diabetes and what causes it?
+
+
+ ANSWERING QUESTION: sciqag_question_10.json
+ ----------------------------- 
+
+
+Failed to answer question due to timeout: How did the correlations among the detected metabolites differ between the diabetic and control rats?
+
+
+ ANSWERING QUESTION: sciqag_question_100.json
+ ----------------------------- 
+
+

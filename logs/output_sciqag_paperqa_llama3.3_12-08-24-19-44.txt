@@ -1,0 +1,10 @@
+Running experiment: sciqag_paperqa_llama3.3
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.3 
+
+
+
+
+ ANSWERING QUESTION: sciqag_question_1.json
+ ----------------------------- 
+
+
