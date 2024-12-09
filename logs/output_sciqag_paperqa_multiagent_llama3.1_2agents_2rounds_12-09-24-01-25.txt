@@ -1,0 +1,66 @@
+Running experiment: sciqag_paperqa_multiagent_llama3.1_2agents_2rounds
+saving results to: datasets/SciQAG/answer_results/paperqa_multiagent_llama3.1_2agents_2rounds 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+ Skipping sciqag_question_13.json as sciqag_answer_13.json already exists. 
+
+
+ Skipping sciqag_question_14.json as sciqag_answer_14.json already exists. 
+
+
+ Skipping sciqag_question_15.json as sciqag_answer_15.json already exists. 
+
+
+ Skipping sciqag_question_16.json as sciqag_answer_16.json already exists. 
+
+
+ Skipping sciqag_question_17.json as sciqag_answer_17.json already exists. 
+
+
+ Skipping sciqag_question_18.json as sciqag_answer_18.json already exists. 
+
+
+ Skipping sciqag_question_19.json as sciqag_answer_19.json already exists. 
+
+
+ Skipping sciqag_question_2.json as sciqag_answer_2.json already exists. 
+
+
+ Skipping sciqag_question_20.json as sciqag_answer_20.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_21.json
+ ----------------------------- 
+
+
+
+--- ROUND 1/2 ---
+[01:25:34] Starting paper search for 'health impacts phthalate esters'.                                                                                                                                                        
+           paper_search for query 'health impacts phthalate esters' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+[01:25:35] Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+

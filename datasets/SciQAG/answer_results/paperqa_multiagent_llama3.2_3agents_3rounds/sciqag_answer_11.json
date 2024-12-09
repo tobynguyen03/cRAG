@@ -1,0 +1,5 @@
+{
+    "question": "What applications require the detection of gas molecules like ethanol vapor?",
+    "ground_truth": "The detection and quantification of ethanol, for instance, with high sensitivity and selectivity are required in many different fields. This includes its use in aiding police in apprehending drink-driving offenders as a breath analyzer, determining blood ethanol concentration from breath, and in certain industry areas like fermentation and distillation where the ethanol vapor concentration can reach toxic levels.",
+    "system_answer": "Detection of gas molecules like ethanol vapor is crucial in various sectors:\n\n- Industrial processes\n- Environmental monitoring (air & water)\n- Medical equipment (breath analysis, diagnosis & treatment)\n- Quality control in biofuels production & beverage quality\n- Fuel efficiency monitoring\n- Laboratory testing\n- Biomedical research"
+}

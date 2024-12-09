@@ -1,0 +1,5 @@
+{
+    "question": "What were the key findings regarding glucose metabolism in the study?",
+    "ground_truth": "The study found that in diabetes, glucose excretion was enormous, being nearly 7500-fold higher than in control rats. Other significantly enhanced metabolites included lactate, alanine, ethanol, and fumarate. These findings suggest that glucose metabolism is dramatically perturbed in diabetes.",
+    "system_answer": "Key findings regarding glucose metabolism:\n\nIn a study on diabetic rats, increased glucose excretion and concentration were observed. Notably, there was a correlation between glucose levels and amino acid metabolites, suggesting a complex interaction between glucose and amino acid metabolism in the body. This highlights the importance of considering both glucose and amino acid profiles when studying metabolic disorders."
+}

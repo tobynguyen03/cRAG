@@ -1,0 +1,5 @@
+{
+    "question": "How were the absolute extraction efficiencies (AEEs) of the phthalate esters in milk samples determined?",
+    "ground_truth": "The absolute extraction efficiencies (AEEs) were determined by comparing the amount of each phthalate ester collected on the fibre to the amount spiked in the milk sample. The AEE was dependent on the fat content in the milk samples, which made each milk sample a unique matrix.",
+    "system_answer": "The absolute extraction efficiencies (AEEs) of phthalate esters in milk samples were determined using a combination of curve fitting equations and the power law equation. For 0% fat samples, direct measurements served as references. Values decreased with increasing fat content."
+}

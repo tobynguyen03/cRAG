@@ -1,0 +1,5 @@
+{
+    "question": "What were the key findings regarding glucose metabolism in the study?",
+    "ground_truth": "The study found that in diabetes, glucose excretion was enormous, being nearly 7500-fold higher than in control rats. Other significantly enhanced metabolites included lactate, alanine, ethanol, and fumarate. These findings suggest that glucose metabolism is dramatically perturbed in diabetes.",
+    "system_answer": "Key Findings:\n\n* Diabetic rats had significantly higher urine glucose levels compared to control rats.\n* Correlations were found between glucose levels and certain other metabolites, indicating alterations in normal metabolic pathways.\n* Increased renal clearance and high glucose levels were observed with correlations to specific metabolites.\n\n(Note: I've combined the information from Agent 0, 1, and 2, as it is word for word identical. If there are any differences between their statements, please let me know so I can rephrase or adjust accordingly.)"
+}

@@ -1,0 +1,5 @@
+{
+    "question": "How long can the SrCO3 sensor endure in a continuous ethanol vapor introduction experiment?",
+    "ground_truth": "The SrCO3 sensor showed no obvious change after 100 hours of reaction to continuous introduction of 2000 ppm ethanol vapor. The sensor kept the same response to ethanol vapor over the 100 hour period.",
+    "system_answer": "After synthesizing the expert inputs, the answer is:\n\nThe SrCO3 sensor can endure for approximately 100 hours in a continuous ethanol vapor introduction experiment."
+}

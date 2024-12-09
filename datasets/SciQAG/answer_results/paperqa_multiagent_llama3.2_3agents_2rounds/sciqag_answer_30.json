@@ -1,0 +1,5 @@
+{
+    "question": "How was the method detection limit (MDL) calculated in this study?",
+    "ground_truth": "The method detection limit (MDL) was calculated by dividing the detection limit by the absolute extraction efficiency. The MDLs of this method were in general lower than those previously reported, which makes this method more sensitive.",
+    "system_answer": "The method detection limit (MDL) in this study was calculated using a modified equation based on the standard deviation of the repeatability. The MDL is determined as three times the standard deviation of five replicated runs of spiked samples at the lowest concentration, then divided by the absolute extraction efficiency (AEE)."
+}

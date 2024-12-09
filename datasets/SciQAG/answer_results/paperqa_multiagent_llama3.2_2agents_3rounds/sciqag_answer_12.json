@@ -1,0 +1,5 @@
+{
+    "question": "What is the significance of nanosized materials in the development of chemical sensors?",
+    "ground_truth": "Nanosized materials have special features that differ from bulk materials, making them ideal for chemical sensing. They exhibit high activity, good selectivity and are small in size, which makes them perfect for chemical sensors.",
+    "system_answer": "Nanosized materials play a crucial role in the development of chemical sensors due to their exceptional properties. They significantly enhance:\n\n* Sensitivity: Ability to detect smaller concentrations of target molecules\n* Selectivity: Ability to distinguish between target and non-target molecules\n* Response time: Speed at which the sensor responds to changes in the environment\n\nThese advancements enable the detection of specific gases, such as ethanol vapor, making nanosized materials a key component in chemical sensors."
+}

@@ -1,0 +1,5 @@
+{
+    "question": "How did the correlations among the detected metabolites differ between the diabetic and control rats?",
+    "ground_truth": "The correlations among the detected metabolites showed a number of striking differences between the diabetic and control rats. For example, the correlation of glucose with alanine was increased in diabetic rats, while the correlation of glucose with lactate decreased. These changes indicate significant alterations in metabolism in the diabetic rats.",
+    "system_answer": "Here is a synthesized answer that reflects the best understanding of the topic:\n\nCorrelations among detected metabolites differed significantly between diabetic and control rats due to altered metabolic pathways in diabetes. A significant positive correlation was found between glucose-6-phosphate and fructose-1,6-bisphosphate in both groups, suggesting a shared metabolic pathway."
+}

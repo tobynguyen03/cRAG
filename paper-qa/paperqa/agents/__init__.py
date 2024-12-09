@@ -226,6 +226,8 @@ def ask_multiagent(query: str, settings: Settings, num_agents: int = 2, num_roun
         for i in range(num_agents)
     ]
 
+    # timeout = 60
+    
     
 
     for round_idx in range(num_rounds):

@@ -1,0 +1,5 @@
+{
+    "question": "Why was sodium chloride added to the milk sample during the extraction process?",
+    "ground_truth": "Sodium chloride was added to saturate the milk sample to improve the extraction efficiency of the phthalate esters. The addition of salt can result in enhanced ion strength in the sample matrix and in increased vapour pressure in the headspace, which can aid in the extraction process.",
+    "system_answer": "Sodium chloride was added to stabilize the milk sample and prevent gas leakage, allowing for efficient extraction of analytes. Its presence eliminates non-volatile components, ensuring a consistent and reliable analysis result."
+}

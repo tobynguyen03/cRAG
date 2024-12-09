@@ -1,0 +1,5 @@
+{
+    "question": "What is the most commonly used plasticizer in the world?",
+    "ground_truth": "Among all phthalate esters, di-(2-ethylhexyl) phthalate (DEHP) is the most commonly used plasticizer worldwide.",
+    "system_answer": "The most commonly used plasticizer globally is Di-(2-ethylhexyl) phthalate (DEHP), primarily due to its widespread industrial application and high presence in the environment."
+}

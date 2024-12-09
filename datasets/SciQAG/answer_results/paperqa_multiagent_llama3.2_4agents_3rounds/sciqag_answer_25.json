@@ -1,0 +1,5 @@
+{
+    "question": "Why was sodium chloride added to the milk sample during the extraction process?",
+    "ground_truth": "Sodium chloride was added to saturate the milk sample to improve the extraction efficiency of the phthalate esters. The addition of salt can result in enhanced ion strength in the sample matrix and in increased vapour pressure in the headspace, which can aid in the extraction process.",
+    "system_answer": "Sodium chloride is added to the milk sample as a stabilizer and desiccant during HS-SPME analysis. Its primary function is to prevent water evaporation, allowing for accurate measurement of volatile compounds in the sample. This addition enhances the efficiency and reliability of the extraction process."
+}

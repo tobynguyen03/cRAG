@@ -1,0 +1,285 @@
+Running experiment: sciqag_paperqa_multiagent_llama3.1_2agents_2rounds
+saving results to: datasets/SciQAG/answer_results/paperqa_multiagent_llama3.1_2agents_2rounds 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+ Skipping sciqag_question_13.json as sciqag_answer_13.json already exists. 
+
+
+ Skipping sciqag_question_14.json as sciqag_answer_14.json already exists. 
+
+
+ Skipping sciqag_question_15.json as sciqag_answer_15.json already exists. 
+
+
+ Skipping sciqag_question_16.json as sciqag_answer_16.json already exists. 
+
+
+ Skipping sciqag_question_17.json as sciqag_answer_17.json already exists. 
+
+
+ Skipping sciqag_question_18.json as sciqag_answer_18.json already exists. 
+
+
+ Skipping sciqag_question_19.json as sciqag_answer_19.json already exists. 
+
+
+ Skipping sciqag_question_2.json as sciqag_answer_2.json already exists. 
+
+
+ Skipping sciqag_question_20.json as sciqag_answer_20.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_21.json
+ ----------------------------- 
+
+
+
+--- ROUND 1/2 ---
+[01:29:31] Starting paper search for 'phthalate ester health impact'.                                                                                                                                                          
+           paper_search for query 'phthalate ester health impact' and offset 0 returned 4 papers.                                                                                                                              
+           Status: Paper Count=4 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+got papers
+           gather_evidence starting for question 'What are the potential health impacts of phthalate esters?'.                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+[01:29:32] Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+           Starting paper search for 'phthalate esters health impacts'.                                                                                                                                                        
+           paper_search for query 'phthalate esters health impacts' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+got papers
+[01:29:33] gather_evidence starting for question 'What are the potential health impacts of phthalate esters?'.                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:34] Starting paper search for 'phthalate esters health impacts'.                                                                                                                                                        
+           paper_search for query 'phthalate esters health impacts' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+           Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:36] Starting paper search for 'phthalate esters health impact'.                                                                                                                                                         
+           paper_search for query 'phthalate esters health impact' and offset 0 returned 4 papers.                                                                                                                             
+           Status: Paper Count=4 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+[01:29:37] Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:38] Starting paper search for 'phthalate esters health impacts'.                                                                                                                                                        
+           paper_search for query 'phthalate esters health impacts' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+           Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:39] Starting paper search for 'phthalate esters health impacts'.                                                                                                                                                        
+           paper_search for query 'phthalate esters health impacts' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+           Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:40] Starting paper search for 'health impacts phthalate esters'.                                                                                                                                                        
+           paper_search for query 'health impacts phthalate esters' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+[01:29:41] Starting paper search for 'health impacts phthalate esters'.                                                                                                                                                        
+           paper_search for query 'health impacts phthalate esters' and offset 8 returned 0 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+           Starting paper search for 'health impacts phthalate esters'.                                                                                                                                                        
+           paper_search for query 'health impacts phthalate esters' and offset 16 returned 0 papers.                                                                                                                           
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+           Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+[01:29:43] Starting paper search for 'phthalate esters health impacts'.                                                                                                                                                        
+           paper_search for query 'phthalate esters health impacts' and offset 0 returned 3 papers.                                                                                                                            
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+[01:29:44] Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             
+           Starting paper search for 'phthalate ester health impact'.                                                                                                                                                          
+           paper_search for query 'phthalate ester health impact' and offset 0 returned 4 papers.                                                                                                                              
+           Status: Paper Count=4 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+[01:29:45] Generating answer for 'What are the potential health impacts of phthalate esters?'.                                                                                                                                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+           Answer:                                                                                                                                                                                                             

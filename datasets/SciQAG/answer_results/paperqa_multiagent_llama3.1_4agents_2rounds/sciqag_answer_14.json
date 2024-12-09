@@ -1,0 +1,5 @@
+{
+    "question": "What is the likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3?",
+    "ground_truth": "The possible mechanism for the CL emission during the oxidation of ethanol on SrCO3 is attributed to the oxidation processes of two intermediates originated from the ethanol oxidation.",
+    "system_answer": "The likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3 involves formaldehyde produced by the oxidation of acetaldehyde. This is a consensual understanding among experts, indicating that formaldehyde acts as an intermediate in the process."
+}

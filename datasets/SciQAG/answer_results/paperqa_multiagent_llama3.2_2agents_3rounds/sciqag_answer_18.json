@@ -1,0 +1,5 @@
+{
+    "question": "How is the CL intensity of the SrCO3 sensor related to the concentration of ethanol vapor?",
+    "ground_truth": "The CL intensity of the SrCO3 sensor increases with the increase in the concentration of ethanol vapor. A calibration curve of CL intensity versus ethanol vapor concentration was created and was found to be linear in the tested range.",
+    "system_answer": "The CL intensity of the SrCO3 sensor increases linearly with increasing ethanol vapor concentration within a specific range. The relationship is most pronounced between 6-3750 parts per million (ppm), with a detection limit of 2.1 ppm, indicating high sensitivity and selectivity for ethanol detection."
+}

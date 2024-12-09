@@ -1,0 +1,5 @@
+{
+    "question": "What is the advantage of the headspace approach in SPME?",
+    "ground_truth": "The headspace approach in SPME is advantageous because it eliminates the co-extraction of undissolved particles and non-volatile components in the sample matrix. This approach could be particularly useful in selectingively extracting phthalate esters because the fibre is not directly submerged in the matrix.",
+    "system_answer": "Here's a synthesized answer that captures the essence of the expert inputs:\n\nThe headspace approach in Solid Phase Microextraction (SPME) offers several advantages when extracting analytes from milk samples. It enables direct measurement and simplifies analysis of volatile compounds present above the sample, resulting in reduced detection limits and streamlined extraction processes."
+}

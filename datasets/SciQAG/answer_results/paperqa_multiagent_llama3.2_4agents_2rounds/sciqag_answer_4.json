@@ -1,0 +1,5 @@
+{
+    "question": "What were the key findings regarding glucose metabolism in the study?",
+    "ground_truth": "The study found that in diabetes, glucose excretion was enormous, being nearly 7500-fold higher than in control rats. Other significantly enhanced metabolites included lactate, alanine, ethanol, and fumarate. These findings suggest that glucose metabolism is dramatically perturbed in diabetes.",
+    "system_answer": "Here is a synthesized answer reflecting the best understanding of the topic:\n\nThe study revealed that rats with diabetes exhibited disrupted glucose metabolism. Key findings include enhanced endogenous glucose production, altered glycolysis, and disturbances in lipid metabolism, such as increased triglycerides and reduced phosphatidylcholine synthesis. Additionally, changes were observed in the Cori cycle and TCA cycle intermediates, suggesting a complex interplay between metabolic pathways."
+}

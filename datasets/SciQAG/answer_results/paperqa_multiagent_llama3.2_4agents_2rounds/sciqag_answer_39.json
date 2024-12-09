@@ -1,0 +1,5 @@
+{
+    "question": "How promising is the flow analysis system based on the MIP based membrane electrode for the detection of melamine in milk?",
+    "ground_truth": "The flow analysis system based on the MIP based membrane electrode is very promising for the detection of melamine in milk. The system, which includes sample pretreatment, takes less than 15 minutes and has a detection limit of 6.0 \u00d7 10\u22126 mol L\u22121.",
+    "system_answer": "The flow analysis system using a MIP-based membrane electrode for melamine detection in milk shows great promise, offering improved detection capabilities and response slopes. This technology holds potential for efficient and accurate monitoring of melamine levels in dairy products."
+}

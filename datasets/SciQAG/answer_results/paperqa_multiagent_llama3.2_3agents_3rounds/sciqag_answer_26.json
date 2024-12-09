@@ -1,0 +1,5 @@
+{
+    "question": "How does the extraction temperature affect the extraction efficiency of the SPME fibre?",
+    "ground_truth": "To accelerate the release of phthalate esters from the milk matrix and increase their concentration in the headspace, a high extraction temperature is desirable. However, a high extraction temperature also reduces the retaining power of the coating materials, especially for lighter esters such as DMP and DEP.",
+    "system_answer": "The optimal extraction temperature for SPME fibers ranges from 70-90\u00b0C, with an ideal temperature around 80-85\u00b0C. This temperature range enhances the fiber's retaining power and reduces clustering effects in milk samples. Higher temperatures beyond this point may lead to decreased efficiency."
+}

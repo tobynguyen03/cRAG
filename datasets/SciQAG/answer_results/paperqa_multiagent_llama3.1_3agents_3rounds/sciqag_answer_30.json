@@ -1,0 +1,5 @@
+{
+    "question": "How was the method detection limit (MDL) calculated in this study?",
+    "ground_truth": "The method detection limit (MDL) was calculated by dividing the detection limit by the absolute extraction efficiency. The MDLs of this method were in general lower than those previously reported, which makes this method more sensitive.",
+    "system_answer": "The method detection limit (MDL) was calculated using three different approaches: \n\n1. Standard deviation \n2. Dividing the detection limit (DL) by absolute extraction efficiency (AEE)\n3. Specific values for DEHP.\n\nThese methods provide a comprehensive assessment of MDL, ensuring accuracy and reliability in the study's results."
+}

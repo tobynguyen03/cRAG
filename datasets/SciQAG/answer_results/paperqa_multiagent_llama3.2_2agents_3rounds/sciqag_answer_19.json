@@ -1,0 +1,5 @@
+{
+    "question": "What is the significance of the lifetime of the SrCO3 sensor in the study?",
+    "ground_truth": "The SrCO3 sensor shows better stability and durability compared to other sensors, evidenced by its ability to retain its response to ethanol vapor over long periods of time.",
+    "system_answer": "The significance of the SrCO3 sensor's lifetime lies in its substantial impact on overall performance, including accuracy, durability, reliability, and cost-effectiveness. A longer lifespan enables more frequent calibration, reduces maintenance needs, and expands its applicability across diverse settings."
+}

@@ -1,0 +1,5 @@
+{
+    "question": "How were the derivatives of aniline detected in this study?",
+    "ground_truth": "The derivatives of aniline were detected using Gas Chromatography-ElectronCapture Detection (GC-ECD). After simultaneous DLLME and derivatization, a small sample of the sedimented phase was injected to GC\u2013MS for analysis.",
+    "system_answer": "The derivatives of aniline were detected using Gas Chromatography-Mass Spectrometry (GC-MS) after simultaneous Dispersive Liquid-Liquid Microextraction (DLLME). The sample was then derivatized with Pentafluorobenzaldehyde (PFBAY), a reagent that enhances the detectability of the compounds."
+}

@@ -1,0 +1,5 @@
+{
+    "question": "How can the potential response of the MIP based membrane ISE be characterized?",
+    "ground_truth": "The potential response of the MIP based membrane ISE can be characterized as rapid, fully reversible, and exhibiting a near-Nernstian response in the concentration range of 5.0 \u00d7 10\u22126 to 1.0 \u00d7 10\u22122 mol L\u22121. It also has a low detection limit and wide linearity range.",
+    "system_answer": "The potential response of a MIP-based membrane ISE can be characterized through:\n\n- Potentiometric signal measurement\n- Response slope analysis\n- Time-based characterization\n- Examination of membrane composition\n\nKey insights include:\n\n- Sensitivity increases with increasing amount of MIP\n- Insolubility occurs at 6.1 wt% MIP concentration above"
+}

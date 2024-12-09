@@ -1,0 +1,5 @@
+{
+    "question": "How was the diabetic rat model established in this study?",
+    "ground_truth": "In this study, female rats were divided into a diabetic group and a control group. The diabetic group received an intraperitoneal dose of STZ, and showed glucose levels in the blood of more than 200 mg/dl after 4 days. The control group was matched for age and gender, and did not receive the STZ injection.",
+    "system_answer": "The diabetic rat model was established by administering 50mg/kg STZ (streptozotocin) via intraperitoneal injection to female Sprague-Dawley rats. This method is widely used to induce type 1 diabetes in rodents, causing hyperglycemia and impairing insulin production."
+}

@@ -1,0 +1,5 @@
+{
+    "question": "What is the significance of the template molecule's removal from the polymerized material in the molecular imprinting process?",
+    "ground_truth": "The removal of template molecules from the polymerized material is essential for the formation of binding sites. After template molecules are removed, cavities complementary in size and shape to the template are formed. These cavities allow for the rebinding process and the creation of molecularly imprinted polymers.",
+    "system_answer": "In molecular imprinting, the removal of the template molecule from the polymerized material creates unique binding sites that selectively recognize and bind to target molecules. This unique shape and chemical properties enhance detection and recognition capabilities, leading to high specificity and selectivity in the process. The resulting material can selectively bind to specific targets, mimicking the host-guest interaction seen in natural systems."
+}

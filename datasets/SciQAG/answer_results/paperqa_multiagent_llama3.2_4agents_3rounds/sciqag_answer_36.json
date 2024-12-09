@@ -1,0 +1,5 @@
+{
+    "question": "How does the sample pH affect the potential response of the MIP based melamine ISE?",
+    "ground_truth": "The potential response of the MIP based melamine ISE is not constant at all pH levels. It tends to decrease at pHs beyond 4.5, probably because at higher pH values, melamine exists as a neutral molecule showing no potential response.",
+    "system_answer": "The sample pH significantly affects the MIP-based melamine ISE's potential response, with optimal conditions found between 3.0-4.5. Detection is nearly constant within this range, while decreasing at lower or higher pH levels. This range is due to changes in melamine ionization state and subsequent decomposition."
+}

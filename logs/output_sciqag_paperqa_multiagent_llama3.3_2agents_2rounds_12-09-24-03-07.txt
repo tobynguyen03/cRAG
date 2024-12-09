@@ -1,0 +1,12 @@
+Running experiment: sciqag_paperqa_multiagent_llama3.3_2agents_2rounds
+saving results to: datasets/SciQAG/answer_results/paperqa_multiagent_llama3.3_2agents_2rounds 
+
+
+
+
+ ANSWERING QUESTION: sciqag_question_1.json
+ ----------------------------- 
+
+
+
+--- ROUND 1/2 ---

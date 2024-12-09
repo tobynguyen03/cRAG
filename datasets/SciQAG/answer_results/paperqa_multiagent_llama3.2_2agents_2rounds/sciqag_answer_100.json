@@ -1,0 +1,5 @@
+{
+    "question": "How were the derivatives of aniline detected in this study?",
+    "ground_truth": "The derivatives of aniline were detected using Gas Chromatography-ElectronCapture Detection (GC-ECD). After simultaneous DLLME and derivatization, a small sample of the sedimented phase was injected to GC\u2013MS for analysis.",
+    "system_answer": "Here's a synthesized answer that reflects the best understanding of the topic:\n\n\"Derivatives of aniline were detected in this study using a combination of DLLME (Dispersive Liquid-Liquid Microextraction) and GC\u2013MS (Gas Chromatography-Mass Spectrometry). The process involved extracting target compounds from river water samples and then analyzing them using GC\u2013MS.\""
+}

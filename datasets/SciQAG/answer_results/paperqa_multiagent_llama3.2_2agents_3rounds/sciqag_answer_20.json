@@ -1,0 +1,5 @@
+{
+    "question": "How is the possible CL emission process from the oxidation of C2H4 and CH3CHO on SrCO3 explained?",
+    "ground_truth": "The CL phenomenon from the catalytic oxidation of ethanol on SrCO3 can be attributed to the oxidation processes of the two intermediates originated from the ethanol oxidation, C2H4 and CH3CHO. The CL emission processes of these gases are likely different, with CH3CHO producing only acetaldehyde as an intermediate.",
+    "system_answer": "The possible CL (Cathode Luminescence) emission process from the oxidation of C2H4 and CH3CHO on SrCO3 can be explained by the oxidation of intermediate species. The CL emission is likely attributed to the formation and recombination of excited states in these intermediates, similar to ethanol oxidation mechanisms."
+}

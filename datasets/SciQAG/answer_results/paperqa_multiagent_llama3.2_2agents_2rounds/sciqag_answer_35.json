@@ -1,0 +1,5 @@
+{
+    "question": "How does the degree of cross-linking affect the potential response of the MIP based membrane electrode?",
+    "ground_truth": "The degree of cross-linking is the mole ratio of cross-linker/monomer during the polymerization process. A higher degree of cross-linking may result in difficulties in removing the template from the polymer and insolubility of MIP in the solvent. Therefore, a suitable degree of cross-linking must be achieved to form stable binding sites.",
+    "system_answer": "The degree of cross-linking in a MIP-based membrane electrode affects its potential response by altering:\n\n- Crystallinity: influencing molecular structure\n- Conductivity: impacting ion transport properties\n- Mechanical stability: determining overall durability\n\nIncreased cross-linking can enhance these characteristics, potentially improving the electrode's performance."
+}

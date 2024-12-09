@@ -1,0 +1,5 @@
+{
+    "question": "What is the significance of the detection limit (DL) in the analysis of phthalate esters?",
+    "ground_truth": "The detection limit (DL) is a measure of the sensitivity of the analysis method. It is estimated using two different approaches, and in this study, the DL of analytes that do not have detectable background levels in the SPME fibre was estimated by the injected amount that resulted in an instrument signal to noise ratio of 3.",
+    "system_answer": "The detection limit (DL) is a critical parameter in the analysis of phthalate esters, indicating the minimum amount of analyte that can be detected with confidence. It varies depending on fat content levels and must be calculated using two approaches: one for analytes without background levels and another for those with detectable background levels."
+}

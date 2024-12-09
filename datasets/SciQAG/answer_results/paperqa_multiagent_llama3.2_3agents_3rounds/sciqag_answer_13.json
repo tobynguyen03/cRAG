@@ -1,0 +1,5 @@
+{
+    "question": "How does the SrCO3 material used in the study respond to ethanol vapor?",
+    "ground_truth": "The SrCO3 sensor responds to ethanol vapor with chemiluminescence (CL). The CL intensity increases sharply by about three orders of magnitude after ethanol vapor is introduced.",
+    "system_answer": "The SrCO3 material exhibits a chemiluminescent response to ethanol vapor, characterized by increased emission as temperature rises. This phenomenon is attributed to the interaction between ethanol and strontium carbonate, leading to a luminous reaction. The exact mechanism may involve an oxidation-reduction process that releases light energy."
+}

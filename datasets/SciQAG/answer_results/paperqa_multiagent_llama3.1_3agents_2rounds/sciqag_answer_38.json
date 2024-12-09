@@ -1,0 +1,5 @@
+{
+    "question": "How does the selectivity coefficient of the MIP based ISE towards discriminated ions compare to that of the NIP membrane electrode?",
+    "ground_truth": "The proposed MIP membrane electrode shows high selectivity to melamine ion over other cations such as Na+, K+, H+, Ca2+, and Mg2+. The selectivity coefficients of the MIP based ISE are superior to those of the NIP membrane electrode due to the specific recognition of the MIP for the target ion.",
+    "system_answer": "The selectivity coefficient of a MIP-based ion-selective electrode (ISE) towards discriminated ions cannot be compared directly to that of a non-imprinted polymer (NIP) membrane electrode due to insufficient information."
+}

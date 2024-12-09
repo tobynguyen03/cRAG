@@ -1,0 +1,5 @@
+{
+    "question": "What is the role of the ion-exchanger resin columns in the detection of melamine?",
+    "ground_truth": "Ion-exchanger resin columns are used to eliminate the interference of anion and cation co-existing in milk samples. They are particularly effective at removing high concentrations of ions such as Na+, K+, and Ca2+ that are present in milk.",
+    "system_answer": "Here's a synthesized answer:\n\nIon-exchanger resin columns play a crucial role in detecting melamine by selectively binding and removing interfering ions from milk samples. This process improves the accuracy of melamine detection through efficient separation and analysis, ultimately yielding reliable results.\n\n(Ion-exchange chromatography principles facilitate selective adsorption and elution of melamine, enabling accurate detection.)"
+}

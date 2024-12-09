@@ -1,0 +1,5 @@
+{
+    "question": "What is the importance of temperature in the CL emission process in the SrCO3 sensor?",
+    "ground_truth": "Temperature plays a significant role in the CL emission process in the SrCO3 sensor. The CL signal increases with the increase in temperature, indicating that the catalytic oxidation process that produces the luminescent intermediates is under a diffusion controlled condition at flow rate below a certain temperature, and is under a reaction controlled condition at flow rate above that temperature.",
+    "system_answer": "The SrCO3 sensor's CL emission process is optimized within a temperature range of 350\u00b0C to 470\u00b0C. This allows for the production of a maximum signal-to-noise (S/N) ratio, indicating optimal performance. Temperature affects reaction rate and CL yield, making this temperature range crucial for accurate results."
+}

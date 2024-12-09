@@ -1,0 +1,5 @@
+{
+    "question": "How long can the SrCO3 sensor endure in a continuous ethanol vapor introduction experiment?",
+    "ground_truth": "The SrCO3 sensor showed no obvious change after 100 hours of reaction to continuous introduction of 2000 ppm ethanol vapor. The sensor kept the same response to ethanol vapor over the 100 hour period.",
+    "system_answer": "Based on available data, the SrCO3 sensor typically has a limited endurance time when exposed to continuous ethanol vapor. The exact duration can vary depending on factors such as sensor design and environmental conditions.\n\n Generally, exposure times exceeding 30-60 minutes can lead to significant degradation of the sensor's performance. Continuous exposure beyond this point may result in reduced accuracy or even sensor failure."
+}

@@ -1,0 +1,5 @@
+{
+    "question": "How selective is the SrCO3 sensor for detecting ethanol among other gases?",
+    "ground_truth": "The SrCO3 sensor exhibits a significantly high selectivity to ethanol. The sensor was not responsive to the passage of other gases such as gasoline, ammonia, hydrocarbons, and hydrogen under the optimized conditions.",
+    "system_answer": "**Selective Gas Detection:** SrCO3 sensor demonstrates **high selectivity** for detecting ethanol, particularly due to its specific chemical properties that facilitate gas-phase interactions. This enables efficient separation and identification of ethanol from a mixture of gases."
+}

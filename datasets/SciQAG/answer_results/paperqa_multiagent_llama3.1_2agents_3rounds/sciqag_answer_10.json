@@ -1,0 +1,5 @@
+{
+    "question": "How did the correlations among the detected metabolites differ between the diabetic and control rats?",
+    "ground_truth": "The correlations among the detected metabolites showed a number of striking differences between the diabetic and control rats. For example, the correlation of glucose with alanine was increased in diabetic rats, while the correlation of glucose with lactate decreased. These changes indicate significant alterations in metabolism in the diabetic rats.",
+    "system_answer": "The correlations among detected metabolites differ between diabetic and control rats. Specifically, there is a significant increase in the correlation between glucose and urea, but a decrease in the correlation between glucose and lactate in diabetic rats compared to controls. Additionally, several correlations between citrate and other metabolites are also decreased in diabetic rats."
+}

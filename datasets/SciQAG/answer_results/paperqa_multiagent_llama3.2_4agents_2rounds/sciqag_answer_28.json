@@ -1,0 +1,5 @@
+{
+    "question": "What role do internal standards play in the analysis of phthalate esters?",
+    "ground_truth": "Internal standards, such as DEHP-d4 and DBP-d4 used in this study, are essential as they help to correct for extraction efficiency. Without internal standards, the detection limit would be lower and the method would be less sensitive.",
+    "system_answer": "### Synthesized Answer:\n\nInternal standards are essential in the analysis of phthalate esters. They correct for variations in extraction efficiency, matrix effects, and instrumental variability, ensuring accurate quantification of these compounds in complex matrices. This leads to precise and reliable results in environmental and health monitoring applications."
+}

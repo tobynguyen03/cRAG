@@ -1,0 +1,5 @@
+{
+    "question": "Why are MIPs considered stable, less costly, and easier to produce than their biological counterparts?",
+    "ground_truth": "MIPs are considered stable because they are synthesized in the presence of functional monomers, template molecules, and a cross-linking agent. They are less costly because they require fewer steps and fewer reagents compared to the production of biological sensors such as antibodies and enzymes.",
+    "system_answer": "MIPs (Molecularly Imprinted Polymers) are considered stable, less costly, and easier to produce than their biological counterparts due to simplicity in synthesis, cost-effectiveness, long-term stability, controlled synthesis using monomers and cross-linking agents, and a templating approach for specific binding sites. This mimics antibody recognition properties without complex processes, making them an attractive alternative."
+}

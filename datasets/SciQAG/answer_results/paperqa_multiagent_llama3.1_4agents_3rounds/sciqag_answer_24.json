@@ -1,0 +1,5 @@
+{
+    "question": "What is the advantage of the headspace approach in SPME?",
+    "ground_truth": "The headspace approach in SPME is advantageous because it eliminates the co-extraction of undissolved particles and non-volatile components in the sample matrix. This approach could be particularly useful in selectingively extracting phthalate esters because the fibre is not directly submerged in the matrix.",
+    "system_answer": "The headspace approach in SPME has several key advantages: selective extraction of phthalate esters, increased concentration in the gas phase through accelerated release at high temperatures, and reduced need for time-consuming cleaning procedures."
+}

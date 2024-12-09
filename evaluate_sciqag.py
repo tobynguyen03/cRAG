@@ -152,8 +152,9 @@ class EvaluatorSciQAG:
                 self.args.query_timeout = 300
             elif self.args.method == "paperqa_multiagent":
                 self.args.query_timeout = 600
-            
-            
+        
+        else:
+            self.args.query_timeout = 500
 
     def answer_all_questions(self):
         """
@@ -211,7 +212,11 @@ class EvaluatorSciQAG:
                 llm_config=self.llm_config,
                 summary_llm=f'ollama/{self.args.llm_model}',
                 summary_llm_config=self.llm_config,
+                
                 embedding='ollama/mxbai-embed-large',
+                embedding_config=None,
+                
+                
                 agent=AgentSettings(
                     agent_llm=f'ollama/{self.args.llm_model}',
                     agent_llm_config=self.llm_config,
@@ -266,7 +271,10 @@ class EvaluatorSciQAG:
                 llm_config=self.llm_config,
                 summary_llm=f'ollama/{self.args.llm_model}',
                 summary_llm_config=self.llm_config,
+                
                 embedding='ollama/mxbai-embed-large',
+                embedding_config={'kwargs': {'api_base': f"http://localhost:{self.args.port}"}},
+                
                 agent=AgentSettings(
                     agent_llm=f'ollama/{self.args.llm_model}',
                     agent_llm_config=self.llm_config,
@@ -284,16 +292,16 @@ class EvaluatorSciQAG:
             
         # bring in LLM here to summarize the answers from the agents into a final consensus answer
         if success: 
-            eval_model_multiagent_consensus = self._init_eval_model_multiagent_consensus()                
+            
+            eval_model_multiagent_consensus = self._init_eval_model_multiagent_consensus()      
+                      
             async def get_multiagent_consensus(question: str, multiagent_answers: List[str]) -> str:
-                
                 multiagent_answers_input = ""
                 for agent_idx, agent_answer in enumerate(multiagent_answers):
                     multiagent_answers_input += f"Agent {agent_idx}: {agent_answer}\n"
                     
                 output = await eval_model_multiagent_consensus.achat(
-                    messages=[
-                        {
+                    messages=[{
                             "role": "user",
                             "content": EVAL_MULTIAGENT_CONSENSUS_PROMPT.format(
                                 question=question, multiagent_answers_input=multiagent_answers_input,
@@ -302,24 +310,22 @@ class EvaluatorSciQAG:
                     ],
                 )
                 
-                final_answer_match = re.search(r'(?i)final answer:\s*(.*)', output.text, re.DOTALL)
-
-                if final_answer_match:
-                    final_answer = final_answer_match.group(1).strip()
-                    return True, final_answer
-                else:
-                    return False, None
-
+                return output.text
+            
             multiagent_answers = [agent.summarization.answer for agent in agents]
 
-            success, final_answer = get_loop().run_until_complete(get_multiagent_consensus(question, multiagent_answers))
+            final_answer = get_loop().run_until_complete(get_multiagent_consensus(question, multiagent_answers))
+            formatted_answer = {"question": question, "ground_truth": ground_truth, "system_answer": final_answer}
             
-            if success:
-                formatted_answer = {"question": question, "ground_truth": ground_truth, "system_answer": final_answer}
-                return success, formatted_answer
-            else: 
-                print("Failed to extract final answer from multiagent consensus.")  
-                return False, None
+            return True, formatted_answer
+            
+            
+            # if success:
+            #     formatted_answer = {"question": question, "ground_truth": ground_truth, "system_answer": final_answer}
+            #     return success, formatted_answer
+            # else: 
+            #     print("Failed to extract final answer from multiagent consensus.")  
+            #     return False, None
             
         
         else: 
@@ -335,7 +341,7 @@ class EvaluatorSciQAG:
                     model_name=f"ollama/{self.args.llm_model}",
                     litellm_params=dict(
                         model=f"ollama/{self.args.llm_model}",
-                        api_base="http://localhost:11434", 
+                        api_base=f"http://localhost:{self.args.port}", 
                     ),
                 )
             ]
@@ -398,7 +404,8 @@ if __name__ == "__main__":
     # num_agents, num_rounds 
     parser.add_argument("--num_agents", type=int, default=2, help="Number of agents to use in multi-agent setting.")
     parser.add_argument("--num_rounds", type=int, default=2, help="Number of rounds to use in multi-agent setting.")
-    
+    parser.add_argument("--port", type=str, default="11434", help="method to use (paperqa or paperqa_multiagent)")
+
     args = parser.parse_args()
     
     # TODO: add in arguments to specify llm model?
@@ -408,10 +415,12 @@ if __name__ == "__main__":
                 "model_name": f"ollama/{args.llm_model}",
                 "litellm_params": {
                     "model": f"ollama/{args.llm_model}",
-                    "api_base": "http://localhost:11434",
+                    "api_base": f"http://localhost:{args.port}",
+                    # "num_ctx": 8192, 
                 },
-            }
-        ]
+            }  # {'num_retries': 3, 'timeout': 60.0}
+        ], 
+        # "router_kwargs": {''}
     }
 
     evaluator = EvaluatorSciQAG(

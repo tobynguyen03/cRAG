@@ -1,0 +1,5 @@
+{
+    "question": "What is the likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3?",
+    "ground_truth": "The possible mechanism for the CL emission during the oxidation of ethanol on SrCO3 is attributed to the oxidation processes of two intermediates originated from the ethanol oxidation.",
+    "system_answer": "**Mechanism of CL Emission**\n\nThe oxidation of ethanol on SrCO\u2083 likely results in the formation of acetaldehyde, which undergoes vibrational excitation. This excited state leads to the emission of a Chlorine Luminescence (CL) signal. The role of ethylene oxidation is less clear and requires further investigation.\n\n**Key Insight:** Excited acetaldehyde is key to CL emission"
+}

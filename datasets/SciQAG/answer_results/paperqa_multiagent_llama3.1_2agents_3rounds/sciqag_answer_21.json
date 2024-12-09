@@ -1,0 +1,5 @@
+{
+    "question": "What are the potential health impacts of phthalate esters?",
+    "ground_truth": "Phthalate esters, which are widely used as additives in the manufacturing of polyvinyl chloride (PVC) plastics, have endocrine disrupting properties. Studies have shown that they can be estrogenic and have reproductive effects in mammals. The European Commission is proposing a ban on the use of phthalate esters in soft PVC materials for making baby toys due to these potential health impacts.",
+    "system_answer": "Phthalate esters pose potential health impacts due to their endocrine-disrupting properties. They can migrate into milk samples, exposing consumers to DEHP, which has been linked to human health risks associated with contaminated milk products."
+}

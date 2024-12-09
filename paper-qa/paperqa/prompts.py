@@ -138,16 +138,13 @@ multiagent_qa_prompt = (
 
 
 EVAL_MULTIAGENT_CONSENSUS_PROMPT = """
-You are tasked with providing the most accurate and well-informed answer to the question below, based on multiple expert inputs. Carefully analyze all provided answers, synthesize the information, and write a single comprehensive response.
-
+You are tasked with synthesizing multiple expert inputs to provide the most accurate and concise answer to the question below.  
 The answer should reflect the best understanding of the topic without referencing the individual inputs or their sources.
 
-After your analysis, write the final answer directly after the text "FINAL ANSWER:".
+Focus on brevity and clarity, distilling key insights into 300-500 characters.
 
 Question: {question}
 
 Answers from experts:
 {multiagent_answers_input}
-
-FINAL ANSWER:
 """

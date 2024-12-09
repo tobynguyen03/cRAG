@@ -1,0 +1,5 @@
+{
+    "question": "What is the main technique used in the synthesis of Molecularly Imprinted Polymers (MIPs)?",
+    "ground_truth": "The main technique used in the synthesis of MIPs is the molecular imprinting technique. This technique involves the use of functional monomers, template molecules, and a cross-linking agent. The polymerization process results in the formation of binding sites with molecular recognition properties.",
+    "system_answer": "The main technique used in the synthesis of Molecularly Imprinted Polymers (MIPs) is molecular imprinting. This involves creating a polymer that \"remembers\" and selectively binds to a target molecule, mimicking biological recognition sites."
+}

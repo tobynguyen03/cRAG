@@ -1,0 +1,5 @@
+{
+    "question": "How does the SrCO3 material used in the study respond to ethanol vapor?",
+    "ground_truth": "The SrCO3 sensor responds to ethanol vapor with chemiluminescence (CL). The CL intensity increases sharply by about three orders of magnitude after ethanol vapor is introduced.",
+    "system_answer": "The SrCO3 material exhibits rapid and sensitive response to ethanol vapor, displaying a wide linear range and high sensitivity, along with strong selectivity. Upon catalytic oxidation, it produces chemiluminescence. This makes it suitable for detecting ethanol vapor."
+}

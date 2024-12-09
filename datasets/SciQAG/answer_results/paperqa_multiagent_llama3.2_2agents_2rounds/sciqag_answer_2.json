@@ -1,0 +1,5 @@
+{
+    "question": "What is the role of metabolomics in healthcare?",
+    "ground_truth": "Metabolomics is a rapidly growing field that relates biological end points to multiple altered metabolite concentrations, providing a wealth of biological information on complex systems. It has been applied to a variety of diseases such as cancer, type 2 diabetes, and inborn errors of metabolism. It uses advanced analytical techniques such as nuclear magnetic resonance (NMR) spectroscopy and mass spectrometry with multivariate statistical analysis to identify potential biomarkers and biological networks.",
+    "system_answer": "### Synthesized Answer:\n\nMetabolomics plays a vital role in healthcare by analyzing endogenous metabolites to diagnose diseases, monitor health outcomes, and identify biomarkers. It helps researchers understand biological processes, develop personalized medicine, and improve treatment efficacy. By identifying patterns and changes in metabolite levels, metabolomics aids in early disease detection, targeted therapy, and precision medicine."
+}

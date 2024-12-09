@@ -1,0 +1,44 @@
+Running experiment: sciqag_paperqa_multiagent_llama3.2_2agents_2rounds
+saving results to: datasets/SciQAG/answer_results/paperqa_multiagent_llama3.2_2agents_2rounds 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+ Skipping sciqag_question_13.json as sciqag_answer_13.json already exists. 
+
+
+ Skipping sciqag_question_14.json as sciqag_answer_14.json already exists. 
+
+
+ Skipping sciqag_question_15.json as sciqag_answer_15.json already exists. 
+
+
+ Skipping sciqag_question_16.json as sciqag_answer_16.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_17.json
+ ----------------------------- 
+
+
+
+--- ROUND 1/2 ---
+[22:14:43] Starting paper search for 'CL emission process in the SrCO3 sensor temperature importance'.                                                                                                                         
+           paper_search for query 'CL emission process in the SrCO3 sensor temperature importance' and offset 0 returned 8 papers.                                                                                             
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                                                                                                               
+got papers
+           gather_evidence starting for question 'What is the importance of temperature in the CL emission process in the SrCO3 sensor?'.                                                                                      

@@ -1,0 +1,5 @@
+{
+    "question": "How was the method detection limit (MDL) calculated in this study?",
+    "ground_truth": "The method detection limit (MDL) was calculated by dividing the detection limit by the absolute extraction efficiency. The MDLs of this method were in general lower than those previously reported, which makes this method more sensitive.",
+    "system_answer": "The method detection limit (MDL) was calculated based on melamine ion detection data. A MIP-based membrane ISE with a detection limit of 1.6 \u00d7 10\u22126 mol L\u22121 was used, although this is inferred from indirect information. The calculation likely employed standard analytical methods to determine the MDL from the detected ion levels."
+}
