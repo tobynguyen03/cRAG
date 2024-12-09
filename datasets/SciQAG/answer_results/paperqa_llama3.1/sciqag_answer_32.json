@@ -1,0 +1,5 @@
+{
+    "question": "What are the applications of Molecularly Imprinted Polymers (MIPs)?",
+    "ground_truth": "MIPs are used in several applications including solid phase extraction (SPE), chromatographic separation, catalysis facilitation, and artificial reception. In recent years, they have also been gained wide acceptance as new molecular recognition materials in chemical sensors.",
+    "system_answer": "Molecularly Imprinted Polymers (MIPs) have diverse applications including solid phase extraction, chromatographic separation, catalysis facilitation, artificial reception, potentiometric sensing, ion-selective electrodes, melamine detection in milk and food products."
+}

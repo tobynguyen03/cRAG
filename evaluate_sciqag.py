@@ -141,7 +141,7 @@ class EvaluatorSciQAG:
         # setup query timeout limits for different models and methods 
         if self.args.llm_model == "llama3.2":
             if self.args.method == "paperqa":
-                self.args.query_timeout = 180
+                self.args.query_timeout = 60
             elif self.args.method == "paperqa_multiagent":
                 self.args.query_timeout = 300
                 

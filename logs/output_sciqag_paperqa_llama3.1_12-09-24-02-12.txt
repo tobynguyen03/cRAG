@@ -1,0 +1,187 @@
+Running experiment: sciqag_paperqa_llama3.1
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.1 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+ Skipping sciqag_question_13.json as sciqag_answer_13.json already exists. 
+
+
+ Skipping sciqag_question_14.json as sciqag_answer_14.json already exists. 
+
+
+ Skipping sciqag_question_15.json as sciqag_answer_15.json already exists. 
+
+
+ Skipping sciqag_question_16.json as sciqag_answer_16.json already exists. 
+
+
+ Skipping sciqag_question_17.json as sciqag_answer_17.json already exists. 
+
+
+ Skipping sciqag_question_18.json as sciqag_answer_18.json already exists. 
+
+
+ Skipping sciqag_question_19.json as sciqag_answer_19.json already exists. 
+
+
+ Skipping sciqag_question_2.json as sciqag_answer_2.json already exists. 
+
+
+ Skipping sciqag_question_20.json as sciqag_answer_20.json already exists. 
+
+
+ Skipping sciqag_question_21.json as sciqag_answer_21.json already exists. 
+
+
+ Skipping sciqag_question_22.json as sciqag_answer_22.json already exists. 
+
+
+ Skipping sciqag_question_23.json as sciqag_answer_23.json already exists. 
+
+
+ Skipping sciqag_question_24.json as sciqag_answer_24.json already exists. 
+
+
+ Skipping sciqag_question_25.json as sciqag_answer_25.json already exists. 
+
+
+ Skipping sciqag_question_26.json as sciqag_answer_26.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_27.json
+ ----------------------------- 
+
+
+[02:15:02] Starting paper search for 'Absolute extraction efficiencies phthalate esters milk samples'.                                    
+[02:15:03] paper_search for query 'Absolute extraction efficiencies phthalate esters milk samples' and offset 0 returned 8 papers.        
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[02:15:04] Generating answer for 'How were the absolute extraction efficiencies (AEEs) of the phthalate esters in milk samples            
+           determined?'.                                                                                                                  
+[02:15:25] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=5 | Current Cost=$0.0000                                          
+           Answer: The absolute extraction efficiencies (AEEs) of the phthalate esters in milk samples were determined using two main     
+           methods:                                                                                                                       
+                                                                                                                                          
+           1. In Note1994 chunk 2, it is mentioned that commercially available Homo-milk sample was spiked with 2 μg of each phthalate    
+           ester in 5 g of milk. The spiked sample was then subjected to headspace solid-phase microextraction (HS-SPME) using different  
+           commercially available SPME fibres under various extraction conditions.                                                        
+           2. In Note1994 chunk 3, it is mentioned that the relative amount of phthalate esters collected on each fibre was normalized to 
+           the highest extracted amount among all phthalate esters.                                                                       
+                                                                                                                                          
+           In both cases, the AEEs were determined based on the comparison of the relative amounts of phthalate esters collected on each  
+           fibre. Additionally, in Note1994 chunk 5, it is mentioned that the AEEs of phthalate esters in milk samples were calculated    
+           using the best curve fitting equations for all the phthalate esters listed.                                                    
+                                                                                                                                          
+           The reasoning process involved analyzing each note to understand how the AEEs were determined. In Note1994 chunk 2, it was     
+           clear that the AEEs were determined by comparing the relative amounts of phthalate esters collected on each fibre. In Note1994 
+           chunk 3, it was mentioned that the extraction efficiency was evaluated at two temperatures: 90 °C for 60 min, and 50 °C, which 
+           suggests that the AEEs may have been estimated or calculated based on the response of calibration standard solutions in the    
+           GC-MS analysis.                                                                                                                
+                                                                                                                                          
+           ANSWER SUMMARY: The absolute extraction efficiencies (AEEs) of phthalate esters in milk samples were determined by comparing   
+           the relative amounts of phthalate esters collected on each fibre, using commercially available SPME fibres and varying         
+           extraction conditions.                                                                                                         
+
+
+ ANSWERING QUESTION: sciqag_question_28.json
+ ----------------------------- 
+
+
+[02:15:27] Starting paper search for 'phthalate ester internal standards'.                                                                
+           paper_search for query 'phthalate ester internal standards' and offset 0 returned 3 papers.                                    
+           Status: Paper Count=3 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+           Generating answer for 'What role do internal standards play in the analysis of phthalate esters?'.                             
+[02:15:40] Status: Paper Count=3 | Relevant Papers=1 | Current Evidence=4 | Current Cost=$0.0000                                          
+           Answer: Internal standards, specifically DBP-d4 and DEHP-d4, play a crucial role in the accurate quantification of phthalate   
+           esters. They are used to normalize peak area counts of chromatograms, ensuring the accuracy of the analysis and accounting for 
+           any variations in the extraction process. Internal standards help identify true positives by comparing ion ratios against those
+           of associated standards. Additionally, they enable the use of one-point standard addition to calculate the concentration of    
+           target analytes, correcting for differences in extraction efficiency due to variations in fat content in milk samples.         
+                                                                                                                                          
+           ANSWER SUMMARY: Internal standards (DBP-d4 and DEHP-d4) are used to accurately quantify phthalate esters by normalizing peak   
+           area counts, identifying true positives, and correcting for extraction efficiency.                                             
+
+
+ ANSWERING QUESTION: sciqag_question_29.json
+ ----------------------------- 
+
+
+[02:15:41] Starting paper search for 'significance of detection limit in phthalate esters analysis'.                                      
+           paper_search for query 'significance of detection limit in phthalate esters analysis' and offset 0 returned 8 papers.          
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+           Generating answer for 'What is the significance of the detection limit (DL) in the analysis of phthalate esters?'.             
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+Failed to answer question due to timeout: What is the significance of the detection limit (DL) in the analysis of phthalate esters?
+
+
+ ANSWERING QUESTION: sciqag_question_3.json
+ ----------------------------- 
+
+
+[02:25:04] Starting paper search for 'diabetic rat model study'.                                                                          
+           paper_search for query 'diabetic rat model study' and offset 0 returned 7 papers.                                              
+           Status: Paper Count=7 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[02:25:05] Generating answer for 'How was the diabetic rat model established in this study?'.                                             
+[02:25:31] Status: Paper Count=7 | Relevant Papers=2 | Current Evidence=8 | Current Cost=$0.0000                                          
+           Answer: The diabetic rat model was established using an intraperitoneal dose of 50 mg/kg Streptozotocin (STZ) administered to  
+           female Sprague–Dawley rats. The rats were monitored for glucose levels, and those with blood glucose levels exceeding 200 mg/dl
+           after 4 days were considered diabetic.                                                                                         
+                                                                                                                                          
+           My reasoning process involved analyzing the provided context from Huang2021 chunk 1, which explicitly stated that the diabetic 
+           rat model was established using STZ administration. This information directly answers the question about how the diabetic rat  
+           model was established in this study.                                                                                           
+                                                                                                                                          
+           ANSWER SUMMARY: The diabetic rat model was established through intraperitoneal STZ administration to Sprague–Dawley rats with a
+           blood glucose level exceeding 200 mg/dl after 4 days indicating diabetes.                                                      
+
+
+ ANSWERING QUESTION: sciqag_question_30.json
+ ----------------------------- 
+
+
+[02:25:32] Starting paper search for 'method detection limit (MDL) calculation in study'.                                                 
+           paper_search for query 'method detection limit (MDL) calculation in study' and offset 0 returned 8 papers.                     
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[02:25:33] Generating answer for 'How was the method detection limit (MDL) calculated in this study?'.                                    
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
