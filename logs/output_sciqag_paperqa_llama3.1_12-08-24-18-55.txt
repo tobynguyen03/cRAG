@@ -1,0 +1,65 @@
+Running experiment: sciqag_paperqa_llama3.1
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.1 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_12.json
+ ----------------------------- 
+
+
+[18:55:21] Starting paper search for 'nanosized materials in chemical sensors'.                                                           
+           paper_search for query 'nanosized materials in chemical sensors' and offset 0 returned 8 papers.                               
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[18:55:23] Generating answer for 'What is the significance of nanosized materials in the development of chemical sensors?'.               
+[18:56:29] Status: Paper Count=8 | Relevant Papers=2 | Current Evidence=8 | Current Cost=$0.0000                                          
+           Answer: Nanosized materials have attracted attention due to their special features different from bulk materials, including    
+           high activity and selectivity. This has led to the rapid development of chemical sensors based on these materials, which can   
+           detect small concentrations of gas molecules with high sensitivity and specificity.                                            
+                                                                                                                                          
+           Reasoning process:                                                                                                             
+           The question asks for the significance of nanosized materials in the development of chemical sensors. To answer this, I looked 
+           for relevant information in the provided context, specifically focusing on passages that mention nanosized materials and their 
+           applications. The first chunk from Zhang2174 mentions the unique features of nanosized materials and their use in chemical     
+           sensors, indicating a direct connection between these materials and sensor development.                                        
+                                                                                                                                          
+           ANSWER SUMMARY: Nanosized materials are significant in chemical sensor development due to their high activity and selectivity, 
+           enabling the detection of small gas molecule concentrations with high sensitivity and specificity.                             
+
+
+ ANSWERING QUESTION: sciqag_question_13.json
+ ----------------------------- 
+
+
+[18:56:35] Starting paper search for 'SrCO3 response to ethanol vapor in studies'.                                                        
+           paper_search for query 'SrCO3 response to ethanol vapor in studies' and offset 0 returned 8 papers.                            
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[18:56:37] Generating answer for 'How does the SrCO3 material used in the study respond to ethanol vapor?'.                               
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+

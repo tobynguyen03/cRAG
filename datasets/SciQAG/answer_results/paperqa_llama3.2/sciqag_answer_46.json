@@ -1,0 +1,5 @@
+{
+    "question": "How does the dry-coating method produce high-quality molecular images?",
+    "ground_truth": "The dry-coating method produces high-quality molecular images by allowing dozens of ion images to be generated from each dry-coated imaging experiment. These images clearly differentiate the anatomical structures of the brain and show signal intensity and phospholipid localization similar to those obtained from the spray-coated tissue section.",
+    "system_answer": "The dry-coating method produces high-quality molecular images in microscopy by reducing electron scattering and improving signal-to-noise ratios, likely through scanning tunneling microscopy (STM) or atomic force microscopy (AFM)."
+}

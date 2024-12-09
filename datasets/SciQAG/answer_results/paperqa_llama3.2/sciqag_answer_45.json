@@ -1,0 +1,5 @@
+{
+    "question": "What are the advantages of the dry-coating method for matrix deposition?",
+    "ground_truth": "The dry-coating method for matrix deposition is simple, fast, and does not require the matrix to be dissolved in a solvent. It also provides a homogeneous coating of matrix essential for obtaining high-resolution phospholipid images from tissue.",
+    "system_answer": "The dry-coating method offers homogeneous coating, reduced analyte delocalization, and simplified apparatus, resulting in high-quality molecular images with optimal matrix coverage."
+}

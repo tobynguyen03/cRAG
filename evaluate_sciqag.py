@@ -141,7 +141,7 @@ class EvaluatorSciQAG:
         # setup query timeout limits for different models and methods 
         if self.args.llm_model == "llama3.2":
             if self.args.method == "paperqa":
-                self.args.query_timeout = 180
+                self.args.query_timeout = 60
             elif self.args.method == "paperqa_multiagent":
                 self.args.query_timeout = 300
                 
@@ -152,9 +152,14 @@ class EvaluatorSciQAG:
                 self.args.query_timeout = 300
             elif self.args.method == "paperqa_multiagent":
                 self.args.query_timeout = 600
-        
-        else:
-            self.args.query_timeout = 500
+
+        elif self.args.llm_model == "llama3.3": # takes more than 180 to load this model             
+            if self.args.method == "paperqa":
+                self.args.query_timeout = 300
+            elif self.args.method == "paperqa_multiagent":
+                self.args.query_timeout = 500
+            
+            
 
     def answer_all_questions(self):
         """
@@ -301,7 +306,8 @@ class EvaluatorSciQAG:
                     multiagent_answers_input += f"Agent {agent_idx}: {agent_answer}\n"
                     
                 output = await eval_model_multiagent_consensus.achat(
-                    messages=[{
+                    messages=[
+                        {
                             "role": "user",
                             "content": EVAL_MULTIAGENT_CONSENSUS_PROMPT.format(
                                 question=question, multiagent_answers_input=multiagent_answers_input,

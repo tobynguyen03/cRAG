@@ -1,0 +1,5 @@
+{
+    "question": "How is the gas sensing mechanism of SnO2 NWs sensors explained?",
+    "ground_truth": "When SnO2 NWs are exposed in air, oxygen molecules will adsorb on the surface and capture electrons from the conductance band of the NWs to become oxygen ions (active surface complexes). The adsorbed oxygen ions on the SnO2 NWs act as electron acceptors that generate a surface depletion region on the surface of the NWs.",
+    "system_answer": "The gas sensing mechanism of SnO2 NWs sensors involves changes in depletion region width and barrier potential when exposed to LPG and NH3, resulting in a decrease in resistance."
+}

@@ -1,0 +1,141 @@
+Running experiment: sciqag_paperqa_llama3.1
+saving results to: datasets/SciQAG/answer_results/paperqa_llama3.1 
+
+
+
+ Skipping sciqag_question_1.json as sciqag_answer_1.json already exists. 
+
+
+ Skipping sciqag_question_10.json as sciqag_answer_10.json already exists. 
+
+
+ Skipping sciqag_question_100.json as sciqag_answer_100.json already exists. 
+
+
+ Skipping sciqag_question_11.json as sciqag_answer_11.json already exists. 
+
+
+ Skipping sciqag_question_12.json as sciqag_answer_12.json already exists. 
+
+
+
+ ANSWERING QUESTION: sciqag_question_13.json
+ ----------------------------- 
+
+
+[18:59:07] Starting paper search for 'SrCO3 material response to ethanol vapor in study'.                                                 
+           paper_search for query 'SrCO3 material response to ethanol vapor in study' and offset 0 returned 8 papers.                     
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+got papers
+[18:59:08] gather_evidence starting for question 'How does the SrCO3 material used in the study respond to ethanol vapor?'.               
+[18:59:23] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=5 | Current Cost=$0.0000                                          
+[18:59:24] Generating answer for 'How does the SrCO3 material used in the study respond to ethanol vapor?'.                               
+[18:59:33] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=5 | Current Cost=$0.0000                                          
+           Answer: The SrCO3 material exhibits rapid response to ethanol vapor with wide linear response, high sensitivity, and satisfied 
+           stability. It also shows high selectivity to ethanol without interference from gasoline, ammonia, or hydrogen.                 
+                                                                                                                                          
+           Upon examining the context, it is clear that the question pertains to the performance of the SrCO3 sensor in detecting ethanol 
+           vapor. To derive an answer, I reviewed each chunk for relevant information:                                                    
+                                                                                                                                          
+           * Chunk 1 mentions chemiluminescence (CL) as a response mechanism when catalytically oxidized by oxygen.                       
+           * Chunk 2 highlights rapid response time (peaks at 7 seconds), increased CL signal (three orders of magnitude), and            
+           temperature-dependent behavior.                                                                                                
+           * Chunk 3 discusses the calibration curve, detection limit (2.1 ppm), and flow rate dependence on the CL intensity.            
+           * Chunk 4 compares SrCO3 to TiO2, stating that it exhibits better stability and durability.                                    
+                                                                                                                                          
+           Based on these points, I inferred that the SrCO3 material responds rapidly to ethanol vapor with high sensitivity and          
+           selectivity, while maintaining stability over time.                                                                            
+                                                                                                                                          
+           ANSWER SUMMARY: The SrCO3 material exhibits rapid response, high sensitivity, and satisfied stability when detecting ethanol   
+           vapor.                                                                                                                         
+
+
+ ANSWERING QUESTION: sciqag_question_14.json
+ ----------------------------- 
+
+
+[18:59:36] Starting paper search for 'likely mechanism CL emission ethanol SrCO3'.                                                        
+           paper_search for query 'likely mechanism CL emission ethanol SrCO3' and offset 0 returned 8 papers.                            
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[18:59:38] Starting paper search for 'likely mechanism CL emission ethanol SrCO3'.                                                        
+           paper_search for query 'likely mechanism CL emission ethanol SrCO3' and offset 8 returned 0 papers.                            
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[18:59:40] Starting paper search for 'likely mechanism CL emission ethanol SrCO3'.                                                        
+           paper_search for query 'likely mechanism CL emission ethanol SrCO3' and offset 16 returned 0 papers.                           
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[18:59:42] Generating answer for 'What is the likely mechanism for the CL emission observed during the oxidation of ethanol on SrCO3?'.   
+[19:00:08] Answer:                                                                                                                        
+
+
+ ANSWERING QUESTION: sciqag_question_15.json
+ ----------------------------- 
+
+
+[19:00:11] Starting paper search for 'selectivity of SrCO3 sensor for ethanol detection'.                                                 
+           paper_search for query 'selectivity of SrCO3 sensor for ethanol detection' and offset 0 returned 8 papers.                     
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[19:00:12] Generating answer for 'How selective is the SrCO3 sensor for detecting ethanol among other gases?'.                            
+[19:00:33] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=5 | Current Cost=$0.0000                                          
+           Answer: The SrCO3 sensor shows excellent selectivity towards detecting ethanol among other gases. It exhibits high sensitivity 
+           and specificity for ethanol detection, with minimal or no interference observed from foreign substances such as hydrocarbon,   
+           gasoline, ammonia, hydrogen, and n-hexane.                                                                                     
+                                                                                                                                          
+           My answer is derived from multiple chunks of text (Zhang2174 chunk 1, Zhang2174 chunk 5, Zhang2174 chunk 3, and Zhang2174 chunk
+           4) that consistently report the sensor's high selectivity for ethanol detection. The key terms "selectivity," "sensitivity,"   
+           and "specificity" are used to describe the sensor's performance in detecting ethanol among other gases. Specifically, chunks 1 
+           and 5 mention that the sensor shows excellent analytical characteristics with high sensitivity and selectivity towards         
+           detecting ethanol, while chunk 3 states that the sensor exhibits significantly higher sensitivity and selectivity to ethanol   
+           compared to other gases such as n-hexane.                                                                                      
+                                                                                                                                          
+           ANSWER SUMMARY: The SrCO3 sensor is highly selective for detecting ethanol among other gases due to its unique properties as a 
+           nanosized material and its ability to produce chemiluminescence (CL) upon the oxidation of ethanol.                            
+
+
+ ANSWERING QUESTION: sciqag_question_16.json
+ ----------------------------- 
+
+
+[19:00:38] Starting paper search for 'SrCO3 sensor endurance in continuous ethanol vapor introduction experiments'.                       
+           paper_search for query 'SrCO3 sensor endurance in continuous ethanol vapor introduction experiments' and offset 0 returned 8   
+           papers.                                                                                                                        
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[19:00:39] Generating answer for 'How long can the SrCO3 sensor endure in a continuous ethanol vapor introduction experiment?'.           
+[19:00:59] Status: Paper Count=8 | Relevant Papers=1 | Current Evidence=4 | Current Cost=$0.0000                                          
+           Answer: The SrCO3 sensor can endure for at least 100 hours in a continuous ethanol vapor introduction experiment.              
+                                                                                                                                          
+           My reasoning process involves analyzing Zhang2174 chunk 3, which explicitly states that "no obvious change in CL intensity was 
+           found after 100 h reaction" with a relative standard deviation (RSD) of about 1.02%. This suggests that the sensor maintained  
+           its stability and durability for at least 100 hours.                                                                           
+                                                                                                                                          
+           ANSWER SUMMARY: The SrCO3 sensor endures for at least 100 hours in continuous ethanol vapor introduction, based on the stable  
+           CL intensity observed after 100 h reaction with a low RSD.                                                                     
+
+
+ ANSWERING QUESTION: sciqag_question_17.json
+ ----------------------------- 
+
+
+[19:01:02] Starting paper search for 'temperature importance in CL emission process SrCO3 sensor'.                                        
+           paper_search for query 'temperature importance in CL emission process SrCO3 sensor' and offset 0 returned 8 papers.            
+           Status: Paper Count=8 | Relevant Papers=0 | Current Evidence=0 | Current Cost=$0.0000                                          
+[19:01:04] Generating answer for 'What is the importance of temperature in the CL emission process in the SrCO3 sensor?'.                 
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.set_verbose=True'.
+

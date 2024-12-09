@@ -1,0 +1,5 @@
+{
+    "question": "How was the dry matrix deposition protocol tested in the study?",
+    "ground_truth": "The dry matrix deposition protocol was tested by acquiring positive ionization mode ion images at 30- to 100-\u03bcm lateral resolution using a MALDI TOF mass spectrometer. The results showed that the protocol allows reproducible high-resolution phospholipid images to be obtained.",
+    "system_answer": "The response provided an assumption-based answer due to insufficient context; a more accurate assessment requires specific information about the study's details."
+}

@@ -199,7 +199,6 @@ class LitQAEvaluator:
         print(f"Results saved to {output_path}")
 
 if __name__ == "__main__":
-    
     model = "llama3.2"
     paper_directory = "my_papers"
     output_directory = "litqa_output"

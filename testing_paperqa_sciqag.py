@@ -79,7 +79,11 @@ answer = ask(
             agent_llm_config=local_llm_config
         ),
         use_doc_details=False,
+<<<<<<< HEAD
         paper_directory="sciqag_papers_txt_only_test"
+=======
+        paper_directory="sciqag_papers_txt_only"
+>>>>>>> 31bcdc8a62bf91a079dc183242ed593e48e75078
     ),
 )
 
