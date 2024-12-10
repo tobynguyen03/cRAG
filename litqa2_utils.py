@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 from paperqa import Docs, QueryRequest, Settings
 from paperqa.agents.task import TASK_DATASET_NAME
-from paperqa.contrib import ZoteroDB
+# from paperqa.contrib import ZoteroDB
 
 def extract_paper_urls():
     base_query = QueryRequest(

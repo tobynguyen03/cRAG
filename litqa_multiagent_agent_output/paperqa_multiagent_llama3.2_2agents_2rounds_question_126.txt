@@ -1,0 +1,9 @@
+,0
+question,Q: What is the substrate preference of the Ddd1 deaminase?
+full_answer,"### Synthesized Answer:
+
+The Ddd1 deaminase prefers to act on 5'-GC DNA substrates."
+answer_letter,A
+ground_truth,5'-GC
+result,0
+timestamp,2024-12-09 21:34:39

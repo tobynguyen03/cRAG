@@ -1,0 +1,7 @@
+,0
+question,Q: Which of the following genes has been shown to be a specific marker for parvalbumin interneurons in the molecular and fusiform layers of the dorsal cochlear nucleus?
+full_answer,The gene specifically associated with parvalbumin interneurons in the dorsal cochlear nucleus is C) Pvalb.
+answer_letter,C
+ground_truth,Ogfrl1
+result,1
+timestamp,2024-12-09 22:30:41

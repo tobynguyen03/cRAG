@@ -1,0 +1,9 @@
+,0
+question,Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+full_answer,"### Synthesized Answer:
+
+The number of differential H3K27Ac peaks between queen and worker honeybees is approximately 2,165. This indicates a significant difference in chromatin modifications between the two castes, which may influence their behavior and social roles."
+answer_letter,B
+ground_truth,3601
+result,1
+timestamp,2024-12-09 21:20:46

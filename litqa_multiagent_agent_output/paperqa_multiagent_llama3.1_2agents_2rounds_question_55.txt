@@ -1,0 +1,7 @@
+,0
+question,"Q: If implementing symmetric molecular dynamics as a holonomic constraint, how can Wyckoff sites be constrained?"
+full_answer,"Wyckoff sites can be constrained by using either Lagrange multiplier constraints or Bravais Lattice projection tensors, allowing for the enforcement of holonomic constraints in symmetric molecular dynamics simulations."
+answer_letter,S
+ground_truth,Lagrange multiplier constraints
+result,1
+timestamp,2024-12-09 21:55:04

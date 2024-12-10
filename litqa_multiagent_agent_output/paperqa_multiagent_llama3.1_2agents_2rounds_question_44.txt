@@ -1,0 +1,7 @@
+,0
+question,Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+full_answer,There are 3601 differential H3K27Ac peaks between queen and worker honeybees.
+answer_letter,A
+ground_truth,3601
+result,0
+timestamp,2024-12-09 21:53:30

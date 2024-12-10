@@ -1,0 +1,7 @@
+,0
+question,"Q: When a large excess of membrane protein substrate (Vamp2) is added to the wild-type Get3/4/5 chaperone complex, the complex dissociates. Which component does the substrate not bind to?"
+full_answer,"Based on the expert inputs, the component that the substrate Vamp2 does not bind to is the Get3/4 complex. This means that while Vamp2 binds to individual subunits of the complex (Get3 and Get4), it does not bind to the entire complex as a whole when in excess."
+answer_letter,B
+ground_truth,Get4/5 complex
+result,1
+timestamp,2024-12-09 21:36:40

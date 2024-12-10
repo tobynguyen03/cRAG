@@ -1,0 +1,7 @@
+,0
+question,Q: Where does Rv2780 localize in macrophages derived from mice that are infected with Mycobacterium tuberculosis?
+full_answer,Rv2780 localizes primarily in the cytoplasm of macrophages derived from mice infected with Mycobacterium tuberculosis.
+answer_letter,D
+ground_truth,Cytoplasm
+result,0
+timestamp,2024-12-09 22:26:44

@@ -1,0 +1,7 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with avrE single knockout Pst DC3000 have on NCED3 expression?
+full_answer,"Infection of A. thaliana plants with avrE single knockout Pst DC3000 results in increased NCED3 expression, linked to ABA biosynthesis and virulence mechanism-dependent pathways. This increase is associated with enhanced ABA signaling, potentially impacting plant defense mechanisms and stress responses."
+answer_letter,D
+ground_truth,Increased expression
+result,1
+timestamp,2024-12-09 21:28:32

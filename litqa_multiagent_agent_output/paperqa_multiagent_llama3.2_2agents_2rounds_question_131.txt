@@ -1,0 +1,9 @@
+,0
+question,Q: What percent of genes that undergo RNA editing in mouse retina cells also display alternative splicing?
+full_answer,"### Synthesized Answer:
+
+Approximately 73% of genes undergoing RNA editing in mouse retina cells also exhibit alternative splicing."
+answer_letter,A
+ground_truth,73%
+result,0
+timestamp,2024-12-09 21:35:44

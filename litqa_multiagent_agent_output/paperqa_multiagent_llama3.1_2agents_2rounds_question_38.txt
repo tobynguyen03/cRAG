@@ -1,0 +1,7 @@
+,0
+question,Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+full_answer,"Bempegaldesleukin is designed to bind preferentially to the high-affinity IL-2 receptor subunit, beta (β) (b2b3 complex), thereby reducing its availability for tumor-infiltrating regulatory T cells (Tregs). This preferential binding enables it to increase IL-2's effect on effector T cells while minimizing interaction with Tregs."
+answer_letter,A
+ground_truth,Preferentially binding to b2b3 complex over b1b2b3 complex
+result,0
+timestamp,2024-12-09 21:51:30

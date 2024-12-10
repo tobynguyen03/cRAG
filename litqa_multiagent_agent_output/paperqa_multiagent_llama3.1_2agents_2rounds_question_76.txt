@@ -1,0 +1,7 @@
+,0
+question,Q: Optogenetic inactivation of BNST AVP cells in mice leads to what kind of change in social communicative behaviors?
+full_answer,Optogenetic inactivation of BNST AVP cells in mice results in decreased social communicative behaviors. This effect is specifically observed in males.
+answer_letter,C
+ground_truth,No difference in social communicative behaviors
+result,1
+timestamp,2024-12-09 22:13:29

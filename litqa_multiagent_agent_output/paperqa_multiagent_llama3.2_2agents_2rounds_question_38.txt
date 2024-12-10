@@ -1,0 +1,7 @@
+,0
+question,Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+full_answer,"Bempegaldesleukin overcomes Treg affinity for IL-2 through selective depletion of intratumoral Tregs, thereby enhancing anti-tumor immune responses. This targeted approach allows the agent to effectively stimulate an immune response against tumors while minimizing suppression by regulatory T cells."
+answer_letter,B
+ground_truth,Preferentially binding to b2b3 complex over b1b2b3 complex
+result,1
+timestamp,2024-12-09 21:19:10

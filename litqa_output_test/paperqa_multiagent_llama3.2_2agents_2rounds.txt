@@ -1,0 +1,10 @@
+,question,answer,ground_truth,result,timestamp
+1,Q: Active olfactory receptor genes increase their contacts with greek island regions by what factor in mouse olfactory neurons?,D,2.7 fold,0,2024-12-09 20:43:47
+3,Q: Approximately how many unique transposable element insertion loci are there in the mandarin (Citrus reticulata) genome?,D,"12,300",0,2024-12-09 20:44:34
+7,Q: At which amino acid position is a large oligosaccharide density observed in the cryo-EM map of Nav1.6?,D,Asn326,2,2024-12-09 20:45:57
+18,Q: Disruption of MTF1 expression in Chlamydomonas has what effect on the photosynthetic machinery?,E,Depletion of photosynthetic machinery,1,2024-12-09 20:46:33
+28,Q: Grafting ECL3 region from adenosine A3 receptor A3AR onto A2AAR does what to the efficacy of binding to the A3AR antagonist CF101 ?,B,increases,1,2024-12-09 20:47:23
+34,Q: How does P. falciparum gene expression change with aging for male and female organisms?,D,Gene expression decreases as P. falciparum ages for both males and females with aging.,2,2024-12-09 20:48:02
+38,Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?,B,Preferentially binding to b2b3 complex over b1b2b3 complex,1,2024-12-09 20:48:31
+39,Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?,A,72,1,2024-12-09 20:49:06
+43,Q: How many clades of adenosine deaminases are there when grouped according to structure-based clustering?,B,1,1,2024-12-09 20:49:32

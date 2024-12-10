@@ -1,0 +1,7 @@
+,0
+question,"Q: In Arabidopsis, which of the following 20 S proteasome subunits has CWC15 not been shown to interact with in its role promoting degradation of the protein Serrate?"
+full_answer,"In Arabidopsis, the proteasome subunit that CWC15 has not been shown to interact with in promoting Serrate degradation is PBE1."
+answer_letter,A
+ground_truth,PBE1
+result,0
+timestamp,2024-12-09 21:57:39

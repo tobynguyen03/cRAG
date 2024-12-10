@@ -1,0 +1,7 @@
+,0
+question,Q: Is doublecortin a unique marker of newly generated granule cells in the hippocampus?
+full_answer,"Based on expert inputs, doublecortin is not considered a unique or specific marker for newly generated granule cells in the hippocampus. It can be expressed by other cell types as well. This suggests that doublecortin may not be a reliable sole indicator of new granule cell generation in this region."
+answer_letter,A
+ground_truth,No
+result,0
+timestamp,2024-12-09 21:26:00

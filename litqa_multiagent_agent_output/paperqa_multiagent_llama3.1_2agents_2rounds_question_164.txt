@@ -1,0 +1,7 @@
+,0
+question,Q: Which of the following genes has been shown to be localized to granule cells in the cerebellum that are anterior to the primary fissure?
+full_answer,"The gene Rasgrf1 is specifically localized to granule cells in the cerebellum, specifically those anterior to the primary fissure."
+answer_letter,A
+ground_truth,Rasgrf1
+result,0
+timestamp,2024-12-09 22:31:27

@@ -1,0 +1,9 @@
+,0
+question,Q: Grafting ECL3 region from adenosine A3 receptor A3AR onto A2AAR does what to the efficacy of binding to the A3AR antagonist CF101 ?
+full_answer,"The most accurate and concise answer is:
+
+Grafting the ECL3 region from A3AR onto A2AAR decreases the efficacy of binding to CF101."
+answer_letter,B
+ground_truth,increases
+result,1
+timestamp,2024-12-09 21:18:08

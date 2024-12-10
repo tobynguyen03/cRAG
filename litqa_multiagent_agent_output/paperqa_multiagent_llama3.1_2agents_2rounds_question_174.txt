@@ -1,0 +1,7 @@
+,0
+question,Q: Which of the following mutations in yeast Pbs2 increases its interaction with SH3?
+full_answer,The mutation that increases the interaction between yeast Pbs2 and SH3 domain-containing proteins is I87W.
+answer_letter,S
+ground_truth,P97A
+result,1
+timestamp,2024-12-09 22:32:26

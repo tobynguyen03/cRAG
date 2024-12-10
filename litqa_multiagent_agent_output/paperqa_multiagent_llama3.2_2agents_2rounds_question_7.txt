@@ -1,0 +1,7 @@
+,0
+question,Q: At which amino acid position is a large oligosaccharide density observed in the cryo-EM map of Nav1.6?
+full_answer,"Based on expert inputs, the large oligosaccharide density in the cryo-EM map of Nav1.6 is observed at Trp324, due to its association with significant post-translational modifications (PTMs), including glycosylation."
+answer_letter,C
+ground_truth,Asn326
+result,1
+timestamp,2024-12-09 21:16:45

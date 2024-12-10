@@ -1,0 +1,9 @@
+,0
+question,Q: Approximately how many unique transposable element insertion loci are there in the mandarin (Citrus reticulata) genome?
+full_answer,"### Synthesized Answer:
+
+According to the available data, there are approximately 39 unique transposable element insertion loci in the mandarin (Citrus reticulata) genome. This information was reported in a reputable study (Wu2022)."
+answer_letter,C
+ground_truth,"12,300"
+result,1
+timestamp,2024-12-09 21:16:04

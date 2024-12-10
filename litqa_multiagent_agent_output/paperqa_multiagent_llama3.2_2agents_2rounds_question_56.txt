@@ -1,0 +1,9 @@
+,0
+question,"Q: In 5XFAD mice, what effect does microglia-specific Ifnar1 deletion have on post-synaptic terminals?"
+full_answer,"### Synthesized Answer:
+
+Microglia-specific Ifnar1 deletion in 5XFAD mice attenuates the loss of post-synaptic terminals, suggesting a neuroprotective effect. This finding implies that microglial activation and inflammation, driven by Ifnar1, contribute to synaptic damage in this model."
+answer_letter,A
+ground_truth,attenuation of loss
+result,0
+timestamp,2024-12-09 21:22:30

@@ -1,0 +1,7 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with avrE single knockout Pst DC3000 have on NCED3 expression?
+full_answer,"There is insufficient information to conclusively determine the effect on NCED3 expression as different time points yield conflicting results. However, it can be noted that there may not be a long-term significant impact."
+answer_letter,C
+ground_truth,Increased expression
+result,2
+timestamp,2024-12-09 22:16:17

@@ -1,0 +1,7 @@
+,0
+question,Q: What is the mechanism for expression of the EPRS1(N1) form of EPRS1 in humans?
+full_answer,"The EPRS1(N1) form of EPRS1 in humans is primarily expressed through polyadenylation, a process where a poly(A) tail is added to the mRNA transcript. This regulatory mechanism allows for the specific expression and regulation of this particular variant."
+answer_letter,A
+ground_truth,polyadenylation
+result,0
+timestamp,2024-12-09 22:21:52

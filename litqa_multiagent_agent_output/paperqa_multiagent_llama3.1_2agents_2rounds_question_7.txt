@@ -1,0 +1,7 @@
+,0
+question,Q: At which amino acid position is a large oligosaccharide density observed in the cryo-EM map of Nav1.6?
+full_answer,"A large oligosaccharide density is observed at position Asn326 in the cryo-EM map of Nav1.6, which suggests a high level of glycosylation at this site. This may be relevant for the protein's function and stability."
+answer_letter,A
+ground_truth,Asn326
+result,0
+timestamp,2024-12-09 21:47:16

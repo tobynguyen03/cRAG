@@ -1,0 +1,7 @@
+,0
+question,Q: Which antibody isotype is NOT produced in HLA-expressing mice by the AMP-CpG formulated EBV vaccine for gp350-specific antibodies?
+full_answer,"The correct answer is IgE. In HLA-expressing mice, the AMP-CpG formulated EBV vaccine primarily induces IgG2a and IgG2b antibody responses for gp350-specific antibodies, but not IgE."
+answer_letter,I
+ground_truth,IgE
+result,1
+timestamp,2024-12-09 21:38:32

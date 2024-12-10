@@ -1,0 +1,9 @@
+,0
+question,"Q: In 5XFAD mice, what effect does neural Ifnar1 deletion have on pre-synaptic terminals?"
+full_answer,"**Neural Ifnar1 Deletion Effect on Pre-Synaptic Terminals**
+
+Neural Ifnar1 deletion has been shown to attenuate (reduce) the loss of pre-synaptic terminals in 5XFAD mice. This suggests that removing or inhibiting Ifnar1 function may help preserve synaptic structure and function."
+answer_letter,E
+ground_truth,restoration
+result,1
+timestamp,2024-12-09 21:23:25

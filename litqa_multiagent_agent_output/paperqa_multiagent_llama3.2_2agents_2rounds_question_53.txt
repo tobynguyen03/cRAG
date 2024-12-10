@@ -1,0 +1,10 @@
+,0
+question,"Q: I am designing peptide-guided LNPs for delivery to the retina, and am using PEG-maleimide to attach peptides to the the surface of the LNP. What fraction of the total PEG replaced with PEG-Maleimide would show no transfection?"
+full_answer,"Based on the available expert inputs, a conservative estimate suggests that a significant portion of PEG substituted with PEG-maleimide may not facilitate transfection. A possible threshold could be around 10-20%. However, this is an approximation and more specific data would provide a clearer answer.
+
+Translation to 300-500 characters:
+""A substantial portion of PEG substitution (around 10-20%) may impede transfection efficiency. This estimate is based on expert inputs and assumes optimal conditions."""
+answer_letter,E
+ground_truth,Above 40%
+result,1
+timestamp,2024-12-09 21:21:11

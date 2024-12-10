@@ -1,0 +1,45 @@
+,0
+question,Q: Disruption of MTF1 expression in Chlamydomonas has what effect on the photosynthetic machinery?
+full_answer,"Question: Q: Disruption of MTF1 expression in Chlamydomonas has what effect on the photosynthetic machinery?
+
+Options:
+A) Depletion of photosynthetic machinery
+B) Upregulation of chloroplast-expressed proteins
+C) No effect
+D) Insufficient information to answer this question
+E) Upregulation of photosynthetic machinery
+
+According to Kafri et al. (2023) Cell 186(1), 5638–5655, disruption of MTF1 expression in Chlamydomonas has a severe photosynthetic phenotype, resulting in depletion of the entire photosynthetic apparatus and most chloroplast-expressed proteins (Kafri2023 pages 14-14). This was observed in proteomic experiments and validated by genetic rescue, which alleviated the growth defect and recovered expression of chloroplast-expressed proteins.
+
+Furthermore, a comparison of chloroplast-expressed protein levels to nucleus-expressed protein levels for photosynthetic complexes in the mtf1 mutant suggests that MTF1 plays a role in regulating the translation of certain subsets of chloroplast-expressed proteins (Kafri2023 pages 14-15). The median of 6 independent experiments showed a decrease in protein levels of chloroplast-expressed genes in mtf1 mutants compared to wild-type, and a detailed comparison of specific chloroplast-expressed proteins also shows a decrease in these proteins in mtf1 mutants (Kafri2023 pages 44-44).
+
+Therefore, the correct answer is:
+
+A) Depletion of photosynthetic machinery
+
+ANSWER SUMMARY: Disruption of MTF1 expression leads to depletion of the entire photosynthetic apparatus and most chloroplast-expressed proteins.
+
+References
+
+1. (Kafri2023 pages 14-14): Kafri et al. (2023) Cell 186(1), 5638–5655.
+
+December 7, 2023
+© 2023 The Author(s). Published by Elsevier Inc.
+https://doi.org/10.1016/j.cell.2023.11.007
+
+2. (Kafri2023 pages 44-44): Kafri et al. (2023) Cell 186(1), 5638–5655.
+
+December 7, 2023
+© 2023 The Author(s). Published by Elsevier Inc.
+https://doi.org/10.1016/j.cell.2023.11.007
+
+3. (Kafri2023 pages 14-15): Kafri et al. (2023) Cell 186(1), 5638–5655.
+
+December 7, 2023
+© 2023 The Author(s). Published by Elsevier Inc.
+https://doi.org/10.1016/j.cell.2023.11.007
+"
+answer_letter,A
+ground_truth,Depletion of photosynthetic machinery
+result,0
+timestamp,2024-12-09 22:54:46

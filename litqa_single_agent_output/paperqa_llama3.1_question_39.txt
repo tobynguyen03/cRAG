@@ -1,0 +1,26 @@
+,0
+question,Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?
+full_answer,"Question: Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?
+
+Options:
+A) 169
+B) 246
+C) 72
+D) Insufficient information to answer this question
+E) 115
+F) 382
+G) 12
+H) 45
+
+Based on the given context, specifically Yilmaz2024 pages 6-6, it is mentioned that ""The panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy consisted of 72 strains..."" This clearly indicates that the size of the panel of fluoroquinone-resistant clinical E.coli samples used to evaluate the SNIPR001 phage therapy is 72.
+
+ANSWER SUMMARY: The correct answer is C) 72, based on Yilmaz2024 pages 6-6.
+
+References
+
+1. (Yilmaz2024 pages 6-6): Yilmaz Emre Gencay et al., ""Engineered phage with antibacterial CRISPR-Cas selectively reduce E. coli burden in mice,"" Nature Biotechnology 42.2 (2024): 265-274, doi: 10.1038/s41587-023-01759-y.
+"
+answer_letter,T
+ground_truth,72
+result,1
+timestamp,2024-12-09 22:55:31

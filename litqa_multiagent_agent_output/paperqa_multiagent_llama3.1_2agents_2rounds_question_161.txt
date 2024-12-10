@@ -1,0 +1,7 @@
+,0
+question,Q: Which of the following gene(s) can lead to pyroptosis when mediated by ZDHHC5?
+full_answer,"The gene that can lead to pyroptosis when mediated by ZDHHC5 is GSDME. Pyroptosis is a form of programmed cell death, and GSDME plays a role in this process when activated by ZDHHC5."
+answer_letter,E
+ground_truth,GSDMD
+result,1
+timestamp,2024-12-09 22:29:41

@@ -1,0 +1,7 @@
+,0
+question,Q: Disruption of MTF1 expression in Chlamydomonas has what effect on the photosynthetic machinery?
+full_answer,Disruption of MTF1 expression in Chlamydomonas depletes its photosynthetic machinery.
+answer_letter,A
+ground_truth,Depletion of photosynthetic machinery
+result,0
+timestamp,2024-12-09 21:48:14

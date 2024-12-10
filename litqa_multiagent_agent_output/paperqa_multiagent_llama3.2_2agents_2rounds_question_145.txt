@@ -1,0 +1,7 @@
+,0
+question,Q: Which amino acids of yeast Rev7 are not important for its interaction with the MRX complex?
+full_answer,"Based on the expert inputs, amino acids 150-203 are not crucial for the interaction between yeast Rev7 and the MRX complex. This region may be less significant or structurally disordered, making it less critical for function."
+answer_letter,E
+ground_truth,1-149
+result,1
+timestamp,2024-12-09 21:37:48

@@ -2,6 +2,10 @@ import os
 import json
 import sys
 import re 
+import argparse
+
+
+
 
 from datetime import datetime
 
@@ -394,7 +398,6 @@ class EvaluatorSciQAG:
 
 # Example usage: (This part would be in the main file, not in the Evaluator class)
 if __name__ == "__main__":
-    import argparse
 
     parser = argparse.ArgumentParser(description="Evaluate PaperQA with a question dataset.")
     parser.add_argument("--question_dataset_path", type=str, required=True, help="Path to the question dataset.")

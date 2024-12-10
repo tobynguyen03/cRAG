@@ -1,0 +1,7 @@
+,0
+question,Q: Which of the following genes has been shown to be a specific marker for parvalbumin interneurons in the molecular and fusiform layers of the dorsal cochlear nucleus?
+full_answer,"The correct answer is C) Pvalb. Parvalbumin (Pvalb) is a specific marker for parvalbumin interneurons in the molecular and fusiform layers of the dorsal cochlear nucleus, highlighting its importance in auditory processing research."
+answer_letter,C
+ground_truth,Ogfrl1
+result,1
+timestamp,2024-12-09 21:39:54

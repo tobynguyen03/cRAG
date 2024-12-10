@@ -1,0 +1,7 @@
+,0
+question,Q: What is the measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish?
+full_answer,The measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish is between 311-476 nM.
+answer_letter,D
+ground_truth,Between 311-476 nM
+result,0
+timestamp,2024-12-09 22:20:47

@@ -1,0 +1,7 @@
+,0
+question,"Q: When a large excess of membrane protein substrate (Vamp2) is added to the wild-type Get3/4/5 chaperone complex, the complex dissociates. Which component does the substrate not bind to?"
+full_answer,"When a large excess of membrane protein substrate (Vamp2) is added to the wild-type Get3/4/5 chaperone complex, it causes the complex to dissociate. In this scenario, the substrate does not bind directly to the Get4/5 complex."
+answer_letter,D
+ground_truth,Get4/5 complex
+result,0
+timestamp,2024-12-09 22:25:52

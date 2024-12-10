@@ -1,0 +1,7 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with avrE/hopM1 double knockout Pst DC3000 have on NCED3 expression?
+full_answer,The infection of A. thaliana plants with the avrE/hopM1 double knockout Pst DC3000 bacterium has no significant effect on NCED3 expression levels. Control plants exhibit a 2.5-fold increase in NCED3 expression.
+answer_letter,A
+ground_truth,no effect
+result,0
+timestamp,2024-12-09 22:17:42

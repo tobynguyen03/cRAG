@@ -1,0 +1,7 @@
+,0
+question,"Q: In lung adenocarcinoma, which of the following cancer immune phenotypes is positively associated with STK11 mutation?"
+full_answer,"In lung adenocarcinoma, the presence of a STK11 mutation is positively associated with a cancer immune phenotype characterized by a high proportion of CD8+ T cells and interferon-gamma (IFN-γ) expression."
+answer_letter,D
+ground_truth,CD8- / IGNF+
+result,1
+timestamp,2024-12-09 21:58:26

@@ -1,0 +1,7 @@
+,0
+question,Q: The NCAN-ELS domain has been shown to interact with what percent of inhibitory synapses?
+full_answer,The NCAN-ELS domain interacts with approximately 50% of inhibitory synapses.
+answer_letter,S
+ground_truth,75%
+result,1
+timestamp,2024-12-09 22:14:18

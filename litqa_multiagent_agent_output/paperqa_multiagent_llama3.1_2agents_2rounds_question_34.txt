@@ -1,0 +1,7 @@
+,0
+question,Q: How does P. falciparum gene expression change with aging for male and female organisms?
+full_answer,Gene expression increases as P. falciparum ages for both male and female organisms.
+answer_letter,E
+ground_truth,Gene expression decreases as P. falciparum ages for both males and females with aging.
+result,1
+timestamp,2024-12-09 21:50:39

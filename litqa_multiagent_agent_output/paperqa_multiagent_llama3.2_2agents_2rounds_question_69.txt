@@ -1,0 +1,7 @@
+,0
+question,"Q: In zebrafish embryos with homozygous leukolysin knockout, defects in angiogenesis can be rescued by inactivating which collagen allele?"
+full_answer,"Defects in angiogenesis in zebrafish embryos with leukolysin knockout can be rescued by inactivating the col4a3 allele. Col4a3 is crucial for angiogenesis, and its deletion can compensate for leukolysin's absence, leading to restored vascular development."
+answer_letter,C
+ground_truth,col4a5
+result,1
+timestamp,2024-12-09 21:25:33

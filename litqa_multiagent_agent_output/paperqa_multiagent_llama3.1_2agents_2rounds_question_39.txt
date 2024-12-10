@@ -1,0 +1,7 @@
+,0
+question,Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?
+full_answer,The panel of fluoroquinone-resistant clinical E.coli samples used to evaluate the SNIPR001 phage therapy consisted of 72 strains.
+answer_letter,C
+ground_truth,72
+result,0
+timestamp,2024-12-09 21:52:00

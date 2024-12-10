@@ -1,0 +1,7 @@
+,0
+question,Q: What effect does optogenetic inhibition of DAVTA fibers in the basolateral amygdala have on REM sleep amount?
+full_answer,There is not enough information to accurately determine the effect of optogenetic inhibition of DAVTA fibers in the basolateral amygdala on REM sleep amount. Further research or data would be required to provide a definitive answer.
+answer_letter,C
+ground_truth,decrease
+result,2
+timestamp,2024-12-09 22:19:52

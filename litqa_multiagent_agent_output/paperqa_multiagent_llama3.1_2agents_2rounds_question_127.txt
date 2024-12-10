@@ -1,0 +1,9 @@
+,0
+question,Q: What kind of localization signal is found in proteins from the PLSCR5 gene?
+full_answer,"Based on the expert inputs, it is clear that there is not enough information available to accurately determine the type of localization signal found in proteins from the PLSCR5 gene. Therefore, the most accurate answer is:
+
+C) Insufficient information to answer this question."
+answer_letter,C
+ground_truth,null
+result,0
+timestamp,2024-12-09 22:23:30

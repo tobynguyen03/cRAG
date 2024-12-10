@@ -1,0 +1,7 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with hopM1 knockout Pst DC3000 have on NCED3 expression?
+full_answer,"Infection of A. thaliana plants with hopM1 knockout Pst DC3000 leads to an initial moderate increase in NCED3 expression, followed by a decrease, indicating complex regulation of gene expression during pathogenesis."
+answer_letter,A
+ground_truth,Increased expression
+result,0
+timestamp,2024-12-09 22:18:51

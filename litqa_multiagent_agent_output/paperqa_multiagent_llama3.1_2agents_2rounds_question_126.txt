@@ -1,0 +1,7 @@
+,0
+question,Q: What is the substrate preference of the Ddd1 deaminase?
+full_answer,"The substrate preference of the Ddd1 deaminase cannot be determined with certainty. However, available data suggests it may have a slight preference for 5'-CC or 5'-TC substrates."
+answer_letter,D
+ground_truth,5'-GC
+result,2
+timestamp,2024-12-09 22:22:53

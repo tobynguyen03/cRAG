@@ -1,0 +1,19 @@
+,0
+question,Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+full_answer,"Question: Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+
+Options:
+A) Preferentially binding to b2b3 complex over b1b2b3 complex
+B) Overcome the Treg affinity for IL-2 by selectively depleting intratumoral Tregs
+C) Tumor microenvironment targeting and checkpoint immune inhibition
+D) Insufficient information to answer this question
+E) Improve PK via PEGylation
+
+According to the text, Bempegaldesleukin (NKTR-214) preferentially binds to the b1b2γ complex on cytotoxic T cells while reducing its affinity for the high-affinity heterotrimeric b1b2γ complex expressed by regulatory T cells (Tregs). This characteristic allows it to selectively stimulate cytotoxic T cell activity without promoting Treg expansion and activation.
+
+ANSWER SUMMARY: Bempegaldesleukin reduces Treg affinity for IL-2 by preferentially binding to the b1b2γ complex on cytotoxic T cells rather than the high-affinity heterotrimeric b1b2γ complex on Tregs.
+"
+answer_letter,H
+ground_truth,Preferentially binding to b2b3 complex over b1b2b3 complex
+result,1
+timestamp,2024-12-09 22:55:22

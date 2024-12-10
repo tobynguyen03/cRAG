@@ -1,0 +1,9 @@
+,0
+question,Q: Which of the following gene(s) can lead to pyroptosis when mediated by ZDHHC5?
+full_answer,"### Synthesized Answer:
+
+Pyroptosis, a form of programmed cell death, can be triggered by the gene GSDMB when mediated by ZDHHC5. However, some sources indicate that GSDMB and GSDME may also play roles in pyroptosis mediated by ZDHHC5. Insufficient information is available to confirm the exact genes involved, but GSDMB appears to be a strong candidate."
+answer_letter,C
+ground_truth,GSDMD
+result,1
+timestamp,2024-12-09 21:39:17
