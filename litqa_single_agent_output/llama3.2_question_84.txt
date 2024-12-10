@@ -1,0 +1,23 @@
+,0
+question,Q: The NCAN-ELS domain has been shown to interact with what percent of inhibitory synapses?
+full_answer,"Question: Q: The NCAN-ELS domain has been shown to interact with what percent of inhibitory synapses?
+
+Options:
+A) 75%
+B) 0%
+C) 57%
+D) Insufficient information to answer this question
+E) 40%
+
+Definition: NCAN-ELS domain refers to a specific protein-protein interaction complex between Neurocan (NCAN) and Exon-Like Small (ELS).
+
+Reasoning process: The context does not provide any explicit information about the percentage of inhibitory synapses that interact with the NCAN-ELS domain.
+
+Given that there is no relevant data or studies mentioned in the provided context, I must conclude that the question cannot be answered accurately.
+
+ANSWER SUMMARY: Insufficient information available to determine the interaction percentage.
+"
+answer_letter,B
+ground_truth,75%
+result,1
+timestamp,2024-12-09 19:44:47

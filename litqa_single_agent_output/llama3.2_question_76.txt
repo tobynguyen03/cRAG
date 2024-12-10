@@ -1,0 +1,31 @@
+,0
+question,Q: Optogenetic inactivation of BNST AVP cells in mice leads to what kind of change in social communicative behaviors?
+full_answer,"Question: Q: Optogenetic inactivation of BNST AVP cells in mice leads to what kind of change in social communicative behaviors?
+
+Options:
+A) No difference in social communicative behaviors
+B) Decreased level of ultrasonic sounds
+C) Decrease in social communicative behaviors only in male mice
+D) Insufficient information to answer this question
+E) Increased level of urine marking
+
+Based on the provided context, the correct answer is:
+
+A) No difference in social communicative behaviors.
+
+My reasoning process involves analyzing the results of optogenetic inactivation of BNST AVP cells in mice. According to Rigneya2024 pages 2-3, inhibiting BNST AVP cells did not alter time spent in the open arms of the elevated zero maze (an anxiety-like behavior) or affect urine marking and ultrasonic vocalizations, indicating no obvious change in anxiety-like states. This suggests that optogenetic inactivation of BNST AVP cells does not have a significant impact on social communicative behaviors.
+
+ANSWER SUMMARY: Optogenetic inactivation of BNST AVP cells in mice results in no difference in social communicative behaviors.
+
+References
+
+1. (Rigneya2024 pages 2-3): Rigneya, Nicole, Elba Campos-Lira, Matthew K. Kirchner, Wei Wei, Selma Belkacem, Rachael Beaumont, Sumeet Singha, Sara Guedez Suarez, Delenn Hartswick, Javier E. Sterne, Geert J. de Vries, and Aras Petrulis.
+
+""Vasopressin Circuit that Modulates Mouse Social Investigation and Anxiety-Like Behavior in a Sex-Specific Manner."" 
+
+Rockefeller University, New York, NY; accessed April 2, 2024.
+"
+answer_letter,A
+ground_truth,No difference in social communicative behaviors
+result,0
+timestamp,2024-12-09 19:44:42

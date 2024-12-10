@@ -1,0 +1,31 @@
+,0
+question,Q: Grafting ECL3 region from adenosine A3 receptor A3AR onto A2AAR does what to the efficacy of binding to the A3AR antagonist CF101 ?
+full_answer,"Question: Q: Grafting ECL3 region from adenosine A3 receptor A3AR onto A2AAR does what to the efficacy of binding to the A3AR antagonist CF101 ?
+
+Options:
+A) increases
+B) decreases
+C) greatly decreases
+D) Insufficient information to answer this question
+E) no change
+
+The context does not provide direct information about grafting the ECL3 region from A3AR onto A2AAR affecting the efficacy of binding to CF101. However, it mentions that grafting ECL3 from A3AR onto other subtypes can create chimeric receptors with increased binding ability to certain ligands, such as CF101 and CF102 (Hongmin2024 pages 4-5). But there is no specific information about the effect of this modification on A2AAR or the antagonist CF101.
+
+Given that the context does not provide a clear answer, I would select:
+
+D) Insufficient information to answer this question
+
+ANSWER SUMMARY: The given context does not contain enough information to determine the effect of grafting ECL3 from A3AR onto A2AAR on the efficacy of binding to CF101.
+
+References
+
+1. (Hongmin2024 pages 4-5): Hongmin Cai, Shimeng Guo, Youwei Xu, Jun Sun, Junrui Li, Zhikan Xia, Yi Jiang, Xin Xie, & H. Eric Xu.
+""Cryo-EM structures of adenosine receptor A3AR bound to selective agonists."" 
+n. pars., in Cryo-EM journal, 2024.
+
+DOI: 10.1038/s41467-024-47207-6
+"
+answer_letter,D
+ground_truth,increases
+result,2
+timestamp,2024-12-09 00:54:39

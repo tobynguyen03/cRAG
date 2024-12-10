@@ -1,0 +1,41 @@
+,0
+question,Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?
+full_answer,"Question: Q: How large was the panel of fluoroquinone-resistant clinical E.coli samples that was used to evaluate the SNIPR001 phage therapy?
+
+Options:
+A) 169
+B) 246
+C) 72
+D) Insufficient information to answer this question
+E) 115
+F) 382
+G) 12
+H) 45
+
+The correct answer is C) 72.
+
+My reasoning process involves analyzing each relevant passage to determine the size of the panel used for evaluating SNIPR001 phage therapy. 
+
+- Gencay2024 pages 6-6 states that the panel consisted of 72 strains isolated from fecal samples or perianal swabs of hematological cancer patients hospitalized for hematopoietic cell transplantation.
+- This information explicitly mentions that there are 72 strains in this specific subset of the larger panel.
+
+Other passages discuss the composition and size of the larger panel but do not provide information on its size. For instance, Gencay2024 pages 2-2 states that a smaller subset (82 strains) was selected from a larger pool of phylogenetically diverse E. coli strains to represent the full 429 strain panel. However, this does not pertain to the fluoroquinone-resistant clinical E.coli samples used for evaluating SNIPR001 phage therapy.
+
+Therefore, based on the explicit information provided in Gencay2024 pages 6-6, I concluded that the size of the specific subset of fluoroquinone-resistant clinical E.coli samples was 72 strains.
+
+ANSWER SUMMARY: The panel consisted of 72 fluoroquinone-resistant clinical E.coli strains isolated from fecal samples or perianal swabs.
+
+References
+
+1. (Gencay2024 pages 6-6): Gencay, Yilmaz Emre, Džiuginta Jasinskytė, Camille Robert, Szabolcs Semsey, Virginia Martínez, Anders Østergaard Petersen, et al. ""Engineered Phage with Antibacterial CRISPR–Cas Selectively Reduce E. coli Burden in Mice."" Nature Biotechnology, vol. 42, no. February 2024, pp. 265-274.
+
+https://doi.org/10.1038/s41587-023-01759-y
+
+2. (Gencay2024 pages 2-2): Gencay, Yilmaz Emre, Džiuginta Jasinskytė, Camille Robert, Szabolcs Semsey, Virginia Martínez, Anders Østergaard Petersen, et al. ""Engineered Phage with Antibacterial CRISPR–Cas Selectively Reduce E. coli Burden in Mice."" Nature Biotechnology, vol. 42, no. February 2024, pp. 265-274.
+
+https://doi.org/10.1038/s41587-023-01759-y
+"
+answer_letter,C
+ground_truth,72
+result,0
+timestamp,2024-12-09 19:41:41

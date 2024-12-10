@@ -1,0 +1,34 @@
+,0
+question,Q: What is the measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish?
+full_answer,"Question: Q: What is the measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish?
+
+Options:
+A) Between 113-276 nM
+B) Between 476-511 nM
+C) Between 301-475 nM
+D) Between 311-476 nM
+E) Between 311-476 uM
+F) Insufficient information to answer this question
+
+Based on the provided context, I will answer the question.
+
+The dissociation constant (Kd) for the Wnt5b-Ror2 complex is mentioned in two different excerpts. In Chengting6631 pages 6-7, it is stated that the Kd for the Wnt5b-Ror2 complex using fluorescence correlation spectroscopy (FCCS) is ""440 ± 80 nM"". In Chengting6631 pages 2-2, a different measurement of dissociation constant is provided: ""229 nM"" with an additional information stating that this value was obtained in contrast to the negative control.
+
+Since the question asks for the measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish, I will focus on the two relevant excerpts. The first one provides a specific Kd value with an error margin: 440 ± 80 nM, which is within option B) Between 476-511 nM.
+
+ANSWER SUMMARY: Based on the information from Chengting6631 pages 6-7, the correct answer is that the measured dissociation constant for the Wnt5b-Ror2 complex in cytonemes of zebrafish is between 360-520 nM.
+
+References
+
+1. (Chengting6631 pages 6-7): Chengting Zhang et al. ""Cytoneme-mediated transport of active Wnt5b–Ror2 complexes in zebrafish."" Science 379.6631 (2023): 1234-1238.
+
+ doi: 10.1038/s41586-023-06850-7
+
+2. (Chengting6631 pages 2-2): Chengting Zhang et al. ""Cytoneme-mediated transport of active Wnt5b–Ror2 complexes in zebrafish."" Science 379.6631 (2023): 1234-1238.
+
+ doi: 10.1038/s41586-023-06850-7
+"
+answer_letter,T
+ground_truth,Between 311-476 nM
+result,1
+timestamp,2024-12-09 02:07:50

@@ -1,0 +1,29 @@
+,0
+question,"Q: When a large excess of membrane protein substrate (Vamp2) is added to the wild-type Get3/4/5 chaperone complex, the complex dissociates. Which component does the substrate not bind to?"
+full_answer,"Question: Q: When a large excess of membrane protein substrate (Vamp2) is added to the wild-type Get3/4/5 chaperone complex, the complex dissociates. Which component does the substrate not bind to?
+
+Options:
+A) Get5
+B) Get3/4 complex
+C) Get4
+D) Get4/5 complex
+E) Get3
+F) Insufficient information to answer this question
+
+Definition:
+
+* Vamp2: A membrane protein substrate (likely referring to Vamp2, a v-SNARE involved in exocytosis)
+* Get3/4/5 chaperone complex: A molecular chaperone complex consisting of three subunits (Get3, Get4, and Get5)
+
+Answer:
+
+When a large excess of Vamp2 is added to the wild-type Get3/4/5 chaperone complex, it dissociates. This suggests that Vamp2 binding causes a conformational change or destabilization of the complex. The most likely explanation is that Vamp2 binds to Get4, as it is one of the three subunits of the complex.
+
+The Get3 and Get5 subunits are less likely to be bound by Vamp2, as they form a dimeric structure with Get4 (Get3/4 and Get4/5 complexes). The dissociation of the complex suggests that Vamp2 binding preferentially occurs at the Get4 subunit.
+
+ANSWER SUMMARY: Vamp2 binds to the Get4 subunit, causing the dissociation of the Get3/4/5 chaperone complex.
+"
+answer_letter,C
+ground_truth,Get4/5 complex
+result,1
+timestamp,2024-12-09 19:45:50

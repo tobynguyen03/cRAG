@@ -1,0 +1,52 @@
+,0
+question,Q: Approximately how many unique transposable element insertion loci are there in the mandarin (Citrus reticulata) genome?
+full_answer,"Question: Q: Approximately how many unique transposable element insertion loci are there in the mandarin (Citrus reticulata) genome?
+
+Options:
+A) 850
+B) 400
+C) 39
+D) 12,300
+E) 750
+F) 2
+G) Insufficient information to answer this question
+H) 2
+I) 4
+J) 900
+
+To determine the number of unique transposable element insertion loci in the mandarin (Citrus reticulata) genome, we need to look at relevant context.
+
+In Wu1101 pages 8-11, it is mentioned that there are 12,309 Mandarin-specific ILs. However, this does not directly answer the question about the number of unique transposable element insertion loci in the mandarin genome.
+
+Wu1101 pages 30-32 and 32-32 do not provide a specific count for mandarin. Instead, they mention the focus on citrus species, including sweet orange, but do not discuss the mandarin genome specifically.
+
+Wu1101 pages 11-13 shows novel IL counts from 34 TE families in sweet orange, pummelo, and mandarin, but it does not provide a count for the mandarin genome.
+
+On the other hand, Wu1101 pages 22-24 mention that transposon insertions are present as tag mutations for all sweet orange cultivar groups and can distinguish over 99% of SWO accessions. Although this does not directly address the question about mandarin, it highlights the presence of TE insertions in Citrus species.
+
+Since the relevant context does not provide a direct count or sufficient information to answer the question accurately, we must choose option G) Insufficient information to answer this question from the available options.
+
+ANSWER SUMMARY: Due to insufficient information, the exact number of unique transposable element insertion loci in the mandarin (Citrus reticulata) genome cannot be determined.
+
+References
+
+1. (Wu1101 pages 11-13): Wu B, Cui Y, Duan Y, Gmitter FG Jr, Luo F. Transposon activities drive the selection and diversification of sweet orange (Citrus × sinensis) cultivars in the last 500 years. bioRxiv preprint doi: https://doi.org/10.1101/2022.03.19.484946; posted April 24, 2024.
+
+Note: Since this is a preprint, there may not be an official publication date or citation. The citation provided above is in MLA format and reflects the current year of posting (2024).
+
+2. (Wu1101 pages 22-24): Wu B, Cui Y, Duan Y, Gmitter FG Jr, Luo F. Transposon activities drive the selection and diversification of sweet orange (Citrus × sinensis) cultivars in the last 500 years. bioRxiv preprint doi: https://doi.org/10.1101/2022.03.19.484946; posted April 24, 2024.
+
+Note: Since this is a preprint, there may not be an official publication date or citation. The citation provided above is in MLA format and reflects the current year of posting (2024).
+
+3. (Wu1101 pages 8-11): Wu B, Cui Y, Duan Y, Gmitter FG Jr, Luo F. Transposon activities drive the selection and diversification of sweet orange (Citrus × sinensis) cultivars in the last 500 years. bioRxiv preprint doi: https://doi.org/10.1101/2022.03.19.484946; posted April 24, 2024.
+
+Note: Since this is a preprint, there may not be an official publication date or citation. The citation provided above is in MLA format and reflects the current year of posting (2024).
+
+4. (Wu1101 pages 30-32): Wu B, Cui Y, Duan Y, Gmitter FG Jr, Luo F. Transposon activities drive the selection and diversification of sweet orange (Citrus × sinensis) cultivars in the last 500 years. bioRxiv preprint doi: https://doi.org/10.1101/2022.03.19.484946; posted April 24, 2024.
+
+Note: Since this is a preprint, there may not be an official publication date or citation. The citation provided above is in MLA format and reflects the current year of posting (2024).
+"
+answer_letter,I
+ground_truth,"12,300"
+result,1
+timestamp,2024-12-09 02:31:15

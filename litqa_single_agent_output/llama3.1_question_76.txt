@@ -1,0 +1,38 @@
+,0
+question,Q: Optogenetic inactivation of BNST AVP cells in mice leads to what kind of change in social communicative behaviors?
+full_answer,"Question: Q: Optogenetic inactivation of BNST AVP cells in mice leads to what kind of change in social communicative behaviors?
+
+Options:
+A) No difference in social communicative behaviors
+B) Decreased level of ultrasonic sounds
+C) Decrease in social communicative behaviors only in male mice
+D) Insufficient information to answer this question
+E) Increased level of urine marking
+
+Based on the provided context, specifically Rigneya2024 pages 2-2 and 2-3, optogenetic inactivation of BNST AVP cells in mice leads to a reduction or absence in social investigation behaviors in males. However, it does not affect females' social investigation of other males or females. Furthermore, in males, there was little to no urine marking and vocalizations in any condition.
+
+The study indicates that the BNST AVP cells are not essential for these behaviors (urine marking and ultrasonic vocalizations) as stated on Rigneya2024 pages 2-3.
+
+Therefore, the correct answer is:
+C) Decrease in social communicative behaviors only in male mice
+
+ANSWER SUMMARY: Optogenetic inactivation of BNST AVP cells in males leads to decreased social investigation behaviors and minimal or no urine marking and vocalizations, with no effect on females' social communication behaviors.
+
+References
+
+1. (Rigneya2024 pages 2-2): Rigneya, Nicole, Elba Campos-Lira, Matthew K. Kirchner, Wei Wei, Selma Belkacem, Rachael Beaumont, Sumeet Singha, Sara Guedez Suarez, Delenn Hartswick, Javier E. Sterne, Geert J. de Vries, and Aras Petrulis.
+
+""Vasopressin Circuit that Modulates Mouse Social Investigation and Anxiety-Like Behavior in a Sex-Specific Manner."" 
+
+Rockefeller University, New York, NY; accessed April 2, 2024.
+
+2. (Rigneya2024 pages 2-3): Rigneya, Nicole, Elba Campos-Lira, Matthew K. Kirchner, Wei Wei, Selma Belkacem, Rachael Beaumont, Sumeet Singha, Sara Guedez Suarez, Delenn Hartswick, Javier E. Sterne, Geert J. de Vries, and Aras Petrulis.
+
+""Vasopressin Circuit that Modulates Mouse Social Investigation and Anxiety-Like Behavior in a Sex-Specific Manner."" 
+
+Rockefeller University, New York, NY; accessed April 2, 2024.
+"
+answer_letter,B
+ground_truth,No difference in social communicative behaviors
+result,1
+timestamp,2024-12-09 02:02:45

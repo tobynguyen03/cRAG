@@ -1,0 +1,27 @@
+,0
+question,Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+full_answer,"Question: Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+
+Options:
+A) 3601
+B) 2165
+C) 243
+D) Insufficient information to answer this question
+E) 1000
+
+According to Jin2023 pages 4-5, there are 3601 differential H3K27ac peaks between queen and worker honeybees.
+
+ANSWER SUMMARY: The correct answer is A) 3601 because it directly corresponds with information provided in the context.
+
+References
+
+1. (Jin2023 pages 4-5): Jin et al. ""Phenotypic dimorphism between honeybee queen and worker is regulated by complicated epigenetic modifications."" iScience 26 (2023): 106308.
+
+ doi:10.1016/j.isci.2023.106308
+
+Accessed April 21, 2024
+"
+answer_letter,B
+ground_truth,3601
+result,1
+timestamp,2024-12-09 01:18:13

@@ -1,0 +1,7 @@
+,0
+question,"Q: In zebrafish embryos with homozygous leukolysin knockout, defects in angiogenesis can be rescued by inactivating which collagen allele?"
+full_answer,
+answer_letter,A
+ground_truth,col4a5
+result,1
+timestamp,2024-12-09 19:44:16

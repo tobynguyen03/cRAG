@@ -1,0 +1,28 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with avrE/hopM1 double knockout Pst DC3000 have on NCED3 expression?
+full_answer,"Question: Q: What effect does infection of A. thaliana plants with avrE/hopM1 double knockout Pst DC3000 have on NCED3 expression?
+
+Options:
+A) no effect
+B) reduced expression
+C) Insufficient information to answer this question
+D) Increased expression
+
+Definition:
+- NCED3 (9-cis-epoxycarotenoid dioxygenase 3) is a marker gene for abscisic acid (ABA) biosynthesis.
+
+Answer:
+Infection of A. thaliana plants with avrE/hopM1 double knockout Pst DC3000 leads to increased expression of the NCED3 gene, indicating an increase in ABA biosynthesis.
+
+Reasoning process: The provided context from Roussin2022 pages 2-3 states that infection with avrE/hopM1 double knockout Pst DC3000 results in increased NCED3 expression compared to mock-infected plants. This suggests a positive correlation between the absence of HopM1 and AvrE1 and increased ABA biosynthesis.
+
+ANSWER SUMMARY: Increased NCED3 expression following avrE/hopM1 double knockout Pst DC3000 infection indicates increased ABA biosynthesis in A. thaliana plants.
+
+References
+
+1. (Roussin2022 pages 2-3): Roussin-Leveille´e et al. ""Evolutionarily Conserved Bacterial Effectors Hijack Abscisic Acid Signaling to Induce an Aqueous Environment in the Apoplast."" Cell Host & Microbe 30 (2022): 489-501. doi: 10.1016/j.chom.2022.02.006.
+"
+answer_letter,D
+ground_truth,no effect
+result,1
+timestamp,2024-12-09 19:45:05

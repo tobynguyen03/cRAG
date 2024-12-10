@@ -1,0 +1,25 @@
+,0
+question,Q: The NCAN-ELS domain has been shown to interact with what percent of inhibitory synapses?
+full_answer,"Question: Q: The NCAN-ELS domain has been shown to interact with what percent of inhibitory synapses?
+
+Options:
+A) 75%
+B) 0%
+C) 57%
+D) Insufficient information to answer this question
+E) 40%
+
+The NCAN-ELS domain has been shown to interact with at least 50% of inhibitory synapses.
+
+My reasoning process involved analyzing the different sections of the provided context. The excerpt mentioned in Irala2024 pages 12-13 stated that '50% of SST+ synapses colocalize with NCAN C-terminal', which directly indicates that the NCAN-ELS domain interacts with at least 50% of inhibitory synapses.
+
+ANSWER SUMMARY: The NCAN-ELS domain has been shown to interact with at least 50% of inhibitory synapses.
+
+References
+
+1. (Irala2024 pages 12-13): Irala et al., 2024, Neuron 112, 1657–1675. doi: 10.1016/j.neuron.2024.03.007
+"
+answer_letter,A
+ground_truth,75%
+result,0
+timestamp,2024-12-09 02:03:00

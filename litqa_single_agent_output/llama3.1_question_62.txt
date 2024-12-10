@@ -1,0 +1,25 @@
+,0
+question,"Q: In lung adenocarcinoma, which of the following cancer immune phenotypes is positively associated with STK11 mutation?"
+full_answer,"Question: Q: In lung adenocarcinoma, which of the following cancer immune phenotypes is positively associated with STK11 mutation?
+
+Options:
+A) CD8+/IGNF -
+B) Eosinophils/endothelial
+C) Fibroblast/TGFβ
+D) CD8+/IGNF +
+E) Insufficient information to answer this question
+F) CD8-/IGNF -
+G) CD8- / IGNF+
+
+Based on Petralia2024 pages 8-9, it is stated that STK11 mutation is positively associated with CD8+/IFNG+.
+
+ANSWER SUMMARY: The correct answer is D) CD8+/IGNF +, as this cancer immune phenotype is positively associated with STK11 mutation in lung adenocarcinoma.
+
+References
+
+1. (Petralia2024 pages 8-9): Petralia F et al. ""Pan-cancer proteogenomics characterization of tumor immunity."" Cell 187, no. 5 (2024): 1255–1277. doi: 10.1016/j.cell.2024.01.027. Accessed February 29, 2024.
+"
+answer_letter,D
+ground_truth,CD8- / IGNF+
+result,1
+timestamp,2024-12-09 01:21:31

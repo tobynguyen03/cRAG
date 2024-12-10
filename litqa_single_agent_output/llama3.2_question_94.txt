@@ -1,0 +1,24 @@
+,0
+question,Q: What effect does a F200Y mutation in fungal β-tubulin have on binding of the anti-fungal drug thiabendazole?
+full_answer,"Question: Q: What effect does a F200Y mutation in fungal β-tubulin have on binding of the anti-fungal drug thiabendazole?
+
+Options:
+A) Disrupts binding
+B) Enhances binding
+C) Insufficient information to answer this question
+D) No effect
+
+To answer this question, we need to understand the effect of the F200Y mutation in fungal β-tubulin on the binding of thiabendazole.
+
+The F200Y mutation refers to a specific genetic alteration in the fungal β-tubulin protein, where the amino acid phenylalanine (F) at position 200 is replaced with tyrosine (Y).
+
+Thiabendazole is an anti-fungal drug that targets β-tubulin. The effect of the F200Y mutation on thiabendazole binding would depend on how the mutation alters the structure and function of β-tubulin.
+
+However, without specific information on how the F200Y mutation affects the binding affinity or mode of action of thiabendazole to β-tubulin, we cannot provide a definitive answer. The context does not contain enough information to determine whether the mutation disrupts, enhances, or has no effect on thiabendazole binding.
+
+ANSWER SUMMARY: Insufficient information to determine the effect of F200Y mutation on thiabendazole binding.
+"
+answer_letter,D
+ground_truth,Disrupts binding
+result,1
+timestamp,2024-12-09 19:44:50

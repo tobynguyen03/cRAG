@@ -1,0 +1,25 @@
+,0
+question,"Q: In Arabidopsis, which of the following 20 S proteasome subunits has CWC15 not been shown to interact with in its role promoting degradation of the protein Serrate?"
+full_answer,"Question: Q: In Arabidopsis, which of the following 20 S proteasome subunits has CWC15 not been shown to interact with in its role promoting degradation of the protein Serrate?
+
+Options:
+A) PBE1
+B) PAG1
+C) PBA1
+D) Insufficient information to answer this question
+E) PAB1
+
+Based on the given context, specifically Bangjun2024 pages 1-1, 4-5, and 9-9, it is stated that CWC15 promotes degradation of Serrate (SE) in Arabidopsis by interacting with PRP4KA. It also mentions that CWC15 interacts with several 20 S proteasome subunits, including PAB1, PAG1, and PBA1, but does not explicitly interact with a specific subunit of the 20 S proteasome regarding degradation of SE. However, it is mentioned in Bangjun2024 pages 9-9 that according to Figure 7 and the proposed action model, CWC15 interacts with PRP4KA and the 20 S proteosome, but specifically states ""The interaction is not mentioned for other subunits such as PBE1"". This suggests that among the given options, the correct answer is A) PBE1.
+
+ANSWER SUMMARY: The 20 S proteasome subunit CWC15 has not been shown to interact with in its role promoting degradation of the protein Serrate is PBE1.
+
+References
+
+1. (Bangjun2024 pages 1-1): Bangjun Zhou et al., ""The spliceosome-associated protein CWC15 promotes miRNA biogenesis in Arabidopsis,"" Nature Communications 5, no. 10 (2024): https://doi.org/10.1038/s41467-024-46676-z.
+
+2. (Bangjun2024 pages 9-9): Bangjun Zhou et al., ""The spliceosome-associated protein CWC15 promotes miRNA biogenesis in Arabidopsis,"" Nature Communications 5, no. 10 (2024): https://doi.org/10.1038/s41467-024-46676-z.
+"
+answer_letter,B
+ground_truth,PBE1
+result,1
+timestamp,2024-12-09 01:21:18

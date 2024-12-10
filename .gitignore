@@ -2,3 +2,4 @@
 .env
 my_papers/
 data/
+ollama-linux-amd64.tgz

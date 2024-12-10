@@ -1,0 +1,23 @@
+,0
+question,"Q: In 5XFAD mice, what effect does neural Ifnar1 deletion have on pre-synaptic terminals?"
+full_answer,"Question: Q: In 5XFAD mice, what effect does neural Ifnar1 deletion have on pre-synaptic terminals?
+
+Options:
+A) restoration
+B) increased loss
+C) no effect
+D) Insufficient information to answer this question
+E) attenuation of loss
+
+Based on the provided context, specifically Ethan2022 pages 8-8 and 9-11, neural Ifnar1 deletion has a positive effect on pre-synaptic terminals in 5XFAD mice. It restores synaptophysin+ puncta density in 5XFAD;NKO mice, indicating a selective regulation of excitatory pre-synaptic bouton density during disease.
+
+ANSWER SUMMARY: Neural Ifnar1 deletion restores pre-synaptic terminal function and density in 5XFAD mice by increasing the number of excitatory synaptic markers.
+
+References
+
+1. (Ethan2022 pages 8-8): Ethan R. Roy et al., ""Concerted Type I Interferon Signaling in Microglia and Neural Cells Promotes Memory Impairment Associated with Amyloid β Plaques,"" Immunity 55 (2022): 879–894, doi: 10.1016/j.immuni.2022.03.018.
+"
+answer_letter,B
+ground_truth,restoration
+result,1
+timestamp,2024-12-09 01:21:02

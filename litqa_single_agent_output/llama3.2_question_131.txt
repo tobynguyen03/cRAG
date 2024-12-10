@@ -1,0 +1,25 @@
+,0
+question,Q: What percent of genes that undergo RNA editing in mouse retina cells also display alternative splicing?
+full_answer,"Question: Q: What percent of genes that undergo RNA editing in mouse retina cells also display alternative splicing?
+
+Options:
+A) 73%
+B) 46%
+C) 51.5%
+D) Insufficient information to answer this question
+E) 0.9%
+
+To answer this question accurately, we must first define key terms and understand their relevance to RNA editing and alternative splicing.
+
+RNA editing refers to the process of altering the nucleotide sequence of RNA after transcription. In some organisms, including mice, certain genes undergo RNA editing, which can affect protein function or structure.
+
+Alternative splicing is a process that allows for the production of multiple proteins from a single gene by selecting different exons (coding regions) during mRNA processing. This can lead to diverse protein structures and functions.
+
+Given the context, we are asked about the percentage of genes that undergo RNA editing in mouse retina cells that also display alternative splicing. Unfortunately, there is insufficient information provided within the given context to determine this exact percentage. The options range from 0.9% to 73%, but without specific data or research findings, it's impossible to accurately calculate this percentage.
+
+ANSWER SUMMARY: Insufficient information prevents an accurate determination of the requested percentage.
+"
+answer_letter,A
+ground_truth,73%
+result,0
+timestamp,2024-12-09 19:45:44

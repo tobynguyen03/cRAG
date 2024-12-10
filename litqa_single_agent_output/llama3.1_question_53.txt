@@ -1,0 +1,25 @@
+,0
+question,"Q: I am designing peptide-guided LNPs for delivery to the retina, and am using PEG-maleimide to attach peptides to the the surface of the LNP. What fraction of the total PEG replaced with PEG-Maleimide would show no transfection?"
+full_answer,"Question: Q: I am designing peptide-guided LNPs for delivery to the retina, and am using PEG-maleimide to attach peptides to the the surface of the LNP. What fraction of the total PEG replaced with PEG-Maleimide would show no transfection?
+
+Options:
+A) Above 40%
+B) Above 20%
+C) Above 60%
+D) Insufficient information to answer this question
+E) Above 10%
+
+The fraction of total PEG replaced with PEG-Maleimide that would show no transfection is above 40%. 
+
+This conclusion can be derived from Herrera2023 pages 5-6, which states ""formulations with over 40% substitution with PEG-maleimide showed no detectable levels of transfection.""
+
+ANSWER SUMMARY: Above 40%, according to the text, formulations with more than 40% PEG-Maleimide substitution show no detectable transfection.
+
+References
+
+1. (Herrera2023 pages 5-6): Herrera-Barrera, M., Ryals, R. C., Gautam, M., Jozic, A., Landry, M., Korzun, T., ... & Sahay, G. (2023). Peptide-guided lipid nanoparticles deliver mRNA to the neural retina of rodents and nonhuman primates. Science, https://www.science.org.
+"
+answer_letter,B
+ground_truth,Above 40%
+result,1
+timestamp,2024-12-09 01:18:31

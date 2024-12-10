@@ -1,0 +1,21 @@
+,0
+question,Q: What is the substrate preference of the Ddd1 deaminase?
+full_answer,"Question: Q: What is the substrate preference of the Ddd1 deaminase?
+
+Options:
+A) 5'-GC
+B) 5'-CC
+C) 5'-TC
+D) Insufficient information to answer this question
+E) 5'-AC
+
+The provided context discusses Gasdermin B (GSDMB) isoforms and their functions in health and disease, but it does not mention the Ddd1 deaminase or its substrate preference.
+
+Therefore, I will select the option that reflects this lack of information.
+
+ANSWER SUMMARY: D) Insufficient information to answer this question
+"
+answer_letter,T
+ground_truth,5'-GC
+result,1
+timestamp,2024-12-09 02:26:12

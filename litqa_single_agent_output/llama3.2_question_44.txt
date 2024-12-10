@@ -1,0 +1,29 @@
+,0
+question,Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+full_answer,"Question: Q: How many differential H3K27Ac peaks are there between queen and worker honeybees?
+
+Options:
+A) 3601
+B) 2165
+C) 243
+D) Insufficient information to answer this question
+E) 1000
+
+The researchers identified 3,601 differential peaks between queens and workers in terms of H3K27ac modifications.
+
+My reasoning process involves carefully reading through the provided context and focusing on specific sections that mention H3K27ac modifications. On Jin2023 pages 4-5, it is stated that ""these peaks were enriched in pathways related to growth and development, ovarian development, and lifespan regulation."" Additionally, page 1 of Jin2023 mentions that queens have more chromosome interactions and unique H3K27ac modifications than workers.
+
+ANSWER SUMMARY: 3601
+
+References
+
+1. (Jin2023 pages 4-5): Jin et al. ""Phenotypic dimorphism between honeybee queen and worker is regulated by complicated epigenetic modifications."" iScience 26 (2023): 106308.
+
+ doi:10.1016/j.isci.2023.106308
+
+Accessed April 21, 2024
+"
+answer_letter,A
+ground_truth,3601
+result,0
+timestamp,2024-12-09 19:42:06

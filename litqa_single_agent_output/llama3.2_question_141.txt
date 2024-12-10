@@ -1,0 +1,28 @@
+,0
+question,Q: Where does Rv2780 localize in macrophages derived from mice that are infected with Mycobacterium tuberculosis?
+full_answer,"Question: Q: Where does Rv2780 localize in macrophages derived from mice that are infected with Mycobacterium tuberculosis?
+
+Options:
+A) Mitochondria
+B) Plasma Membrane
+C) Endoplasmic Reticulum
+D) Cytoplasm
+E) Nucleus
+F) Insufficient information to answer this question
+
+Definition: Rv2780 is an alanine dehydrogenase gene product of Mycobacterium tuberculosis.
+
+Answer: D) Cytoplasm
+
+Reasoning: According to Peng2024 pages 2-3, Rv2780 was found in the cytoplasm of mice peritoneal macrophages (MPMs) and A549 cells during M. tuberculosis infection. Additionally, it was detected in both the supernatants and lysates of M. tuberculosis cultures, suggesting its role as a secreted protein.
+
+ANSWER SUMMARY: Rv2780 localizes to the cytoplasm of macrophages upon infection with Mycobacterium tuberculosis.
+
+References
+
+1. (Peng2024 pages 2-3): Peng, C., Cheng, Y., Ma, M., Chen, Q., Duan, Y., Liu, S., ... & Wang, P. (2024). Mycobacterium tuberculosis suppresses host antimicrobial peptides by dehydrogenating L-alanine. Nature Communications, 15(4216), https://doi.org/10.1038/s41467-024-48588-4
+"
+answer_letter,D
+ground_truth,Cytoplasm
+result,0
+timestamp,2024-12-09 19:52:30

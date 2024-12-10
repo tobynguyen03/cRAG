@@ -1,0 +1,22 @@
+,0
+question,Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+full_answer,"Question: Q: How is Bempegaldesleukin supposed to overcome Treg affinity for IL-2?
+
+Options:
+A) Preferentially binding to b2b3 complex over b1b2b3 complex
+B) Overcome the Treg affinity for IL-2 by selectively depleting intratumoral Tregs
+C) Tumor microenvironment targeting and checkpoint immune inhibition
+D) Insufficient information to answer this question
+E) Improve PK via PEGylation
+
+Bempegaldesleukin (NKTR-214) is designed to preferentially bind to the CD122 subunit of the high-affinity IL-2 receptor, rather than the low-affinity receptor found on Tregs. This means that it has a higher affinity for the heterodimeric IL-2 receptor pathway (IL-2Rβγ) compared to the trimeric receptor found on Tregs.
+
+Reasoning process:
+The context clearly states that Bempegaldesleukin is a CD-122-biased IL-2 receptor agonist, which implies that it preferentially binds to the CD122 subunit of the high-affinity IL-2 receptor. This is in contrast to traditional IL-2 therapy, which has major drawbacks due to its short half-life and dose-limiting toxicities. By targeting the heterodimeric IL-2 receptor pathway (IL-2Rβγ), Bempegaldesleukin aims to overcome the limitations of traditional IL-2 therapy by selectively activating cytotoxic T cells while minimizing the activation of Tregs.
+
+ANSWER SUMMARY: Bempegaldesleukin overcomes Treg affinity for IL-2 by preferentially binding to the CD122 subunit of the high-affinity IL-2 receptor, rather than the low-affinity receptor found on Tregs.
+"
+answer_letter,T
+ground_truth,Preferentially binding to b2b3 complex over b1b2b3 complex
+result,1
+timestamp,2024-12-09 00:56:01

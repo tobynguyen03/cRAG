@@ -1,0 +1,7 @@
+,0
+question,Q: Which amino acids of yeast Rev7 are not important for its interaction with the MRX complex?
+full_answer,
+answer_letter,A
+ground_truth,1-149
+result,0
+timestamp,2024-12-09 19:52:38

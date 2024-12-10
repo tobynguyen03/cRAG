@@ -1,0 +1,32 @@
+,0
+question,"Q: In lung adenocarcinoma, which of the following cancer immune phenotypes is positively associated with STK11 mutation?"
+full_answer,"Question: Q: In lung adenocarcinoma, which of the following cancer immune phenotypes is positively associated with STK11 mutation?
+
+Options:
+A) CD8+/IGNF -
+B) Eosinophils/endothelial
+C) Fibroblast/TGFβ
+D) CD8+/IGNF +
+E) Insufficient information to answer this question
+F) CD8-/IGNF -
+G) CD8- / IGNF+
+
+Definition:
+
+- STK11 (Serine/Threonine Kinase 11): A tumor suppressor gene that encodes for a protein involved in regulating cell growth and survival. Mutations in this gene have been associated with several types of cancer, including lung adenocarcinoma.
+
+Reasoning Process:
+The question requires identifying the cancer immune phenotype positively associated with STK11 mutation in lung adenocarcinoma. The options provided include various combinations of immune cells (e.g., CD8+ T cells, eosinophils) and their activation markers (e.g., IGNF).
+
+To answer this question correctly, one needs to understand the relationship between STK11 mutations and specific cancer immune phenotypes. In lung adenocarcinoma, research has shown that STK11 mutations can lead to increased expression of IL-13, a cytokine associated with eosinophil activation. This suggests a positive association between STK11 mutation and the eosinophils/endothelial immune phenotype.
+
+Therefore, based on this understanding, the correct answer is:
+
+B) Eosinophils/endothelial
+
+ANSWER SUMMARY: Positive association between STK11 mutation in lung adenocarcinoma with eosinophils/endothelial immune phenotype.
+"
+answer_letter,B
+ground_truth,CD8- / IGNF+
+result,1
+timestamp,2024-12-09 19:42:50

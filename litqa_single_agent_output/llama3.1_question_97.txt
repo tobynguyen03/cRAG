@@ -1,0 +1,22 @@
+,0
+question,Q: What effect does infection of A. thaliana plants with avrE single knockout Pst DC3000 have on NCED3 expression?
+full_answer,"Question: Q: What effect does infection of A. thaliana plants with avrE single knockout Pst DC3000 have on NCED3 expression?
+
+Options:
+A) Increased expression
+B) No effect
+C) Insufficient information to answer this question
+D) Reduced expression
+
+According to Roussin2022 pages 3-3, infection of A. thaliana plants with avrE single knockout Pst DC3000 resulted in an increase in NCED3 expression, but only half the level of induction induced by wild-type Pst DC3000.
+
+ANSWER SUMMARY: Increased expression, but reduced to half the level compared to wild-type Pseudomonas syringae.
+
+References
+
+1. (Roussin2022 pages 3-3): Roussin-Leveille´e et al. ""Evolutionarily Conserved Bacterial Effectors Hijack Abscisic Acid Signaling to Induce an Aqueous Environment in the Apoplast."" Cell Host & Microbe 30 (2022): 489-501. doi: 10.1016/j.chom.2022.02.006.
+"
+answer_letter,B
+ground_truth,Increased expression
+result,1
+timestamp,2024-12-09 02:03:30

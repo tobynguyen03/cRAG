@@ -1,0 +1,7 @@
+,0
+question,Q: Active olfactory receptor genes increase their contacts with greek island regions by what factor in mouse olfactory neurons?
+full_answer,
+answer_letter,B
+ground_truth,2.7 fold
+result,1
+timestamp,2024-12-09 02:30:51

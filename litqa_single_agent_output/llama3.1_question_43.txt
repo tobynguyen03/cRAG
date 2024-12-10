@@ -1,0 +1,7 @@
+,0
+question,Q: How many clades of adenosine deaminases are there when grouped according to structure-based clustering?
+full_answer,Insufficient information to answer this question
+answer_letter,S
+ground_truth,1
+result,1
+timestamp,2024-12-09 01:16:58

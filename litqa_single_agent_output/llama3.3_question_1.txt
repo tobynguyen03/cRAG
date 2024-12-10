@@ -1,0 +1,28 @@
+,0
+question,Q: Active olfactory receptor genes increase their contacts with greek island regions by what factor in mouse olfactory neurons?
+full_answer,"Question: Q: Active olfactory receptor genes increase their contacts with greek island regions by what factor in mouse olfactory neurons?
+
+Options:
+A) 2.0 fold
+B) 27 fold
+C) 3.0 fold
+D) 2.7 fold
+E) 1.7 fold
+F) Insufficient information to answer this question
+
+To determine the factor by which active olfactory receptor genes increase their contacts with Greek Island regions in mouse olfactory neurons, we need to examine the provided context closely. The most relevant information is found in Ariel1038 pages 19-23, where it states that the active OR has 2.76 ± 3.91 cpb (contacts per billion) compared to the control which has 1.03 ± 1.74 cpb. This indicates an increase in contacts but does not directly provide a simple factor by which the increase occurs due to the presence of standard deviations.
+
+However, to calculate the factor of increase, we can divide the mean number of contacts per billion for active OR by the mean number of contacts per billion for the control: 2.76 cpb / 1.03 cpb ≈ 2.68. This calculation suggests that active olfactory receptor genes increase their contacts with Greek Island regions approximately 2.7 times more than the control.
+
+Given this calculation and looking at the provided options, D) 2.7 fold is the closest match to our calculated factor of increase.
+
+ANSWER SUMMARY: Active olfactory receptor genes increase their contacts by a factor calculated as approximately 2.7 based on mean cpb values from Ariel1038 pages 19-23.
+
+References
+
+1. (Ariel1038 pages 19-23): Ariel D. Pourmorady, Elizaveta V. Bashkirova, Andrea M. Chiariello, Houda Belagzhal, Albana Kodra, Rachel Duffié, Jerome Kahiapo, Kevin Monahan, Joan Pulupa, Ira Schieren, Alexa Osterhoudt, Job Dekker, Mario Nicodemi, and Stavros Lomvardas. ""RNA-mediated symmetry breaking enables singular olfactory receptor choice."" Nature, doi:10.1038/s41586-023-06845-4.
+"
+answer_letter,D
+ground_truth,2.7 fold
+result,0
+timestamp,2024-12-08 18:20:13
